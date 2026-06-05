@@ -1,21 +1,1288 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Anas Osman</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Anas Osman — Seismogeodesist & PhD Candidate</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Syne:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  /* Deep space + copper + warm bone */
+  --void:#080b10;
+  --void2:#0e1420;
+  --void3:#151d2b;
+  --void4:#1c2740;
+  --copper:#c4813a;
+  --copper2:#e09d55;
+  --copper3:#f0b96e;
+  --ice:#e8eef6;
+  --ice2:#cad5e8;
+  --ice3:#9aaec8;
+  --mist:rgba(232,238,246,0.06);
+  --mist2:rgba(232,238,246,0.10);
+  --mist3:rgba(232,238,246,0.16);
+  --rule:rgba(232,238,246,0.08);
+  --rule2:rgba(232,238,246,0.14);
+  --serif:'Playfair Display',Georgia,serif;
+  --sans:'Syne',sans-serif;
+  --mono:'JetBrains Mono',monospace;
+}
+
+html{scroll-behavior:smooth;font-size:16px}
+
+body{
+  font-family:var(--sans);
+  background:var(--void);
+  color:var(--ice);
+  line-height:1.7;
+  font-weight:300;
+  overflow-x:hidden;
+}
+
+/* ─── SCROLLBAR ─────────────────────────────── */
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:var(--void)}
+::-webkit-scrollbar-thumb{background:var(--copper);border-radius:2px}
+
+/* ─── STAR BACKGROUND ───────────────────────── */
+.starfield{
+  position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;
+}
+.starfield::before{
+  content:'';position:absolute;inset:0;
+  background-image:
+    radial-gradient(1px 1px at 10% 20%, rgba(196,129,58,0.4) 0%, transparent 100%),
+    radial-gradient(1px 1px at 30% 70%, rgba(232,238,246,0.25) 0%, transparent 100%),
+    radial-gradient(1px 1px at 55% 10%, rgba(232,238,246,0.2) 0%, transparent 100%),
+    radial-gradient(1px 1px at 75% 55%, rgba(196,129,58,0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 90% 30%, rgba(232,238,246,0.2) 0%, transparent 100%),
+    radial-gradient(1px 1px at 20% 90%, rgba(232,238,246,0.15) 0%, transparent 100%),
+    radial-gradient(1px 1px at 60% 80%, rgba(196,129,58,0.2) 0%, transparent 100%),
+    radial-gradient(0.5px 0.5px at 45% 45%, rgba(232,238,246,0.3) 0%, transparent 100%),
+    radial-gradient(0.5px 0.5px at 85% 85%, rgba(232,238,246,0.2) 0%, transparent 100%),
+    radial-gradient(0.5px 0.5px at 15% 55%, rgba(232,238,246,0.15) 0%, transparent 100%);
+}
+.starfield::after{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse 60% 40% at 20% 30%, rgba(196,129,58,0.04) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 30% at 80% 70%, rgba(154,174,200,0.04) 0%, transparent 70%);
+}
+
+/* ─── NAV ───────────────────────────────────── */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:200;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.2rem 4rem;
+  background:rgba(8,11,16,0.75);
+  backdrop-filter:blur(20px);
+  border-bottom:0.5px solid var(--rule);
+}
+.nav-brand{
+  font-family:var(--serif);
+  font-size:1rem;font-weight:400;letter-spacing:0.04em;
+  color:var(--ice);text-decoration:none;
+  display:flex;align-items:center;gap:0.6rem;
+}
+.nav-brand-dot{
+  width:6px;height:6px;border-radius:50%;background:var(--copper2);
+  display:inline-block;
+}
+.nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
+.nav-links a{
+  font-size:0.72rem;font-weight:400;letter-spacing:0.16em;
+  text-transform:uppercase;color:var(--ice3);text-decoration:none;
+  transition:color 0.2s;position:relative;
+}
+.nav-links a::after{
+  content:'';position:absolute;bottom:-2px;left:0;width:0;height:1px;
+  background:var(--copper2);transition:width 0.25s;
+}
+.nav-links a:hover{color:var(--copper2)}
+.nav-links a:hover::after{width:100%}
+.nav-cv{
+  padding:0.45rem 1.2rem;
+  border:0.5px solid var(--copper);
+  color:var(--copper2);
+  font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;
+  text-decoration:none;
+  transition:all 0.2s;font-weight:400;
+}
+.nav-cv:hover{background:var(--copper);color:var(--void);}
+
+/* ─── HERO ───────────────────────────────────── */
+.hero{
+  min-height:100vh;
+  display:grid;
+  grid-template-columns:1fr 420px;
+  gap:0;
+  position:relative;
+  z-index:1;
+  overflow:hidden;
+}
+.hero-left{
+  padding:10rem 4rem 5rem;
+  display:flex;flex-direction:column;justify-content:center;
+  border-right:0.5px solid var(--rule);
+  position:relative;
+}
+.hero-left::before{
+  content:'';
+  position:absolute;top:0;left:0;right:0;bottom:0;
+  background:radial-gradient(ellipse 80% 60% at 0% 50%, rgba(196,129,58,0.04) 0%, transparent 70%);
+  pointer-events:none;
+}
+.hero-eyebrow{
+  display:flex;align-items:center;gap:0.8rem;
+  margin-bottom:2rem;
+  opacity:0;animation:fadeUp 0.9s 0.15s cubic-bezier(.22,1,.36,1) forwards;
+}
+.eyebrow-line{width:32px;height:1px;background:var(--copper2)}
+.eyebrow-text{
+  font-family:var(--mono);font-size:0.68rem;font-weight:300;
+  letter-spacing:0.2em;text-transform:uppercase;color:var(--copper2);
+}
+.hero-name{
+  font-family:var(--serif);
+  font-size:clamp(3.5rem,6vw,5.5rem);
+  font-weight:400;line-height:1.0;
+  letter-spacing:-0.02em;
+  margin-bottom:0.5rem;
+  opacity:0;animation:fadeUp 0.9s 0.25s cubic-bezier(.22,1,.36,1) forwards;
+}
+.hero-name em{font-style:italic;color:var(--copper2)}
+.hero-titles{
+  display:flex;flex-wrap:wrap;gap:0.5rem;
+  margin-bottom:2rem;
+  opacity:0;animation:fadeUp 0.9s 0.35s cubic-bezier(.22,1,.36,1) forwards;
+}
+.hero-title-pill{
+  font-family:var(--mono);font-size:0.65rem;font-weight:300;
+  letter-spacing:0.1em;text-transform:uppercase;
+  padding:0.3rem 0.75rem;
+  border:0.5px solid var(--rule2);
+  color:var(--ice3);
+  white-space:nowrap;
+}
+.hero-bio{
+  font-size:1rem;font-weight:300;
+  color:var(--ice2);line-height:1.85;
+  max-width:580px;
+  margin-bottom:3rem;
+  opacity:0;animation:fadeUp 0.9s 0.45s cubic-bezier(.22,1,.36,1) forwards;
+}
+.hero-ctas{
+  display:flex;gap:1rem;
+  opacity:0;animation:fadeUp 0.9s 0.55s cubic-bezier(.22,1,.36,1) forwards;
+}
+.btn-p{
+  padding:0.85rem 2rem;
+  background:var(--copper);color:var(--void);
+  font-family:var(--sans);font-size:0.78rem;font-weight:500;
+  letter-spacing:0.1em;text-transform:uppercase;
+  text-decoration:none;border:1px solid var(--copper);
+  transition:all 0.25s;
+}
+.btn-p:hover{background:var(--copper2);border-color:var(--copper2)}
+.btn-s{
+  padding:0.85rem 2rem;
+  background:transparent;color:var(--ice);
+  font-family:var(--sans);font-size:0.78rem;font-weight:400;
+  letter-spacing:0.1em;text-transform:uppercase;
+  text-decoration:none;border:0.5px solid var(--rule2);
+  transition:all 0.25s;
+}
+.btn-s:hover{border-color:var(--ice3);color:var(--ice)}
+
+/* Profile panel */
+.hero-right{
+  display:flex;flex-direction:column;
+  padding:10rem 3.5rem 5rem;
+  justify-content:center;
+  position:relative;
+  opacity:0;animation:fadeLeft 0.9s 0.4s cubic-bezier(.22,1,.36,1) forwards;
+}
+.profile-photo-ring{
+  width:120px;height:120px;border-radius:50%;
+  border:1px solid var(--copper);
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:1.8rem;
+  position:relative;
+  overflow:hidden;
+  background:var(--void3);
+}
+.profile-photo-ring::before{
+  content:'';position:absolute;inset:4px;border-radius:50%;
+  border:0.5px solid rgba(196,129,58,0.3);
+}
+.profile-initials{
+  font-family:var(--serif);font-size:2.4rem;font-weight:400;
+  color:var(--copper2);letter-spacing:0.03em;
+  position:relative;z-index:1;
+}
+.profile-photo-note{
+  font-family:var(--mono);font-size:0.6rem;color:var(--ice3);
+  letter-spacing:0.1em;position:absolute;bottom:8px;left:0;right:0;text-align:center;
+}
+.profile-affiliation{
+  margin-bottom:1.5rem;
+}
+.aff-label{
+  font-family:var(--mono);font-size:0.62rem;letter-spacing:0.14em;
+  text-transform:uppercase;color:var(--copper);margin-bottom:0.3rem;
+}
+.aff-name{font-size:0.9rem;color:var(--ice);font-weight:400;line-height:1.4}
+.aff-sub{font-size:0.78rem;color:var(--ice3);font-weight:300}
+.profile-divider{
+  height:0.5px;background:var(--rule2);margin:1.5rem 0;
+}
+.profile-ids{display:flex;flex-direction:column;gap:0.6rem}
+.profile-id-row{display:flex;align-items:center;gap:0.75rem}
+.pid-label{
+  font-family:var(--mono);font-size:0.6rem;letter-spacing:0.1em;
+  text-transform:uppercase;color:var(--ice3);min-width:80px;
+}
+.pid-val{
+  font-family:var(--mono);font-size:0.65rem;color:var(--copper2);
+  text-decoration:none;transition:color 0.2s;
+}
+.pid-val:hover{color:var(--copper3)}
+
+/* ─── SECTION STRUCTURE ─────────────────────── */
+section{position:relative;z-index:1}
+.section-inner{padding:6rem 4rem}
+.section-header{
+  display:flex;align-items:baseline;gap:1.5rem;
+  margin-bottom:3.5rem;
+  padding-bottom:1.5rem;
+  border-bottom:0.5px solid var(--rule2);
+}
+.sh-num{
+  font-family:var(--mono);font-size:0.65rem;
+  letter-spacing:0.14em;color:var(--copper);
+}
+.sh-title{
+  font-family:var(--serif);font-size:2.2rem;font-weight:400;color:var(--ice);
+}
+.sh-right{margin-left:auto}
+.see-all{
+  font-family:var(--mono);font-size:0.65rem;letter-spacing:0.1em;
+  text-transform:uppercase;color:var(--ice3);text-decoration:none;
+  transition:color 0.2s;
+}
+.see-all:hover{color:var(--copper2)}
+
+/* ─── TICKER / MARQUEE ──────────────────────── */
+.ticker-wrap{
+  border-top:0.5px solid var(--rule);
+  border-bottom:0.5px solid var(--rule);
+  overflow:hidden;
+  padding:0.75rem 0;
+  position:relative;z-index:1;
+}
+.ticker-inner{
+  display:flex;gap:4rem;
+  white-space:nowrap;
+  animation:ticker 40s linear infinite;
+}
+.ticker-inner span{
+  font-family:var(--mono);font-size:0.65rem;letter-spacing:0.16em;
+  text-transform:uppercase;color:var(--ice3);flex-shrink:0;
+}
+.ticker-inner .dot{color:var(--copper2);margin:0 0.5rem}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ─── RESEARCH ───────────────────────────────── */
+.research-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
+  background:var(--rule);
+  border:0.5px solid var(--rule);
+}
+.rc{
+  background:var(--void);
+  padding:2rem 1.8rem;
+  transition:background 0.2s;
+  position:relative;overflow:hidden;
+}
+.rc::before{
+  content:'';
+  position:absolute;bottom:0;left:0;right:0;height:2px;
+  background:transparent;
+  transition:background 0.25s;
+}
+.rc:hover{background:var(--void2)}
+.rc:hover::before{background:linear-gradient(90deg,var(--copper),transparent)}
+.rc-num{
+  font-family:var(--mono);font-size:0.6rem;color:var(--copper);
+  letter-spacing:0.12em;margin-bottom:1rem;
+}
+.rc-title{
+  font-family:var(--serif);font-size:1.05rem;font-weight:400;
+  color:var(--ice);line-height:1.35;margin-bottom:0.8rem;
+}
+.rc-body{font-size:0.82rem;color:var(--ice3);line-height:1.7;font-weight:300}
+
+/* ─── PUBLICATIONS ──────────────────────────── */
+.pub-alt{background:var(--void2)}
+.pub-list{display:flex;flex-direction:column}
+.pub-item{
+  display:grid;grid-template-columns:72px 1fr 90px;
+  gap:2rem;align-items:start;
+  padding:1.8rem 0;
+  border-bottom:0.5px solid var(--rule);
+}
+.pub-item:first-child{border-top:0.5px solid var(--rule)}
+.pub-yr{
+  font-family:var(--mono);font-size:0.68rem;
+  color:var(--copper);letter-spacing:0.06em;
+  padding-top:0.2rem;
+}
+.pub-title{
+  font-family:var(--serif);font-size:1rem;font-weight:400;
+  line-height:1.4;margin-bottom:0.4rem;color:var(--ice);
+}
+.pub-title a{color:inherit;text-decoration:none;transition:color 0.2s}
+.pub-title a:hover{color:var(--copper2)}
+.pub-authors{font-size:0.78rem;color:var(--ice3);margin-bottom:0.25rem;font-weight:300}
+.pub-authors strong{color:var(--ice2);font-weight:400}
+.pub-journal{
+  font-size:0.76rem;font-style:italic;color:var(--copper);font-weight:300;
+}
+.pub-doi{
+  font-family:var(--mono);font-size:0.6rem;color:var(--ice3);
+  text-decoration:none;margin-top:0.4rem;display:block;
+  transition:color 0.2s;
+}
+.pub-doi:hover{color:var(--copper2)}
+.pub-badge{
+  font-family:var(--mono);font-size:0.58rem;letter-spacing:0.1em;
+  text-transform:uppercase;padding:0.25rem 0.6rem;
+  border:0.5px solid;align-self:start;white-space:nowrap;
+}
+.pub-badge.published{border-color:var(--copper);color:var(--copper)}
+.pub-badge.review{border-color:var(--ice3);color:var(--ice3)}
+.pub-badge.conf{border-color:rgba(154,174,200,0.4);color:var(--ice3)}
+
+/* ─── EDUCATION ─────────────────────────────── */
+.edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:0.5px solid var(--rule)}
+.edu-card{
+  background:var(--void);
+  padding:2.5rem 2rem;
+  position:relative;
+}
+.edu-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:2px;
+  background:linear-gradient(90deg,var(--copper),transparent);
+}
+.edu-period{
+  font-family:var(--mono);font-size:0.63rem;letter-spacing:0.1em;
+  color:var(--copper);margin-bottom:0.8rem;
+}
+.edu-degree{
+  font-family:var(--serif);font-size:1.15rem;font-weight:400;
+  color:var(--ice);line-height:1.3;margin-bottom:0.35rem;
+}
+.edu-uni{font-size:0.85rem;color:var(--ice2);margin-bottom:0.25rem;font-weight:400}
+.edu-grade{
+  font-family:var(--mono);font-size:0.65rem;letter-spacing:0.06em;
+  color:var(--copper2);margin-top:0.6rem;
+}
+.edu-note{font-size:0.78rem;color:var(--ice3);line-height:1.6;margin-top:0.7rem;font-weight:300}
+
+/* ─── EXPERIENCE ────────────────────────────── */
+.exp-alt{background:var(--void2)}
+.exp-list{display:flex;flex-direction:column;gap:0}
+.exp-item{
+  display:grid;grid-template-columns:160px 1fr;
+  gap:3rem;padding:2.5rem 0;
+  border-bottom:0.5px solid var(--rule);
+  align-items:start;
+}
+.exp-item:first-child{border-top:0.5px solid var(--rule)}
+.exp-meta{}
+.exp-period{
+  font-family:var(--mono);font-size:0.65rem;color:var(--copper);
+  letter-spacing:0.08em;margin-bottom:0.3rem;
+}
+.exp-type{
+  font-family:var(--mono);font-size:0.6rem;color:var(--ice3);
+  letter-spacing:0.08em;text-transform:uppercase;
+}
+.exp-role{
+  font-family:var(--serif);font-size:1.15rem;font-weight:400;
+  color:var(--ice);margin-bottom:0.2rem;
+}
+.exp-org{font-size:0.85rem;color:var(--copper2);margin-bottom:0.15rem}
+.exp-loc{font-size:0.75rem;color:var(--ice3);margin-bottom:0.8rem}
+.exp-desc{font-size:0.85rem;color:var(--ice3);line-height:1.75;font-weight:300;max-width:600px}
+
+/* ─── AWARDS ────────────────────────────────── */
+.awards-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.award-card{
+  background:var(--void2);
+  border:0.5px solid var(--rule2);
+  padding:1.8rem;
+  transition:border-color 0.2s;
+  position:relative;
+}
+.award-card:hover{border-color:rgba(196,129,58,0.4)}
+.award-year{
+  font-family:var(--mono);font-size:0.62rem;color:var(--copper);
+  letter-spacing:0.1em;margin-bottom:0.7rem;
+}
+.award-title{
+  font-family:var(--serif);font-size:1.05rem;font-weight:400;
+  color:var(--ice);line-height:1.35;margin-bottom:0.5rem;
+}
+.award-issuer{font-size:0.78rem;color:var(--ice3);font-weight:300}
+.award-star{
+  position:absolute;top:1.5rem;right:1.5rem;
+  width:24px;height:24px;
+  border:0.5px solid rgba(196,129,58,0.3);
+  border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+}
+.award-star svg{width:12px;height:12px;stroke:var(--copper2);fill:none;stroke-width:1.5}
+
+/* ─── SKILLS ────────────────────────────────── */
+.skills-wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
+.skill-col{}
+.skill-col-label{
+  font-family:var(--mono);font-size:0.62rem;letter-spacing:0.16em;
+  text-transform:uppercase;color:var(--copper);
+  margin-bottom:1rem;padding-bottom:0.6rem;
+  border-bottom:0.5px solid var(--rule2);
+}
+.skill-list{display:flex;flex-direction:column;gap:0.5rem}
+.sk{
+  font-size:0.82rem;color:var(--ice3);
+  padding:0.35rem 0;
+  border-bottom:0.5px solid var(--rule);
+  font-weight:300;transition:color 0.2s;
+}
+.sk:hover{color:var(--copper2)}
+
+/* ─── CERTIFICATIONS ─────────────────────────── */
+.certs-alt{background:var(--void2)}
+.certs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.cert-item{
+  background:var(--void);border:0.5px solid var(--rule);
+  padding:1.2rem;transition:border-color 0.2s;
+}
+.cert-item:hover{border-color:rgba(196,129,58,0.3)}
+.cert-org{
+  font-family:var(--mono);font-size:0.58rem;letter-spacing:0.1em;
+  text-transform:uppercase;color:var(--copper);margin-bottom:0.4rem;
+}
+.cert-name{font-size:0.8rem;color:var(--ice);line-height:1.35;font-weight:400}
+.cert-date{
+  font-family:var(--mono);font-size:0.58rem;color:var(--ice3);
+  margin-top:0.4rem;
+}
+
+/* ─── ADVISORS ───────────────────────────────── */
+.advisors-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
+.advisor-card{
+  background:var(--void2);border:0.5px solid var(--rule2);
+  padding:1.8rem;
+  transition:border-color 0.2s;
+}
+.advisor-card:hover{border-color:rgba(196,129,58,0.35)}
+.adv-role{
+  font-family:var(--mono);font-size:0.6rem;letter-spacing:0.12em;
+  text-transform:uppercase;color:var(--copper);margin-bottom:0.6rem;
+}
+.adv-name{
+  font-family:var(--serif);font-size:1.1rem;font-weight:400;
+  color:var(--ice);margin-bottom:0.3rem;
+}
+.adv-inst{font-size:0.78rem;color:var(--ice3);font-weight:300;line-height:1.5}
+
+/* ─── LANGUAGES ──────────────────────────────── */
+.langs-grid{display:flex;gap:2rem;flex-wrap:wrap}
+.lang-item{
+  display:flex;flex-direction:column;gap:0.4rem;
+  min-width:160px;
+}
+.lang-name{font-family:var(--serif);font-size:1rem;font-weight:400;color:var(--ice)}
+.lang-level{font-family:var(--mono);font-size:0.62rem;letter-spacing:0.1em;color:var(--copper);text-transform:uppercase}
+.lang-bar{height:2px;background:var(--rule2);border-radius:1px;overflow:hidden;margin-top:0.3rem}
+.lang-fill{height:100%;background:var(--copper);border-radius:1px}
+
+/* ─── CONTACT ────────────────────────────────── */
+.contact-wrap{
+  display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;
+}
+.contact-heading{
+  font-family:var(--serif);font-size:2.5rem;font-weight:400;
+  font-style:italic;color:var(--ice);
+  line-height:1.2;margin-bottom:1.5rem;
+}
+.contact-sub{font-size:0.9rem;color:var(--ice3);line-height:1.8;font-weight:300;margin-bottom:2rem}
+.contact-email-btn{
+  display:inline-flex;align-items:center;gap:0.75rem;
+  padding:0.9rem 1.8rem;
+  border:0.5px solid var(--copper);
+  color:var(--copper2);
+  font-family:var(--mono);font-size:0.72rem;letter-spacing:0.1em;
+  text-decoration:none;transition:all 0.25s;
+}
+.contact-email-btn:hover{background:var(--copper);color:var(--void)}
+.contact-links-grid{display:flex;flex-direction:column;gap:0.75rem}
+.cl-item{
+  display:flex;align-items:center;gap:1rem;
+  padding:1rem 1.2rem;
+  border:0.5px solid var(--rule);
+  background:var(--void2);
+  text-decoration:none;
+  transition:border-color 0.2s;
+}
+.cl-item:hover{border-color:rgba(196,129,58,0.4)}
+.cl-icon{
+  width:30px;height:30px;border:0.5px solid var(--rule2);
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.cl-icon svg{width:14px;height:14px;stroke:var(--copper2);fill:none;stroke-width:1.5}
+.cl-meta{display:flex;flex-direction:column;gap:0.1rem}
+.cl-label{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ice3)}
+.cl-val{font-size:0.82rem;color:var(--ice);font-weight:300}
+
+/* ─── FOOTER ─────────────────────────────────── */
+footer{
+  position:relative;z-index:1;
+  padding:2rem 4rem;
+  border-top:0.5px solid var(--rule);
+  display:flex;align-items:center;justify-content:space-between;
+}
+.footer-l{
+  font-family:var(--mono);font-size:0.65rem;color:var(--ice3);letter-spacing:0.08em;
+}
+.footer-r{font-family:var(--mono);font-size:0.65rem;color:var(--ice3)}
+
+/* ─── ANIMATIONS ─────────────────────────────── */
+@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeLeft{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:translateX(0)}}
+
+.reveal{opacity:0;transform:translateY(16px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal.vis{opacity:1;transform:translateY(0)}
+
+/* ─── UTILITIES ──────────────────────────────── */
+.alt-bg{background:var(--void2)}
+</style>
 </head>
 <body>
-    <h1>Anas Osman</h1>
-    <p>PhD Student</p>
 
-    <h2>Research Interests</h2>
-    <ul>
-        <li>Geodesy</li>
-        <li>Geodynamics</li>
-        <li>InSAR</li>
-        <li>Earthquake Studies</li>
-    </ul>
+<!-- STARFIELD -->
+<div class="starfield" aria-hidden="true"></div>
 
-    <h2>Contact</h2>
-    <p>Email: anas@apm.ac.cn</p>
+<!-- NAV -->
+<nav>
+  <a href="#" class="nav-brand">
+    <span class="nav-brand-dot"></span>
+    Anas Osman
+  </a>
+  <ul class="nav-links">
+    <li><a href="#research">Research</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#awards">Awards</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="#" class="nav-cv">CV ↓</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">
+      <span class="eyebrow-line"></span>
+      <span class="eyebrow-text">Seismogeodesist · PhD Candidate</span>
+    </div>
+    <h1 class="hero-name"><em>Anas</em><br>Osman</h1>
+    <div class="hero-titles">
+      <span class="hero-title-pill">InSAR Specialist</span>
+      <span class="hero-title-pill">Surveying Engineer</span>
+      <span class="hero-title-pill">Earthquake Geodesy</span>
+      <span class="hero-title-pill">Geospatial Data Analyst</span>
+      <span class="hero-title-pill">Lecturer</span>
+    </div>
+    <p class="hero-bio">
+      I study how the Earth's crust moves during the earthquake cycle — interseismic, 
+      coseismic, and postseismic periods. My work uses geodetic data to understand fault 
+      behavior and how the lithosphere responds during and after major seismic events. 
+      Currently a PhD candidate at the University of Chinese Academy of Sciences, 
+      Institute of Geodesy and Geophysics, CAS.
+    </p>
+    <div class="hero-ctas">
+      <a href="#publications" class="btn-p">View Publications</a>
+      <a href="#contact" class="btn-s">Get in Touch</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="profile-photo-ring">
+      <span class="profile-initials">AO</span>
+      <span class="profile-photo-note">Photo coming</span>
+    </div>
+    <div class="profile-affiliation">
+      <div class="aff-label">Current Affiliation</div>
+      <div class="aff-name">University of Chinese Academy of Sciences</div>
+      <div class="aff-sub">Institute of Geodesy &amp; Geophysics, CAS</div>
+    </div>
+    <div class="profile-affiliation">
+      <div class="aff-label">Advisors</div>
+      <div class="aff-name">Prof. Rumeng Guo &amp; Prof. Heping Sun</div>
+      <div class="aff-sub">Chinese Academy of Sciences</div>
+    </div>
+    <div class="profile-divider"></div>
+    <div class="profile-ids">
+      <div class="profile-id-row">
+        <span class="pid-label">ORCID</span>
+        <a href="https://orcid.org/0000-0002-4075-6879" target="_blank" class="pid-val">0000-0002-4075-6879</a>
+      </div>
+      <div class="profile-id-row">
+        <span class="pid-label">Scopus</span>
+        <a href="https://www.scopus.com/authid/detail.uri?authorId=57395201900" target="_blank" class="pid-val">57395201900</a>
+      </div>
+      <div class="profile-id-row">
+        <span class="pid-label">WoS ID</span>
+        <a href="https://www.webofscience.com/wos/author/record/KLD-3093-2024" target="_blank" class="pid-val">KLD-3093-2024</a>
+      </div>
+      <div class="profile-id-row">
+        <span class="pid-label">Scholar</span>
+        <a href="https://scholar.google.com/citations?user=oemk-kcAAAAJ&hl=en" target="_blank" class="pid-val">Google Scholar ↗</a>
+      </div>
+      <div class="profile-id-row">
+        <span class="pid-label">GitHub</span>
+        <a href="https://github.com/osmananas" target="_blank" class="pid-val">github.com/osmananas</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker-wrap">
+  <div class="ticker-inner" aria-hidden="true">
+    <span>Seismogeodesy</span><span class="dot">◆</span>
+    <span>InSAR Processing</span><span class="dot">◆</span>
+    <span>Earthquake Cycle</span><span class="dot">◆</span>
+    <span>GNSS Geodesy</span><span class="dot">◆</span>
+    <span>Geoid Modelling</span><span class="dot">◆</span>
+    <span>Fault Slip Analysis</span><span class="dot">◆</span>
+    <span>Satellite Geodesy</span><span class="dot">◆</span>
+    <span>Crustal Deformation</span><span class="dot">◆</span>
+    <span>Least-Squares Adjustment</span><span class="dot">◆</span>
+    <span>Remote Sensing</span><span class="dot">◆</span>
+    <span>Geodetic Reference Frames</span><span class="dot">◆</span>
+    <!-- duplicate for seamless loop -->
+    <span>Seismogeodesy</span><span class="dot">◆</span>
+    <span>InSAR Processing</span><span class="dot">◆</span>
+    <span>Earthquake Cycle</span><span class="dot">◆</span>
+    <span>GNSS Geodesy</span><span class="dot">◆</span>
+    <span>Geoid Modelling</span><span class="dot">◆</span>
+    <span>Fault Slip Analysis</span><span class="dot">◆</span>
+    <span>Satellite Geodesy</span><span class="dot">◆</span>
+    <span>Crustal Deformation</span><span class="dot">◆</span>
+    <span>Least-Squares Adjustment</span><span class="dot">◆</span>
+    <span>Remote Sensing</span><span class="dot">◆</span>
+    <span>Geodetic Reference Frames</span><span class="dot">◆</span>
+  </div>
+</div>
+
+<!-- RESEARCH -->
+<section id="research">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="sh-num">01</span>
+      <span class="sh-title">Research Focus</span>
+    </div>
+    <div class="research-grid reveal">
+      <div class="rc">
+        <div class="rc-num">01 / 06</div>
+        <div class="rc-title">Earthquake Cycle Geodesy</div>
+        <div class="rc-body">Studying interseismic strain accumulation, coseismic rupture, and postseismic relaxation using geodetic observations to constrain fault locking and slip models across the earthquake cycle.</div>
+      </div>
+      <div class="rc">
+        <div class="rc-num">02 / 06</div>
+        <div class="rc-title">InSAR & Surface Deformation</div>
+        <div class="rc-body">Interferometric Synthetic Aperture Radar analysis using Sentinel-1 and TerraSAR-X for mapping crustal deformation, urban subsidence, and fault surface rupture at millimeter-scale precision.</div>
+      </div>
+      <div class="rc">
+        <div class="rc-num">03 / 06</div>
+        <div class="rc-title">GNSS & Satellite Geodesy</div>
+        <div class="rc-body">Precise positioning through multi-constellation GNSS, time series analysis for detecting secular and transient deformation signals, and space weather effects on positioning accuracy.</div>
+      </div>
+      <div class="rc">
+        <div class="rc-num">04 / 06</div>
+        <div class="rc-title">Geoid Modelling</div>
+        <div class="rc-body">Determination of regional gravimetric geoid models using least-squares collocation, evaluation of global geopotential models against ground truth GNSS/levelling and gravity data.</div>
+      </div>
+      <div class="rc">
+        <div class="rc-num">05 / 06</div>
+        <div class="rc-title">Land Subsidence Monitoring</div>
+        <div class="rc-body">Multi-temporal InSAR analysis of urban land surface deformation coupled with land use / land cover change analysis, applied to cities across Indonesia and East Africa.</div>
+      </div>
+      <div class="rc">
+        <div class="rc-num">06 / 06</div>
+        <div class="rc-title">Geodetic Reference Systems</div>
+        <div class="rc-body">Evaluation and modernization of national geodetic reference frames; assessment of high-degree global geopotential models over Sudan using GPS/levelling benchmark data.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PUBLICATIONS -->
+<section id="publications" class="alt-bg">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="sh-num">02</span>
+      <span class="sh-title">Publications</span>
+      <div class="sh-right">
+        <a href="https://www.researchgate.net/profile/Anas-Osman-4" target="_blank" class="see-all">ResearchGate ↗</a>
+      </div>
+    </div>
+    <div class="pub-list reveal">
+
+      <div class="pub-item">
+        <div class="pub-yr">2026</div>
+        <div>
+          <div class="pub-title">
+            <a href="https://doi.org/10.1029/2025gl121473" target="_blank">
+              Interseismic, Coseismic, and Early Postseismic Slip Associated With the 2025 Mw 8.8 Kamchatka Earthquake
+            </a>
+          </div>
+          <div class="pub-authors">Yang Xiao; Jingqi Wang; Yijun Zhang; Wenting Zhang; Jiangcun Zhou; Heping Sun; Yabo Zhao; <strong>Anas Osman</strong>; Rumeng Guo</div>
+          <div class="pub-journal">Geophysical Research Letters · May 2026</div>
+          <a href="https://doi.org/10.1029/2025gl121473" class="pub-doi" target="_blank">DOI: 10.1029/2025gl121473</a>
+        </div>
+        <div class="pub-badge published">Published</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-yr">2026</div>
+        <div>
+          <div class="pub-title">
+            <a href="https://doi.org/10.25105/urbanenvirotech.v9i1.23368" target="_blank">
+              Multi-Temporal Identification and Analysis of Land Surface Deformation with Land Use Land Cover in Makassar City
+            </a>
+          </div>
+          <div class="pub-authors">Suharman Hamzah; Regita Faridatunisa Wijayanti; Ira Mutiara Anjasmara; Laode M Sabri; <strong>Anas Osman</strong></div>
+          <div class="pub-journal">Indonesian Journal of Urban and Environmental Technology · Feb 2026</div>
+          <a href="https://doi.org/10.25105/urbanenvirotech.v9i1.23368" class="pub-doi" target="_blank">DOI: 10.25105/urbanenvirotech.v9i1.23368</a>
+        </div>
+        <div class="pub-badge published">Published</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-yr">2025</div>
+        <div>
+          <div class="pub-title">
+            <a href="https://doi.org/10.1515/jag-2024-0006" target="_blank">
+              Regional evaluation of global geopotential models and digital elevation models with ground-based gravity and GNSS/levelling data over Sudan
+            </a>
+          </div>
+          <div class="pub-authors"><strong>Anas Osman</strong>; Basem Elsaka; Ira Mutiara Anjasmara</div>
+          <div class="pub-journal">Journal of Applied Geodesy · Jan 2025</div>
+          <a href="https://doi.org/10.1515/jag-2024-0006" class="pub-doi" target="_blank">DOI: 10.1515/jag-2024-0006</a>
+        </div>
+        <div class="pub-badge published">Published</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-yr">2023</div>
+        <div>
+          <div class="pub-title">
+            <a href="https://doi.org/10.1088/1755-1315/1127/1/012014" target="_blank">
+              Determination of a New Gravimetric Geoid Modelling for Sudan Using the Least-Squares Collocation Technique
+            </a>
+          </div>
+          <div class="pub-authors"><strong>Osman, A.S.M.</strong>; Anjasmara, I.M.</div>
+          <div class="pub-journal">IOP Conference Series: Earth and Environmental Science · 2023</div>
+          <a href="https://doi.org/10.1088/1755-1315/1127/1/012014" class="pub-doi" target="_blank">DOI: 10.1088/1755-1315/1127/1/012014</a>
+        </div>
+        <div class="pub-badge conf">Conference</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-yr">2021</div>
+        <div>
+          <div class="pub-title">
+            <a href="https://doi.org/10.12962/j27745449.v2i2.101" target="_blank">
+              Accuracy Investigation of the Three-Point Resection Method Through the Distribution of Control Points Across Four Quadrants
+            </a>
+          </div>
+          <div class="pub-authors"><strong>Anas Osman</strong>; Abdalla M A Mabrouk; Abdalraheem M A Mahjoub; Eltayeb A M Elkhalifa; A Abbas Elhag</div>
+          <div class="pub-journal">Journal of Marine-Earth Science and Technology · Nov 2021</div>
+          <a href="https://doi.org/10.12962/j27745449.v2i2.101" class="pub-doi" target="_blank">DOI: 10.12962/j27745449.v2i2.101</a>
+        </div>
+        <div class="pub-badge published">Published</div>
+      </div>
+
+      <div class="pub-item">
+        <div class="pub-yr">2021</div>
+        <div>
+          <div class="pub-title">
+            <a href="https://doi.org/10.1088/1755-1315/936/1/012035" target="_blank">
+              Assessment of High-Degree Reference Models and Recent GOCE/GRACE Global Geopotential Models over Sudan Based on GPS/Leveling Data
+            </a>
+          </div>
+          <div class="pub-authors"><strong>Osman, A.S.M.</strong>; Anjasmara, I.M.; Ruby, A.; Udama, Z.A.</div>
+          <div class="pub-journal">IOP Conference Series: Earth and Environmental Science · 2021</div>
+          <a href="https://doi.org/10.1088/1755-1315/936/1/012035" class="pub-doi" target="_blank">DOI: 10.1088/1755-1315/936/1/012035</a>
+        </div>
+        <div class="pub-badge conf">Conference</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section id="education">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="sh-num">03</span>
+      <span class="sh-title">Education</span>
+    </div>
+    <div class="edu-grid reveal">
+      <div class="edu-card">
+        <div class="edu-period">Sep 2023 – Jun 2027</div>
+        <div class="edu-degree">Doctor of Philosophy</div>
+        <div class="edu-uni">University of Chinese Academy of Sciences</div>
+        <div class="edu-grade">Geodesy and Surveying Engineering</div>
+        <div class="edu-note">Research on earthquake cycle geodesy, InSAR fault slip modelling, and seismotectonics. Institute of Geodesy and Geophysics, CAS — Wuhan, China.</div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-period">Jul 2020 – Aug 2022</div>
+        <div class="edu-degree">Master of Engineering <em style="font-style:italic;font-family:var(--serif);color:var(--copper2)">Cum Laude</em></div>
+        <div class="edu-uni">Institut Teknologi Sepuluh Nopember (ITS)</div>
+        <div class="edu-grade">Geomatics Engineering · CGPA 3.86/4</div>
+        <div class="edu-note">Supported by the KNB Indonesian Government Scholarship. Thesis led to two published papers in geodesy and geoid modelling. Surabaya, Indonesia.</div>
+      </div>
+      <div class="edu-card">
+        <div class="edu-period">2012 – 2017</div>
+        <div class="edu-degree">Bachelor of Science (Honours)</div>
+        <div class="edu-uni">Omdurman Islamic University</div>
+        <div class="edu-grade">Surveying Engineering · Second Class Division One</div>
+        <div class="edu-note">Final project on three-point resection accuracy — subsequently published in the Journal of Marine-Earth Science and Technology. Omdurman, Sudan.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section id="experience" class="alt-bg">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="sh-num">04</span>
+      <span class="sh-title">Experience</span>
+    </div>
+    <div class="exp-list reveal">
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-period">Sep 2022 – Present</div>
+          <div class="exp-type">Part-time</div>
+        </div>
+        <div>
+          <div class="exp-role">Adjunct Lecturer</div>
+          <div class="exp-org">Omdurman Islamic University</div>
+          <div class="exp-loc">Khartoum State, Sudan (Remote &amp; On-site)</div>
+          <div class="exp-desc">Teaching undergraduate modules in Geoinformatics (GIS), Geoid Determination, Satellite Geodesy, and Surveying Engineering. Developing course material and supervising student projects at the Faculty of Engineering Sciences, Department of Surveying Engineering.</div>
+        </div>
+      </div>
+      <div class="exp-item">
+        <div class="exp-meta">
+          <div class="exp-period">Dec 2017 – Dec 2018</div>
+          <div class="exp-type">Contract</div>
+        </div>
+        <div>
+          <div class="exp-role">Consultant Surveying Engineer</div>
+          <div class="exp-org">Dar Consult</div>
+          <div class="exp-loc">Khartoum, Sudan · On-site</div>
+          <div class="exp-desc">Worked on multiple road and bridge construction projects as a consultant engineer. Responsibilities included design modification, contractor supervision, and ensuring accurate implementation of engineering designs at construction sites. Also trained in Quality Management Systems (ISO 9001:2008) during this period.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AWARDS -->
+<section id="awards">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="sh-num">05</span>
+      <span class="sh-title">Honours &amp; Awards</span>
+    </div>
+    <div class="awards-grid reveal">
+      <div class="award-card">
+        <div class="award-year">August 2025</div>
+        <div class="award-title">Excellent Poster Award — Joint Conference of Geodesy &amp; Geodynamics Symposium</div>
+        <div class="award-issuer">13th International Workshop on Multi-observations of Xizang, Xinjiang &amp; Siberia · Xining, China</div>
+        <div class="award-star"><svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
+      </div>
+      <div class="award-card">
+        <div class="award-year">June 2025</div>
+        <div class="award-title">Excellence Award — "My Research Journey in China" Short Video Competition</div>
+        <div class="award-issuer">International College, University of Chinese Academy of Sciences (UCAS)</div>
+        <div class="award-star"><svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
+      </div>
+      <div class="award-card">
+        <div class="award-year">June 2024</div>
+        <div class="award-title">PhD Qualification Examination Passed — UCAS G2023 Cohort</div>
+        <div class="award-issuer">University of Chinese Academy of Sciences – International College</div>
+        <div class="award-star"><svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
+      </div>
+      <div class="award-card">
+        <div class="award-year">July 2023</div>
+        <div class="award-title">ANSO-CAS-TWAS/UNESCO PhD Scholarship for Young Talents</div>
+        <div class="award-issuer">Alliance of International Science Organizations (ANSO), Chinese Academy of Sciences &amp; TWAS/UNESCO</div>
+        <div class="award-star"><svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
+      </div>
+      <div class="award-card">
+        <div class="award-year">August 2022</div>
+        <div class="award-title">Master of Engineering with Cum Laude (Distinction)</div>
+        <div class="award-issuer">Institut Teknologi Sepuluh Nopember (ITS) · Surabaya, Indonesia</div>
+        <div class="award-star"><svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
+      </div>
+      <div class="award-card">
+        <div class="award-year">June 2019</div>
+        <div class="award-title">KNB Scholarship for Master's Studies</div>
+        <div class="award-issuer">Kemitraan Negara Berkembang · Indonesian Government Scholarship for Developing Countries</div>
+        <div class="award-star"><svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
+      </div>
+      <div class="award-card">
+        <div class="award-year">July 2017</div>
+        <div class="award-title">Academic Excellence Award — Highest GPA in Surveying Engineering</div>
+        <div class="award-issuer">Omdurman Islamic University · 5th academic year, 2016/2017 — Top of cohort</div>
+        <div class="award-star"><svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
+      </div>
+      <div class="award-card">
+        <div class="award-year">December 2023</div>
+        <div class="award-title">Commendation for Excellent Performance — Choral Competition</div>
+        <div class="award-issuer">University of Chinese Academy of Sciences · "December 9th Movement" commemorative event</div>
+        <div class="award-star"><svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills" class="alt-bg">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="sh-num">06</span>
+      <span class="sh-title">Technical Skills</span>
+    </div>
+    <div class="skills-wrap reveal">
+      <div class="skill-col">
+        <div class="skill-col-label">Software & Tools</div>
+        <div class="skill-list">
+          <div class="sk">SNAP / GAMMA</div>
+          <div class="sk">MATLAB</div>
+          <div class="sk">Python</div>
+          <div class="sk">ArcGIS Pro</div>
+          <div class="sk">QGIS</div>
+          <div class="sk">BERNESE GNSS</div>
+          <div class="sk">CloudCompare</div>
+          <div class="sk">AutoCAD Civil 3D</div>
+          <div class="sk">PRIMAVERA P6</div>
+        </div>
+      </div>
+      <div class="skill-col">
+        <div class="skill-col-label">Methods</div>
+        <div class="skill-list">
+          <div class="sk">InSAR Processing</div>
+          <div class="sk">Fault Slip Modelling</div>
+          <div class="sk">Least-Squares Adjustment</div>
+          <div class="sk">Least-Squares Collocation</div>
+          <div class="sk">PPP &amp; RTK GNSS</div>
+          <div class="sk">Photogrammetry</div>
+          <div class="sk">LiDAR Analysis</div>
+          <div class="sk">Geoid Determination</div>
+          <div class="sk">Systematic Review</div>
+        </div>
+      </div>
+      <div class="skill-col">
+        <div class="skill-col-label">Satellites & Sensors</div>
+        <div class="skill-list">
+          <div class="sk">Sentinel-1</div>
+          <div class="sk">TerraSAR-X</div>
+          <div class="sk">GPS / GLONASS</div>
+          <div class="sk">Galileo / BeiDou</div>
+          <div class="sk">ICESat-2</div>
+          <div class="sk">GRACE-FO</div>
+          <div class="sk">GOCE / EGM2008</div>
+          <div class="sk">Airborne Gravity</div>
+          <div class="sk">SAR Interferometry</div>
+        </div>
+      </div>
+      <div class="skill-col">
+        <div class="skill-col-label">Field & Engineering</div>
+        <div class="skill-list">
+          <div class="sk">Total Station</div>
+          <div class="sk">GNSS Field Campaigns</div>
+          <div class="sk">Levelling Networks</div>
+          <div class="sk">UAV Mapping</div>
+          <div class="sk">Quantity Surveying</div>
+          <div class="sk">Road &amp; Bridge Survey</div>
+          <div class="sk">Cadastral Survey</div>
+          <div class="sk">ISO 9001:2008</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section id="certifications">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="sh-num">07</span>
+      <span class="sh-title">Selected Certifications</span>
+    </div>
+    <div class="certs-grid reveal">
+      <div class="cert-item">
+        <div class="cert-org">COMET / UK NERC</div>
+        <div class="cert-name">InSAR Training Workshop 2025</div>
+        <div class="cert-date">Nov 2025</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-org">NOAA NGS</div>
+        <div class="cert-name">Evaluating Noise in GNSS Time Series</div>
+        <div class="cert-date">Jun 2024</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-org">NOAA NGS</div>
+        <div class="cert-name">GNSS Orbit Determination</div>
+        <div class="cert-date">Mar 2024</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-org">NOAA NGS</div>
+        <div class="cert-name">Space Weather Impacts on GNSS Positioning</div>
+        <div class="cert-date">Mar 2024</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-org">NOAA NGS</div>
+        <div class="cert-name">Multi-GNSS Positioning &amp; M-PAGES</div>
+        <div class="cert-date">Mar 2024</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-org">NOAA NGS</div>
+        <div class="cert-name">SatBathy Tool for Satellite-Derived Bathymetry</div>
+        <div class="cert-date">Mar 2024</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-org">AGS (HK)</div>
+        <div class="cert-name">Advanced InSAR &amp; Data Analytics for Civil Engineering</div>
+        <div class="cert-date">Apr 2024</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-org">NOAA NGS</div>
+        <div class="cert-name">The NGS Geoid Monitoring Service (GeMS)</div>
+        <div class="cert-date">Jan 2024</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-org">EarthScope Consortium</div>
+        <div class="cert-name">Seismology Skill Building Workshop</div>
+        <div class="cert-date">Jun 2024</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-org">University of Nottingham</div>
+        <div class="cert-name">Certified Peer Reviewer</div>
+        <div class="cert-date">Jan 2025</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-org">University of Nottingham</div>
+        <div class="cert-name">Open Science Certificate</div>
+        <div class="cert-date">Nov 2024</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-org">GGOS / IAG</div>
+        <div class="cert-name">GGOS Days 2024 — Global Geodetic Observing System</div>
+        <div class="cert-date">Oct 2024</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-org">University of Nottingham</div>
+        <div class="cert-name">Research Metrics Certificate</div>
+        <div class="cert-date">Dec 2024</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-org">Esri</div>
+        <div class="cert-name">Cartography — ArcGIS Certification</div>
+        <div class="cert-date">May 2019</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-org">NOAA NGS</div>
+        <div class="cert-name">Geoid Modelling Series (GEOID18, GEOID2022, Alaska)</div>
+        <div class="cert-date">2022 – 2024</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ADVISORS + LANGUAGES -->
+<section id="advisors" class="alt-bg">
+  <div class="section-inner">
+    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start">
+      <div>
+        <div class="section-header reveal" style="margin-bottom:2rem">
+          <span class="sh-num">08</span>
+          <span class="sh-title">Advisors</span>
+        </div>
+        <div class="advisors-grid reveal" style="grid-template-columns:1fr">
+          <div class="advisor-card">
+            <div class="adv-role">Current · Primary Advisor</div>
+            <div class="adv-name">Prof. Heping Sun</div>
+            <div class="adv-inst">Chinese Academy of Sciences · Innovation Academy for Precision Measurement Science and Technology</div>
+          </div>
+          <div class="advisor-card">
+            <div class="adv-role">Current · Co-Advisor</div>
+            <div class="adv-name">Prof. Rumeng Guo</div>
+            <div class="adv-inst">Institute of Geodesy and Geophysics · Chinese Academy of Sciences</div>
+          </div>
+          <div class="advisor-card">
+            <div class="adv-role">Past · MSc Advisor</div>
+            <div class="adv-name">Dr. Ira Mutiara Anjasmara</div>
+            <div class="adv-inst">Sepuluh Nopember Institute of Technology (ITS) · Surabaya, Indonesia</div>
+          </div>
+          <div class="advisor-card">
+            <div class="adv-role">Past · BSc Advisor</div>
+            <div class="adv-name">Prof. A. Abbas-Elhag</div>
+            <div class="adv-inst">Omdurman Islamic University · DPhil, University of Oxford (1980)</div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="section-header reveal" style="margin-bottom:2rem">
+          <span class="sh-num">09</span>
+          <span class="sh-title">Languages</span>
+        </div>
+        <div class="reveal" style="display:flex;flex-direction:column;gap:1.5rem">
+          <div class="lang-item" style="min-width:auto">
+            <div class="lang-name">Sudanese Arabic</div>
+            <div class="lang-level">Native · Bilingual</div>
+            <div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div>
+          </div>
+          <div class="lang-item" style="min-width:auto">
+            <div class="lang-name">Old Nubian</div>
+            <div class="lang-level">Native · Bilingual</div>
+            <div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div>
+          </div>
+          <div class="lang-item" style="min-width:auto">
+            <div class="lang-name">English</div>
+            <div class="lang-level">Full Professional Proficiency</div>
+            <div class="lang-bar"><div class="lang-fill" style="width:88%"></div></div>
+          </div>
+          <div class="lang-item" style="min-width:auto">
+            <div class="lang-name">Chinese</div>
+            <div class="lang-level">Elementary Proficiency</div>
+            <div class="lang-bar"><div class="lang-fill" style="width:25%"></div></div>
+          </div>
+          <div class="lang-item" style="min-width:auto">
+            <div class="lang-name">Indonesian</div>
+            <div class="lang-level">Elementary Proficiency</div>
+            <div class="lang-bar"><div class="lang-fill" style="width:22%"></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="sh-num">10</span>
+      <span class="sh-title">Contact</span>
+    </div>
+    <div class="contact-wrap reveal">
+      <div>
+        <div class="contact-heading">Open to collaboration &amp; research exchange</div>
+        <p class="contact-sub">
+          I welcome conversations about earthquake geodesy, InSAR methodology, 
+          geoid modelling, and geodetic data analysis. Particularly interested in 
+          joint research projects, conference invitations, and academic exchange.
+        </p>
+        <div style="display:flex;flex-direction:column;gap:0.8rem">
+          <a href="mailto:anas.geodesy@gmail.com" class="contact-email-btn">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            anas.geodesy@gmail.com
+          </a>
+          <a href="mailto:anas@apm.ac.cn" class="contact-email-btn" style="background:transparent;color:var(--ice3);border-color:var(--rule2)">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            anas@apm.ac.cn
+          </a>
+        </div>
+      </div>
+      <div class="contact-links-grid">
+        <a href="https://www.linkedin.com/in/anas-geodesy/" target="_blank" class="cl-item">
+          <div class="cl-icon"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg></div>
+          <div class="cl-meta">
+            <span class="cl-label">LinkedIn</span>
+            <span class="cl-val">linkedin.com/in/anas-geodesy</span>
+          </div>
+        </a>
+        <a href="https://www.researchgate.net/profile/Anas-Osman-4" target="_blank" class="cl-item">
+          <div class="cl-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg></div>
+          <div class="cl-meta">
+            <span class="cl-label">ResearchGate</span>
+            <span class="cl-val">researchgate.net/profile/Anas-Osman-4</span>
+          </div>
+        </a>
+        <a href="https://scholar.google.com/citations?user=oemk-kcAAAAJ&hl=en" target="_blank" class="cl-item">
+          <div class="cl-icon"><svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+          <div class="cl-meta">
+            <span class="cl-label">Google Scholar</span>
+            <span class="cl-val">citations?user=oemk-kcAAAAJ</span>
+          </div>
+        </a>
+        <a href="https://orcid.org/0000-0002-4075-6879" target="_blank" class="cl-item">
+          <div class="cl-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9 12h6M12 9v6"/></svg></div>
+          <div class="cl-meta">
+            <span class="cl-label">ORCID</span>
+            <span class="cl-val">0000-0002-4075-6879</span>
+          </div>
+        </a>
+        <a href="https://www.scopus.com/authid/detail.uri?authorId=57395201900" target="_blank" class="cl-item">
+          <div class="cl-icon"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M8 12h8M12 8v8"/></svg></div>
+          <div class="cl-meta">
+            <span class="cl-label">Scopus</span>
+            <span class="cl-val">Author ID: 57395201900</span>
+          </div>
+        </a>
+        <a href="https://github.com/osmananas" target="_blank" class="cl-item">
+          <div class="cl-icon"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg></div>
+          <div class="cl-meta">
+            <span class="cl-label">GitHub</span>
+            <span class="cl-val">github.com/osmananas</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <span class="footer-l">Anas Sharafeldin Mohamed Osman · PhD Candidate · UCAS / CAS</span>
+  <span class="footer-r">© 2025 · Geodesy &amp; Surveying Engineering</span>
+</footer>
+
+<script>
+const io = new IntersectionObserver((entries) => {
+  entries.forEach(e => {
+    if (e.isIntersecting) {
+      e.target.classList.add('vis');
+      io.unobserve(e.target);
+    }
+  });
+}, {threshold: 0.08});
+document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+</script>
 </body>
 </html>
