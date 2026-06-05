@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Anas Osman</title>
+</head>
+<body>
+    <h1>Anas Osman</h1>
+    <p>PhD Student</p>
+
+    <h2>Research Interests</h2>
+    <ul>
+        <li>Geodesy</li>
+        <li>Geodynamics</li>
+        <li>InSAR</li>
+        <li>Earthquake Studies</li>
+    </ul>
+
+    <h2>Contact</h2>
+    <p>Email: your-email@example.com</p>
+</body>
+</html>
