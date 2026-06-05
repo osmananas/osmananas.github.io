@@ -1,2 +1,2 @@
 # anas.github.io
-Personal academic website of Anas Osman
+Personal website of Anas Osman
