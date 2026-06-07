@@ -3,33 +3,58 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dr. Anas Osman — Seismogeodesist & PhD Candidate</title>
+<title>Anas Osman | Seismogeodesist & Geomatics Engineer</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=Syne:wght@300;400;500;600&family=JetBrains+Mono:wght@300;400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,700;1,400;1,500&family=JetBrains+Mono:wght@300;400;500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 
 :root{
-  /* Deep space + copper + warm bone */
-  --void:#080b10;
-  --void2:#0e1420;
-  --void3:#151d2b;
-  --void4:#1c2740;
-  --copper:#c4813a;
-  --copper2:#e09d55;
-  --copper3:#f0b96e;
-  --ice:#e8eef6;
-  --ice2:#cad5e8;
-  --ice3:#9aaec8;
-  --mist:rgba(232,238,246,0.06);
-  --mist2:rgba(232,238,246,0.10);
-  --mist3:rgba(232,238,246,0.16);
-  --rule:rgba(232,238,246,0.08);
-  --rule2:rgba(232,238,246,0.14);
-  --serif:'Playfair Display',Georgia,serif;
-  --sans:'Syne',sans-serif;
-  --mono:'JetBrains Mono',monospace;
+  /* Core Color System - Cosmic Earth Fusion */
+  --void: #05070a;
+  --void2: #0a0f17;
+  --void3: #101826;
+  --void4: #172135;
+  
+  /* Research Theme (Deep Space) */
+  --nebula-purple: #7b2cbf;
+  --nebula-purple2: #9d4edd;
+  --cosmic-blue: #3a86ff;
+  --cosmic-blue2: #5390d9;
+  
+  /* Industry Theme (Earth & Copper) */
+  --terracotta: #e07a5f;
+  --terracotta2: #f2cc8f;
+  --earth-green: #81b29a;
+  --earth-green2: #a8dadc;
+  
+  /* Neutral System */
+  --ice: #f8f9fa;
+  --ice2: #e9ecef;
+  --ice3: #dee2e6;
+  --ice4: #ced4da;
+  --mist: rgba(248,249,250,0.05);
+  --mist2: rgba(248,249,250,0.1);
+  --mist3: rgba(248,249,250,0.15);
+  --rule: rgba(248,249,250,0.08);
+  --rule2: rgba(248,249,250,0.15);
+  
+  /* Typography */
+  --serif: 'Playfair Display', Georgia, serif;
+  --sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --mono: 'JetBrains Mono', monospace;
+  
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
+  --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.4), 0 2px 4px -1px rgba(0,0,0,0.3);
+  --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.5), 0 4px 6px -2px rgba(0,0,0,0.3);
+  --shadow-xl: 0 20px 25px -5px rgba(0,0,0,0.6), 0 10px 10px -5px rgba(0,0,0,0.3);
+  
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 html{scroll-behavior:smooth;font-size:16px}
@@ -38,167 +63,288 @@ body{
   font-family:var(--sans);
   background:var(--void);
   color:var(--ice);
-  line-height:1.7;
-  font-weight:300;
+  line-height:1.6;
+  font-weight:400;
   overflow-x:hidden;
+  cursor:default;
 }
 
-/* ─── SCROLLBAR ─────────────────────────────── */
-::-webkit-scrollbar{width:3px}
+/* ─── CUSTOM SCROLLBAR ───────────────────────── */
+::-webkit-scrollbar{width:6px}
 ::-webkit-scrollbar-track{background:var(--void)}
-::-webkit-scrollbar-thumb{background:var(--copper);border-radius:2px}
+::-webkit-scrollbar-thumb{
+  background:linear-gradient(180deg, var(--nebula-purple), var(--cosmic-blue));
+  border-radius:3px;
+}
 
-/* ─── STAR BACKGROUND ───────────────────────── */
+/* ─── DYNAMIC STARFIELD BACKGROUND ───────────── */
 .starfield{
   position:fixed;inset:0;z-index:0;pointer-events:none;overflow:hidden;
+  transition:background var(--transition-slow);
 }
 .starfield::before{
   content:'';position:absolute;inset:0;
   background-image:
-    radial-gradient(1px 1px at 10% 20%, rgba(196,129,58,0.4) 0%, transparent 100%),
-    radial-gradient(1px 1px at 30% 70%, rgba(232,238,246,0.25) 0%, transparent 100%),
-    radial-gradient(1px 1px at 55% 10%, rgba(232,238,246,0.2) 0%, transparent 100%),
-    radial-gradient(1px 1px at 75% 55%, rgba(196,129,58,0.3) 0%, transparent 100%),
-    radial-gradient(1px 1px at 90% 30%, rgba(232,238,246,0.2) 0%, transparent 100%),
-    radial-gradient(1px 1px at 20% 90%, rgba(232,238,246,0.15) 0%, transparent 100%),
-    radial-gradient(1px 1px at 60% 80%, rgba(196,129,58,0.2) 0%, transparent 100%),
-    radial-gradient(0.5px 0.5px at 45% 45%, rgba(232,238,246,0.3) 0%, transparent 100%),
-    radial-gradient(0.5px 0.5px at 85% 85%, rgba(232,238,246,0.2) 0%, transparent 100%),
-    radial-gradient(0.5px 0.5px at 15% 55%, rgba(232,238,246,0.15) 0%, transparent 100%);
+    radial-gradient(1px 1px at 10% 20%, rgba(123,44,191,0.6) 0%, transparent 100%),
+    radial-gradient(1px 1px at 30% 70%, rgba(248,249,250,0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 55% 10%, rgba(248,249,250,0.25) 0%, transparent 100%),
+    radial-gradient(1px 1px at 75% 55%, rgba(58,134,255,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 90% 30%, rgba(248,249,250,0.25) 0%, transparent 100%),
+    radial-gradient(1px 1px at 20% 90%, rgba(248,249,250,0.2) 0%, transparent 100%),
+    radial-gradient(1px 1px at 60% 80%, rgba(123,44,191,0.4) 0%, transparent 100%),
+    radial-gradient(0.5px 0.5px at 45% 45%, rgba(248,249,250,0.35) 0%, transparent 100%),
+    radial-gradient(0.5px 0.5px at 85% 85%, rgba(248,249,250,0.25) 0%, transparent 100%),
+    radial-gradient(0.5px 0.5px at 15% 55%, rgba(248,249,250,0.2) 0%, transparent 100%);
+  animation: twinkle 20s ease-in-out infinite alternate;
 }
 .starfield::after{
   content:'';position:absolute;inset:0;
   background:
-    radial-gradient(ellipse 60% 40% at 20% 30%, rgba(196,129,58,0.04) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 30% at 80% 70%, rgba(154,174,200,0.04) 0%, transparent 70%);
+    radial-gradient(ellipse 60% 40% at 20% 30%, rgba(123,44,191,0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 30% at 80% 70%, rgba(58,134,255,0.06) 0%, transparent 70%);
+  transition:background var(--transition-slow);
 }
 
-/* ─── NAV ───────────────────────────────────── */
+/* Industry theme background transition */
+body.industry-theme .starfield::after{
+  background:
+    radial-gradient(ellipse 60% 40% at 20% 30%, rgba(224,122,95,0.06) 0%, transparent 70%),
+    radial-gradient(ellipse 50% 30% at 80% 70%, rgba(129,178,154,0.06) 0%, transparent 70%);
+}
+
+@keyframes twinkle{
+  0%{opacity:0.7}
+  100%{opacity:1}
+}
+
+/* ─── NAVIGATION WITH THEME SWITCHER ─────────── */
 nav{
-  position:fixed;top:0;left:0;right:0;z-index:200;
+  position:fixed;top:0;left:0;right:0;z-index:1000;
   display:flex;align-items:center;justify-content:space-between;
   padding:1.2rem 4rem;
-  background:rgba(8,11,16,0.75);
-  backdrop-filter:blur(20px);
-  border-bottom:0.5px solid var(--rule);
+  background:rgba(5,7,10,0.8);
+  backdrop-filter:blur(24px);
+  border-bottom:1px solid var(--rule);
+  transition:all var(--transition-normal);
+}
+nav.scrolled{
+  padding:0.8rem 4rem;
+  background:rgba(5,7,10,0.9);
+  box-shadow:var(--shadow-lg);
 }
 .nav-brand{
   font-family:var(--serif);
-  font-size:1rem;font-weight:400;letter-spacing:0.04em;
+  font-size:1.2rem;font-weight:500;letter-spacing:0.04em;
   color:var(--ice);text-decoration:none;
-  display:flex;align-items:center;gap:0.6rem;
+  display:flex;align-items:center;gap:0.8rem;
+  transition:all var(--transition-fast);
+}
+.nav-brand:hover{
+  color:var(--nebula-purple2);
 }
 .nav-brand-dot{
-  width:6px;height:6px;border-radius:50%;background:var(--copper2);
+  width:8px;height:8px;border-radius:50%;
+  background:linear-gradient(135deg, var(--nebula-purple), var(--cosmic-blue));
   display:inline-block;
+  animation: pulse 2s infinite;
 }
 .nav-links{display:flex;gap:2.5rem;list-style:none;align-items:center}
 .nav-links a{
-  font-size:0.72rem;font-weight:400;letter-spacing:0.16em;
-  text-transform:uppercase;color:var(--ice3);text-decoration:none;
-  transition:color 0.2s;position:relative;
+  font-size:0.75rem;font-weight:500;letter-spacing:0.16em;
+  text-transform:uppercase;color:var(--ice4);text-decoration:none;
+  transition:all var(--transition-fast);position:relative;
+  padding:0.5rem 0;
 }
 .nav-links a::after{
-  content:'';position:absolute;bottom:-2px;left:0;width:0;height:1px;
-  background:var(--copper2);transition:width 0.25s;
+  content:'';position:absolute;bottom:0;left:0;width:0;height:2px;
+  background:linear-gradient(90deg, var(--nebula-purple), var(--cosmic-blue));
+  transition:width var(--transition-normal);
+  border-radius:1px;
 }
-.nav-links a:hover{color:var(--copper2)}
+.nav-links a:hover{color:var(--ice)}
 .nav-links a:hover::after{width:100%}
-.nav-cv{
-  padding:0.45rem 1.2rem;
-  border:0.5px solid var(--copper);
-  color:var(--copper2);
-  font-size:0.72rem;letter-spacing:0.14em;text-transform:uppercase;
-  text-decoration:none;
-  transition:all 0.2s;font-weight:400;
-}
-.nav-cv:hover{background:var(--copper);color:var(--void);}
+.nav-links a.active{color:var(--ice)}
+.nav-links a.active::after{width:100%}
 
-/* ─── HERO ───────────────────────────────────── */
+/* Theme switcher */
+.theme-switcher{
+  display:flex;gap:0.5rem;
+  background:var(--mist2);
+  padding:0.3rem;
+  border-radius:20px;
+  border:1px solid var(--rule2);
+}
+.theme-btn{
+  padding:0.4rem 0.8rem;
+  border-radius:15px;
+  font-family:var(--mono);
+  font-size:0.65rem;
+  letter-spacing:0.1em;
+  text-transform:uppercase;
+  cursor:pointer;
+  transition:all var(--transition-fast);
+  border:none;
+  background:transparent;
+  color:var(--ice4);
+}
+.theme-btn.active{
+  background:linear-gradient(135deg, var(--nebula-purple), var(--cosmic-blue));
+  color:white;
+  box-shadow:var(--shadow-md);
+}
+.theme-btn.industry.active{
+  background:linear-gradient(135deg, var(--terracotta), var(--earth-green));
+}
+.nav-cv{
+  padding:0.5rem 1.4rem;
+  border-radius:4px;
+  background:linear-gradient(135deg, var(--nebula-purple), var(--cosmic-blue));
+  color:white;
+  font-size:0.7rem;letter-spacing:0.14em;text-transform:uppercase;
+  text-decoration:none;
+  transition:all var(--transition-fast);font-weight:500;
+  box-shadow:var(--shadow-md);
+}
+.nav-cv:hover{
+  transform:translateY(-2px);
+  box-shadow:var(--shadow-lg);
+}
+
+/* ─── HERO SECTION WITH 3D EFFECT ────────────── */
 .hero{
   min-height:100vh;
   display:grid;
-  grid-template-columns:1fr 420px;
+  grid-template-columns:1.2fr 0.8fr;
   gap:0;
   position:relative;
   z-index:1;
   overflow:hidden;
+  perspective:1000px;
 }
 .hero-left{
   padding:10rem 4rem 5rem;
   display:flex;flex-direction:column;justify-content:center;
-  border-right:0.5px solid var(--rule);
+  border-right:1px solid var(--rule);
   position:relative;
 }
 .hero-left::before{
   content:'';
   position:absolute;top:0;left:0;right:0;bottom:0;
-  background:radial-gradient(ellipse 80% 60% at 0% 50%, rgba(196,129,58,0.04) 0%, transparent 70%);
+  background:radial-gradient(ellipse 80% 60% at 0% 50%, rgba(123,44,191,0.08) 0%, transparent 70%);
   pointer-events:none;
 }
 .hero-eyebrow{
-  display:flex;align-items:center;gap:0.8rem;
+  display:flex;align-items:center;gap:1rem;
   margin-bottom:2rem;
   opacity:0;animation:fadeUp 0.9s 0.15s cubic-bezier(.22,1,.36,1) forwards;
 }
-.eyebrow-line{width:32px;height:1px;background:var(--copper2)}
+.eyebrow-line{width:40px;height:2px;background:linear-gradient(90deg, var(--nebula-purple), var(--cosmic-blue))}
 .eyebrow-text{
-  font-family:var(--mono);font-size:0.68rem;font-weight:300;
-  letter-spacing:0.2em;text-transform:uppercase;color:var(--copper2);
+  font-family:var(--mono);font-size:0.7rem;font-weight:400;
+  letter-spacing:0.2em;text-transform:uppercase;color:var(--nebula-purple2);
 }
 .hero-name{
   font-family:var(--serif);
-  font-size:clamp(3.5rem,6vw,5.5rem);
-  font-weight:400;line-height:1.0;
-  letter-spacing:-0.02em;
-  margin-bottom:0.5rem;
+  font-size:clamp(4rem, 8vw, 6.5rem);
+  font-weight:500;line-height:1.0;
+  letter-spacing:-0.03em;
+  margin-bottom:0.8rem;
   opacity:0;animation:fadeUp 0.9s 0.25s cubic-bezier(.22,1,.36,1) forwards;
+  background:linear-gradient(135deg, var(--ice), var(--ice3));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
 }
-.hero-name em{font-style:italic;color:var(--copper2)}
+.hero-name em{
+  font-style:italic;
+  background:linear-gradient(135deg, var(--nebula-purple2), var(--cosmic-blue2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+}
 .hero-titles{
-  display:flex;flex-wrap:wrap;gap:0.5rem;
-  margin-bottom:2rem;
+  display:flex;flex-wrap:wrap;gap:0.7rem;
+  margin-bottom:2.5rem;
   opacity:0;animation:fadeUp 0.9s 0.35s cubic-bezier(.22,1,.36,1) forwards;
 }
 .hero-title-pill{
-  font-family:var(--mono);font-size:0.65rem;font-weight:300;
+  font-family:var(--mono);font-size:0.68rem;font-weight:400;
   letter-spacing:0.1em;text-transform:uppercase;
-  padding:0.3rem 0.75rem;
-  border:0.5px solid var(--rule2);
+  padding:0.4rem 0.9rem;
+  border-radius:20px;
+  border:1px solid var(--rule2);
+  background:var(--mist);
   color:var(--ice3);
   white-space:nowrap;
+  transition:all var(--transition-fast);
+}
+.hero-title-pill:hover{
+  border-color:var(--nebula-purple);
+  background:var(--mist2);
+  transform:translateY(-2px);
 }
 .hero-bio{
-  font-size:1rem;font-weight:300;
-  color:var(--ice2);line-height:1.85;
-  max-width:580px;
-  margin-bottom:3rem;
+  font-size:1.1rem;font-weight:400;
+  color:var(--ice2);line-height:1.8;
+  max-width:650px;
+  margin-bottom:3.5rem;
   opacity:0;animation:fadeUp 0.9s 0.45s cubic-bezier(.22,1,.36,1) forwards;
 }
 .hero-ctas{
-  display:flex;gap:1rem;
+  display:flex;gap:1.2rem;
   opacity:0;animation:fadeUp 0.9s 0.55s cubic-bezier(.22,1,.36,1) forwards;
 }
 .btn-p{
-  padding:0.85rem 2rem;
-  background:var(--copper);color:var(--void);
-  font-family:var(--sans);font-size:0.78rem;font-weight:500;
+  padding:1rem 2.2rem;
+  border-radius:6px;
+  background:linear-gradient(135deg, var(--nebula-purple), var(--cosmic-blue));
+  color:white;
+  font-family:var(--sans);font-size:0.8rem;font-weight:600;
   letter-spacing:0.1em;text-transform:uppercase;
-  text-decoration:none;border:1px solid var(--copper);
-  transition:all 0.25s;
+  text-decoration:none;border:none;
+  transition:all var(--transition-fast);
+  box-shadow:var(--shadow-md);
+  position:relative;
+  overflow:hidden;
 }
-.btn-p:hover{background:var(--copper2);border-color:var(--copper2)}
+.btn-p::before{
+  content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;
+  background:linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+  transition:left 0.5s;
+}
+.btn-p:hover{
+  transform:translateY(-3px);
+  box-shadow:var(--shadow-xl);
+}
+.btn-p:hover::before{
+  left:100%;
+}
 .btn-s{
-  padding:0.85rem 2rem;
+  padding:1rem 2.2rem;
+  border-radius:6px;
   background:transparent;color:var(--ice);
-  font-family:var(--sans);font-size:0.78rem;font-weight:400;
+  font-family:var(--sans);font-size:0.8rem;font-weight:500;
   letter-spacing:0.1em;text-transform:uppercase;
-  text-decoration:none;border:0.5px solid var(--rule2);
-  transition:all 0.25s;
+  text-decoration:none;border:1px solid var(--rule2);
+  transition:all var(--transition-fast);
+  position:relative;
+  overflow:hidden;
 }
-.btn-s:hover{border-color:var(--ice3);color:var(--ice)}
+.btn-s::after{
+  content:'';position:absolute;inset:0;
+  background:var(--mist);
+  opacity:0;transition:opacity var(--transition-fast);
+}
+.btn-s:hover{
+  border-color:var(--ice3);
+  transform:translateY(-2px);
+  box-shadow:var(--shadow-md);
+}
+.btn-s:hover::after{
+  opacity:1;
+}
 
-/* Profile panel */
+/* Profile panel with 3D tilt effect */
 .hero-right{
   display:flex;flex-direction:column;
   padding:10rem 3.5rem 5rem;
@@ -206,459 +352,860 @@ nav{
   position:relative;
   opacity:0;animation:fadeLeft 0.9s 0.4s cubic-bezier(.22,1,.36,1) forwards;
 }
+.profile-card{
+  background:linear-gradient(135deg, var(--void2), var(--void3));
+  border-radius:16px;
+  padding:2.5rem;
+  border:1px solid var(--rule2);
+  box-shadow:var(--shadow-xl);
+  transform-style:preserve-3d;
+  transition:transform var(--transition-normal), box-shadow var(--transition-normal);
+}
+.profile-card:hover{
+  transform:translateY(-8px) rotateX(2deg) rotateY(-2deg);
+  box-shadow:0 25px 50px -12px rgba(0,0,0,0.7);
+}
 .profile-photo-ring{
-  width:120px;height:120px;border-radius:50%;
-  border:1px solid var(--copper);
+  width:140px;height:140px;border-radius:50%;
+  border:2px solid transparent;
+  background:linear-gradient(var(--void2), var(--void2)) padding-box,
+              linear-gradient(135deg, var(--nebula-purple), var(--cosmic-blue)) border-box;
   display:flex;align-items:center;justify-content:center;
-  margin-bottom:1.8rem;
+  margin:0 auto 2rem;
   position:relative;
   overflow:hidden;
-  background:var(--void3);
-}
-.profile-photo-ring::before{
-  content:'';position:absolute;inset:4px;border-radius:50%;
-  border:0.5px solid rgba(196,129,58,0.3);
+  box-shadow:var(--shadow-lg);
 }
 .profile-initials{
-  font-family:var(--serif);font-size:2.4rem;font-weight:400;
-  color:var(--copper2);letter-spacing:0.03em;
+  font-family:var(--serif);font-size:3rem;font-weight:500;
+  background:linear-gradient(135deg, var(--nebula-purple2), var(--cosmic-blue2));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  letter-spacing:0.03em;
   position:relative;z-index:1;
 }
 .profile-photo-note{
-  font-family:var(--mono);font-size:0.6rem;color:var(--ice3);
-  letter-spacing:0.1em;position:absolute;bottom:8px;left:0;right:0;text-align:center;
+  font-family:var(--mono);font-size:0.6rem;color:var(--ice4);
+  letter-spacing:0.1em;position:absolute;bottom:10px;left:0;right:0;text-align:center;
 }
 .profile-affiliation{
-  margin-bottom:1.5rem;
+  margin-bottom:1.8rem;
+  text-align:center;
 }
 .aff-label{
-  font-family:var(--mono);font-size:0.62rem;letter-spacing:0.14em;
-  text-transform:uppercase;color:var(--copper);margin-bottom:0.3rem;
+  font-family:var(--mono);font-size:0.65rem;letter-spacing:0.14em;
+  text-transform:uppercase;color:var(--nebula-purple);margin-bottom:0.4rem;
 }
-.aff-name{font-size:0.9rem;color:var(--ice);font-weight:400;line-height:1.4}
-.aff-sub{font-size:0.78rem;color:var(--ice3);font-weight:300}
+.aff-name{font-size:1rem;color:var(--ice);font-weight:500;line-height:1.4}
+.aff-sub{font-size:0.85rem;color:var(--ice3);font-weight:400}
 .profile-divider{
-  height:0.5px;background:var(--rule2);margin:1.5rem 0;
+  height:1px;background:var(--rule2);margin:1.8rem 0;
+  border-radius:1px;
 }
-.profile-ids{display:flex;flex-direction:column;gap:0.6rem}
-.profile-id-row{display:flex;align-items:center;gap:0.75rem}
+.profile-ids{display:flex;flex-direction:column;gap:0.8rem}
+.profile-id-row{display:flex;align-items:center;gap:1rem}
 .pid-label{
-  font-family:var(--mono);font-size:0.6rem;letter-spacing:0.1em;
-  text-transform:uppercase;color:var(--ice3);min-width:80px;
+  font-family:var(--mono);font-size:0.62rem;letter-spacing:0.1em;
+  text-transform:uppercase;color:var(--ice4);min-width:85px;
 }
 .pid-val{
-  font-family:var(--mono);font-size:0.65rem;color:var(--copper2);
-  text-decoration:none;transition:color 0.2s;
+  font-family:var(--mono);font-size:0.68rem;color:var(--cosmic-blue2);
+  text-decoration:none;transition:all var(--transition-fast);
 }
-.pid-val:hover{color:var(--copper3)}
+.pid-val:hover{color:var(--nebula-purple2);text-decoration:underline}
+
+/* ─── TICKER WITH GRADIENT TEXT ──────────────── */
+.ticker-wrap{
+  border-top:1px solid var(--rule);
+  border-bottom:1px solid var(--rule);
+  overflow:hidden;
+  padding:1rem 0;
+  position:relative;z-index:1;
+  background:var(--mist);
+}
+.ticker-inner{
+  display:flex;gap:5rem;
+  white-space:nowrap;
+  animation:ticker 50s linear infinite;
+}
+.ticker-inner span{
+  font-family:var(--mono);font-size:0.7rem;letter-spacing:0.16em;
+  text-transform:uppercase;color:var(--ice3);flex-shrink:0;
+  transition:color var(--transition-fast);
+}
+.ticker-inner span:hover{
+  color:var(--nebula-purple2);
+}
+.ticker-inner .dot{
+  background:linear-gradient(135deg, var(--nebula-purple), var(--cosmic-blue));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
+  margin:0 0.5rem;
+  font-weight:700;
+}
+@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
 /* ─── SECTION STRUCTURE ─────────────────────── */
 section{position:relative;z-index:1}
-.section-inner{padding:6rem 4rem}
+.section-inner{padding:7rem 4rem}
 .section-header{
-  display:flex;align-items:baseline;gap:1.5rem;
-  margin-bottom:3.5rem;
-  padding-bottom:1.5rem;
-  border-bottom:0.5px solid var(--rule2);
+  display:flex;align-items:baseline;gap:2rem;
+  margin-bottom:4rem;
+  padding-bottom:1.8rem;
+  border-bottom:1px solid var(--rule2);
 }
 .sh-num{
-  font-family:var(--mono);font-size:0.65rem;
-  letter-spacing:0.14em;color:var(--copper);
+  font-family:var(--mono);font-size:0.7rem;
+  letter-spacing:0.14em;color:var(--nebula-purple);
+  padding:0.3rem 0.8rem;
+  background:var(--mist);
+  border-radius:4px;
+  border:1px solid var(--rule);
 }
 .sh-title{
-  font-family:var(--serif);font-size:2.2rem;font-weight:400;color:var(--ice);
+  font-family:var(--serif);font-size:2.8rem;font-weight:500;color:var(--ice);
 }
 .sh-right{margin-left:auto}
 .see-all{
-  font-family:var(--mono);font-size:0.65rem;letter-spacing:0.1em;
-  text-transform:uppercase;color:var(--ice3);text-decoration:none;
-  transition:color 0.2s;
+  font-family:var(--mono);font-size:0.68rem;letter-spacing:0.1em;
+  text-transform:uppercase;color:var(--ice4);text-decoration:none;
+  transition:all var(--transition-fast);
+  padding:0.5rem 1rem;
+  border-radius:4px;
+  border:1px solid var(--rule);
 }
-.see-all:hover{color:var(--copper2)}
+.see-all:hover{
+  color:var(--nebula-purple2);
+  border-color:var(--nebula-purple);
+  background:var(--mist);
+}
 
-/* ─── TICKER / MARQUEE ──────────────────────── */
-.ticker-wrap{
-  border-top:0.5px solid var(--rule);
-  border-bottom:0.5px solid var(--rule);
-  overflow:hidden;
-  padding:0.75rem 0;
-  position:relative;z-index:1;
+/* Industry theme section headers */
+.industry-section .sh-num{
+  color:var(--terracotta);
 }
-.ticker-inner{
-  display:flex;gap:4rem;
-  white-space:nowrap;
-  animation:ticker 40s linear infinite;
+.industry-section .sh-title{
+  background:linear-gradient(135deg, var(--terracotta), var(--earth-green));
+  -webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;
+  background-clip:text;
 }
-.ticker-inner span{
-  font-family:var(--mono);font-size:0.65rem;letter-spacing:0.16em;
-  text-transform:uppercase;color:var(--ice3);flex-shrink:0;
-}
-.ticker-inner .dot{color:var(--copper2);margin:0 0.5rem}
-@keyframes ticker{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-/* ─── RESEARCH ───────────────────────────────── */
+/* ─── RESEARCH GRID WITH 3D CARDS ────────────── */
 .research-grid{
-  display:grid;grid-template-columns:repeat(3,1fr);gap:1px;
-  background:var(--rule);
-  border:0.5px solid var(--rule);
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;
 }
-.rc{
-  background:var(--void);
-  padding:2rem 1.8rem;
-  transition:background 0.2s;
-  position:relative;overflow:hidden;
+.research-card{
+  background:linear-gradient(135deg, var(--void2), var(--void3));
+  border-radius:12px;
+  padding:2.5rem 2rem;
+  border:1px solid var(--rule2);
+  transition:all var(--transition-normal);
+  position:relative;
+  overflow:hidden;
+  transform-style:preserve-3d;
 }
-.rc::before{
+.research-card::before{
   content:'';
-  position:absolute;bottom:0;left:0;right:0;height:2px;
-  background:transparent;
-  transition:background 0.25s;
+  position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(90deg, var(--nebula-purple), var(--cosmic-blue));
+  transform:scaleX(0);
+  transform-origin:left;
+  transition:transform var(--transition-normal);
 }
-.rc:hover{background:var(--void2)}
-.rc:hover::before{background:linear-gradient(90deg,var(--copper),transparent)}
-.rc-num{
-  font-family:var(--mono);font-size:0.6rem;color:var(--copper);
-  letter-spacing:0.12em;margin-bottom:1rem;
+.research-card:hover{
+  transform:translateY(-8px) scale(1.02);
+  box-shadow:var(--shadow-xl);
+  border-color:var(--nebula-purple);
+}
+.research-card:hover::before{
+  transform:scaleX(1);
+}
+.rc-icon{
+  width:50px;height:50px;
+  border-radius:10px;
+  background:linear-gradient(135deg, var(--nebula-purple), var(--cosmic-blue));
+  display:flex;align-items:center;justify-content:center;
+  margin-bottom:1.5rem;
+  box-shadow:var(--shadow-md);
+}
+.rc-icon svg{
+  width:24px;height:24px;
+  stroke:white;
+  fill:none;
+  stroke-width:1.5;
 }
 .rc-title{
-  font-family:var(--serif);font-size:1.05rem;font-weight:400;
-  color:var(--ice);line-height:1.35;margin-bottom:0.8rem;
+  font-family:var(--serif);font-size:1.3rem;font-weight:500;
+  color:var(--ice);line-height:1.4;margin-bottom:1rem;
 }
-.rc-body{font-size:0.82rem;color:var(--ice3);line-height:1.7;font-weight:300}
+.rc-body{font-size:0.9rem;color:var(--ice3);line-height:1.7;font-weight:400}
 
-/* ─── PUBLICATIONS ──────────────────────────── */
+/* ─── PUBLICATIONS WITH INTERACTIVE ITEMS ────── */
 .pub-alt{background:var(--void2)}
-.pub-list{display:flex;flex-direction:column}
+.pub-list{display:flex;flex-direction:column;gap:1rem}
 .pub-item{
-  display:grid;grid-template-columns:72px 1fr 90px;
+  display:grid;grid-template-columns:80px 1fr 100px;
   gap:2rem;align-items:start;
-  padding:1.8rem 0;
-  border-bottom:0.5px solid var(--rule);
+  padding:2rem;
+  border-radius:12px;
+  border:1px solid var(--rule);
+  background:var(--void);
+  transition:all var(--transition-normal);
 }
-.pub-item:first-child{border-top:0.5px solid var(--rule)}
+.pub-item:hover{
+  background:var(--void3);
+  border-color:var(--nebula-purple);
+  transform:translateX(8px);
+  box-shadow:var(--shadow-lg);
+}
 .pub-yr{
-  font-family:var(--mono);font-size:0.68rem;
-  color:var(--copper);letter-spacing:0.06em;
-  padding-top:0.2rem;
+  font-family:var(--mono);font-size:0.75rem;
+  color:var(--nebula-purple);letter-spacing:0.06em;
+  padding:0.4rem 0.8rem;
+  background:var(--mist);
+  border-radius:4px;
+  text-align:center;
+  border:1px solid var(--rule);
 }
 .pub-title{
-  font-family:var(--serif);font-size:1rem;font-weight:400;
-  line-height:1.4;margin-bottom:0.4rem;color:var(--ice);
+  font-family:var(--serif);font-size:1.2rem;font-weight:500;
+  line-height:1.4;margin-bottom:0.6rem;color:var(--ice);
 }
-.pub-title a{color:inherit;text-decoration:none;transition:color 0.2s}
-.pub-title a:hover{color:var(--copper2)}
-.pub-authors{font-size:0.78rem;color:var(--ice3);margin-bottom:0.25rem;font-weight:300}
-.pub-authors strong{color:var(--ice2);font-weight:400}
+.pub-title a{color:inherit;text-decoration:none;transition:color var(--transition-fast)}
+.pub-title a:hover{color:var(--nebula-purple2)}
+.pub-authors{font-size:0.85rem;color:var(--ice3);margin-bottom:0.4rem;font-weight:400}
+.pub-authors strong{color:var(--ice2);font-weight:500}
 .pub-journal{
-  font-size:0.76rem;font-style:italic;color:var(--copper);font-weight:300;
+  font-size:0.8rem;font-style:italic;color:var(--cosmic-blue2);font-weight:400;
 }
 .pub-doi{
-  font-family:var(--mono);font-size:0.6rem;color:var(--ice3);
-  text-decoration:none;margin-top:0.4rem;display:block;
-  transition:color 0.2s;
+  font-family:var(--mono);font-size:0.65rem;color:var(--ice4);
+  text-decoration:none;margin-top:0.6rem;display:inline-block;
+  transition:color var(--transition-fast);
+  padding:0.2rem 0.6rem;
+  background:var(--mist);
+  border-radius:4px;
 }
-.pub-doi:hover{color:var(--copper2)}
+.pub-doi:hover{color:var(--nebula-purple2);background:var(--mist2)}
 .pub-badge{
-  font-family:var(--mono);font-size:0.58rem;letter-spacing:0.1em;
-  text-transform:uppercase;padding:0.25rem 0.6rem;
-  border:0.5px solid;align-self:start;white-space:nowrap;
+  font-family:var(--mono);font-size:0.62rem;letter-spacing:0.1em;
+  text-transform:uppercase;padding:0.4rem 0.8rem;
+  border-radius:20px;
+  border:1px solid;
+  align-self:start;white-space:nowrap;
+  font-weight:500;
 }
-.pub-badge.published{border-color:var(--copper);color:var(--copper)}
-.pub-badge.review{border-color:var(--ice3);color:var(--ice3)}
-.pub-badge.conf{border-color:rgba(154,174,200,0.4);color:var(--ice3)}
+.pub-badge.published{
+  border-color:var(--nebula-purple);
+  color:var(--nebula-purple2);
+  background:rgba(123,44,191,0.1);
+}
+.pub-badge.review{
+  border-color:var(--ice3);
+  color:var(--ice3);
+  background:var(--mist);
+}
+.pub-badge.conf{
+  border-color:var(--cosmic-blue);
+  color:var(--cosmic-blue2);
+  background:rgba(58,134,255,0.1);
+}
 
-/* ─── EDUCATION ─────────────────────────────── */
-.edu-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--rule);border:0.5px solid var(--rule)}
-.edu-card{
-  background:var(--void);
-  padding:2.5rem 2rem;
+/* ─── EDUCATION TIMELINE ─────────────────────── */
+.edu-timeline{
   position:relative;
+  padding-left:3rem;
 }
-.edu-card::before{
-  content:'';position:absolute;top:0;left:0;right:0;height:2px;
-  background:linear-gradient(90deg,var(--copper),transparent);
+.edu-timeline::before{
+  content:'';
+  position:absolute;top:0;bottom:0;left:0;
+  width:2px;
+  background:linear-gradient(180deg, var(--nebula-purple), var(--cosmic-blue));
+  border-radius:1px;
+}
+.edu-item{
+  position:relative;
+  margin-bottom:4rem;
+  padding-left:2rem;
+}
+.edu-item:last-child{
+  margin-bottom:0;
+}
+.edu-dot{
+  position:absolute;top:0;left:-3.6rem;
+  width:16px;height:16px;
+  border-radius:50%;
+  background:linear-gradient(135deg, var(--nebula-purple), var(--cosmic-blue));
+  border:3px solid var(--void);
+  box-shadow:var(--shadow-md);
+}
+.edu-card{
+  background:linear-gradient(135deg, var(--void2), var(--void3));
+  border-radius:12px;
+  padding:2.5rem;
+  border:1px solid var(--rule2);
+  transition:all var(--transition-normal);
+}
+.edu-card:hover{
+  transform:translateY(-5px);
+  box-shadow:var(--shadow-xl);
+  border-color:var(--nebula-purple);
 }
 .edu-period{
-  font-family:var(--mono);font-size:0.63rem;letter-spacing:0.1em;
-  color:var(--copper);margin-bottom:0.8rem;
+  font-family:var(--mono);font-size:0.7rem;letter-spacing:0.1em;
+  color:var(--nebula-purple);margin-bottom:1rem;
+  padding:0.3rem 0.8rem;
+  background:var(--mist);
+  border-radius:4px;
+  display:inline-block;
 }
 .edu-degree{
-  font-family:var(--serif);font-size:1.15rem;font-weight:400;
-  color:var(--ice);line-height:1.3;margin-bottom:0.35rem;
+  font-family:var(--serif);font-size:1.4rem;font-weight:500;
+  color:var(--ice);line-height:1.3;margin-bottom:0.5rem;
 }
-.edu-uni{font-size:0.85rem;color:var(--ice2);margin-bottom:0.25rem;font-weight:400}
+.edu-degree em{
+  font-style:italic;
+  color:var(--nebula-purple2);
+}
+.edu-uni{font-size:1rem;color:var(--ice2);margin-bottom:0.5rem;font-weight:500}
 .edu-grade{
-  font-family:var(--mono);font-size:0.65rem;letter-spacing:0.06em;
-  color:var(--copper2);margin-top:0.6rem;
+  font-family:var(--mono);font-size:0.7rem;letter-spacing:0.06em;
+  color:var(--cosmic-blue2);margin-top:0.8rem;
 }
-.edu-note{font-size:0.78rem;color:var(--ice3);line-height:1.6;margin-top:0.7rem;font-weight:300}
+.edu-note{font-size:0.9rem;color:var(--ice3);line-height:1.7;margin-top:1rem;font-weight:400}
 
-/* ─── EXPERIENCE ────────────────────────────── */
-.exp-alt{background:var(--void2)}
-.exp-list{display:flex;flex-direction:column;gap:0}
-.exp-item{
-  display:grid;grid-template-columns:160px 1fr;
-  gap:3rem;padding:2.5rem 0;
-  border-bottom:0.5px solid var(--rule);
-  align-items:start;
+/* ─── INDUSTRY EXPERIENCE SECTION ────────────── */
+.industry-section{
+  background:linear-gradient(180deg, var(--void2), var(--void));
 }
-.exp-item:first-child{border-top:0.5px solid var(--rule)}
+.exp-timeline{
+  position:relative;
+  padding-left:3rem;
+}
+.exp-timeline::before{
+  content:'';
+  position:absolute;top:0;bottom:0;left:0;
+  width:2px;
+  background:linear-gradient(180deg, var(--terracotta), var(--earth-green));
+  border-radius:1px;
+}
+.exp-item{
+  position:relative;
+  margin-bottom:4rem;
+  padding-left:2rem;
+}
+.exp-item:last-child{
+  margin-bottom:0;
+}
+.exp-dot{
+  position:absolute;top:0;left:-3.6rem;
+  width:16px;height:16px;
+  border-radius:50%;
+  background:linear-gradient(135deg, var(--terracotta), var(--earth-green));
+  border:3px solid var(--void);
+  box-shadow:var(--shadow-md);
+}
+.exp-card{
+  background:linear-gradient(135deg, var(--void2), var(--void3));
+  border-radius:12px;
+  padding:2.5rem;
+  border:1px solid var(--rule2);
+  transition:all var(--transition-normal);
+}
+.exp-card:hover{
+  transform:translateY(-5px);
+  box-shadow:var(--shadow-xl);
+  border-color:var(--terracotta);
+}
+.exp-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  margin-bottom:1.5rem;
+}
 .exp-meta{}
 .exp-period{
-  font-family:var(--mono);font-size:0.65rem;color:var(--copper);
-  letter-spacing:0.08em;margin-bottom:0.3rem;
+  font-family:var(--mono);font-size:0.7rem;letter-spacing:0.1em;
+  color:var(--terracotta);margin-bottom:0.5rem;
+  padding:0.3rem 0.8rem;
+  background:var(--mist);
+  border-radius:4px;
+  display:inline-block;
 }
 .exp-type{
-  font-family:var(--mono);font-size:0.6rem;color:var(--ice3);
+  font-family:var(--mono);font-size:0.65rem;color:var(--ice4);
   letter-spacing:0.08em;text-transform:uppercase;
+  margin-left:0.5rem;
 }
 .exp-role{
-  font-family:var(--serif);font-size:1.15rem;font-weight:400;
-  color:var(--ice);margin-bottom:0.2rem;
+  font-family:var(--serif);font-size:1.4rem;font-weight:500;
+  color:var(--ice);margin-bottom:0.5rem;
 }
-.exp-org{font-size:0.85rem;color:var(--copper2);margin-bottom:0.15rem}
-.exp-loc{font-size:0.75rem;color:var(--ice3);margin-bottom:0.8rem}
-.exp-desc{font-size:0.85rem;color:var(--ice3);line-height:1.75;font-weight:300;max-width:600px}
-
-/* ─── AWARDS ────────────────────────────────── */
-.awards-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
-.award-card{
-  background:var(--void2);
-  border:0.5px solid var(--rule2);
-  padding:1.8rem;
-  transition:border-color 0.2s;
+.exp-org{font-size:1rem;color:var(--terracotta2);margin-bottom:0.3rem;font-weight:500}
+.exp-loc{font-size:0.85rem;color:var(--ice3);margin-bottom:1rem}
+.exp-desc{font-size:0.95rem;color:var(--ice2);line-height:1.75;font-weight:400;max-width:700px}
+.exp-achievements{
+  margin-top:1.5rem;
+  padding-top:1.5rem;
+  border-top:1px solid var(--rule);
+}
+.exp-achievements h4{
+  font-family:var(--mono);font-size:0.7rem;letter-spacing:0.1em;
+  text-transform:uppercase;color:var(--earth-green);margin-bottom:1rem;
+}
+.exp-achievements ul{
+  list-style:none;
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:0.8rem;
+}
+.exp-achievements li{
+  font-size:0.85rem;color:var(--ice3);
+  padding-left:1.2rem;
   position:relative;
 }
-.award-card:hover{border-color:rgba(196,129,58,0.4)}
-.award-year{
-  font-family:var(--mono);font-size:0.62rem;color:var(--copper);
-  letter-spacing:0.1em;margin-bottom:0.7rem;
+.exp-achievements li::before{
+  content:'✓';
+  position:absolute;left:0;
+  color:var(--earth-green);
+  font-weight:700;
 }
-.award-title{
-  font-family:var(--serif);font-size:1.05rem;font-weight:400;
-  color:var(--ice);line-height:1.35;margin-bottom:0.5rem;
+
+/* ─── DUAL SKILL MATRIX ──────────────────────── */
+.skills-container{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:4rem;
 }
-.award-issuer{font-size:0.78rem;color:var(--ice3);font-weight:300}
-.award-star{
-  position:absolute;top:1.5rem;right:1.5rem;
-  width:24px;height:24px;
-  border:0.5px solid rgba(196,129,58,0.3);
-  border-radius:50%;
+.skills-column{
+  background:linear-gradient(135deg, var(--void2), var(--void3));
+  border-radius:16px;
+  padding:2.5rem;
+  border:1px solid var(--rule2);
+}
+.skills-column.research{
+  border-top:3px solid var(--nebula-purple);
+}
+.skills-column.industry{
+  border-top:3px solid var(--terracotta);
+}
+.skills-header{
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  margin-bottom:2rem;
+  padding-bottom:1rem;
+  border-bottom:1px solid var(--rule2);
+}
+.skills-icon{
+  width:40px;height:40px;
+  border-radius:8px;
   display:flex;align-items:center;justify-content:center;
 }
-.award-star svg{width:12px;height:12px;stroke:var(--copper2);fill:none;stroke-width:1.5}
+.skills-icon.research{
+  background:linear-gradient(135deg, var(--nebula-purple), var(--cosmic-blue));
+}
+.skills-icon.industry{
+  background:linear-gradient(135deg, var(--terracotta), var(--earth-green));
+}
+.skills-icon svg{
+  width:20px;height:20px;
+  stroke:white;
+  fill:none;
+  stroke-width:1.5;
+}
+.skills-title{
+  font-family:var(--serif);font-size:1.5rem;font-weight:500;
+  color:var(--ice);
+}
+.skill-category{
+  margin-bottom:2rem;
+}
+.skill-category:last-child{
+  margin-bottom:0;
+}
+.category-title{
+  font-family:var(--mono);font-size:0.7rem;letter-spacing:0.16em;
+  text-transform:uppercase;color:var(--ice4);
+  margin-bottom:1rem;
+  padding-bottom:0.5rem;
+  border-bottom:1px solid var(--rule);
+}
+.skill-list{
+  display:flex;flex-wrap:wrap;gap:0.8rem;
+}
+.skill-tag{
+  font-size:0.85rem;color:var(--ice3);
+  padding:0.5rem 1rem;
+  border-radius:20px;
+  border:1px solid var(--rule);
+  background:var(--mist);
+  transition:all var(--transition-fast);
+  cursor:default;
+}
+.skill-tag:hover{
+  transform:translateY(-2px);
+  box-shadow:var(--shadow-md);
+}
+.research .skill-tag:hover{
+  border-color:var(--nebula-purple);
+  background:rgba(123,44,191,0.1);
+  color:var(--nebula-purple2);
+}
+.industry .skill-tag:hover{
+  border-color:var(--terracotta);
+  background:rgba(224,122,95,0.1);
+  color:var(--terracotta2);
+}
 
-/* ─── SKILLS ────────────────────────────────── */
-.skills-wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:2rem}
-.skill-col{}
-.skill-col-label{
-  font-family:var(--mono);font-size:0.62rem;letter-spacing:0.16em;
-  text-transform:uppercase;color:var(--copper);
-  margin-bottom:1rem;padding-bottom:0.6rem;
-  border-bottom:0.5px solid var(--rule2);
+/* ─── AWARDS GRID ────────────────────────────── */
+.awards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem}
+.award-card{
+  background:linear-gradient(135deg, var(--void2), var(--void3));
+  border-radius:12px;
+  padding:2rem;
+  border:1px solid var(--rule2);
+  transition:all var(--transition-normal);
+  position:relative;
+  overflow:hidden;
 }
-.skill-list{display:flex;flex-direction:column;gap:0.5rem}
-.sk{
-  font-size:0.82rem;color:var(--ice3);
-  padding:0.35rem 0;
-  border-bottom:0.5px solid var(--rule);
-  font-weight:300;transition:color 0.2s;
+.award-card::before{
+  content:'';
+  position:absolute;top:0;right:0;
+  width:80px;height:80px;
+  background:linear-gradient(135deg, transparent, rgba(123,44,191,0.1));
+  border-bottom-left-radius:100%;
 }
-.sk:hover{color:var(--copper2)}
+.award-card:hover{
+  transform:translateY(-8px);
+  box-shadow:var(--shadow-xl);
+  border-color:var(--nebula-purple);
+}
+.award-year{
+  font-family:var(--mono);font-size:0.7rem;color:var(--nebula-purple);
+  letter-spacing:0.1em;margin-bottom:1rem;
+  padding:0.3rem 0.8rem;
+  background:var(--mist);
+  border-radius:4px;
+  display:inline-block;
+}
+.award-title{
+  font-family:var(--serif);font-size:1.15rem;font-weight:500;
+  color:var(--ice);line-height:1.4;margin-bottom:0.8rem;
+}
+.award-issuer{font-size:0.85rem;color:var(--ice3);font-weight:400}
+.award-icon{
+  position:absolute;top:1.5rem;right:1.5rem;
+  width:32px;height:32px;
+  border-radius:50%;
+  background:linear-gradient(135deg, var(--nebula-purple), var(--cosmic-blue));
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:var(--shadow-md);
+}
+.award-icon svg{
+  width:16px;height:16px;
+  fill:white;
+}
 
 /* ─── CERTIFICATIONS ─────────────────────────── */
 .certs-alt{background:var(--void2)}
-.certs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
+.certs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem}
 .cert-item{
-  background:var(--void);border:0.5px solid var(--rule);
-  padding:1.2rem;transition:border-color 0.2s;
+  background:var(--void);
+  border-radius:8px;
+  padding:1.5rem;
+  border:1px solid var(--rule);
+  transition:all var(--transition-normal);
 }
-.cert-item:hover{border-color:rgba(196,129,58,0.3)}
+.cert-item:hover{
+  transform:translateY(-3px);
+  box-shadow:var(--shadow-lg);
+  border-color:var(--cosmic-blue);
+}
 .cert-org{
-  font-family:var(--mono);font-size:0.58rem;letter-spacing:0.1em;
-  text-transform:uppercase;color:var(--copper);margin-bottom:0.4rem;
+  font-family:var(--mono);font-size:0.6rem;letter-spacing:0.1em;
+  text-transform:uppercase;color:var(--cosmic-blue);margin-bottom:0.6rem;
 }
-.cert-name{font-size:0.8rem;color:var(--ice);line-height:1.35;font-weight:400}
+.cert-name{font-size:0.85rem;color:var(--ice);line-height:1.4;font-weight:500}
 .cert-date{
-  font-family:var(--mono);font-size:0.58rem;color:var(--ice3);
-  margin-top:0.4rem;
+  font-family:var(--mono);font-size:0.6rem;color:var(--ice4);
+  margin-top:0.6rem;
 }
 
-/* ─── ADVISORS ───────────────────────────────── */
+/* ─── ADVISORS + LANGUAGES ───────────────────── */
+.advisors-languages{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:5rem;
+}
 .advisors-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.5rem}
 .advisor-card{
-  background:var(--void2);border:0.5px solid var(--rule2);
-  padding:1.8rem;
-  transition:border-color 0.2s;
+  background:linear-gradient(135deg, var(--void2), var(--void3));
+  border-radius:12px;
+  padding:2rem;
+  border:1px solid var(--rule2);
+  transition:all var(--transition-normal);
 }
-.advisor-card:hover{border-color:rgba(196,129,58,0.35)}
+.advisor-card:hover{
+  transform:translateY(-5px);
+  box-shadow:var(--shadow-lg);
+  border-color:var(--nebula-purple);
+}
 .adv-role{
-  font-family:var(--mono);font-size:0.6rem;letter-spacing:0.12em;
-  text-transform:uppercase;color:var(--copper);margin-bottom:0.6rem;
+  font-family:var(--mono);font-size:0.65rem;letter-spacing:0.12em;
+  text-transform:uppercase;color:var(--nebula-purple);margin-bottom:0.8rem;
 }
 .adv-name{
-  font-family:var(--serif);font-size:1.1rem;font-weight:400;
-  color:var(--ice);margin-bottom:0.3rem;
+  font-family:var(--serif);font-size:1.2rem;font-weight:500;
+  color:var(--ice);margin-bottom:0.5rem;
 }
-.adv-inst{font-size:0.78rem;color:var(--ice3);font-weight:300;line-height:1.5}
+.adv-inst{font-size:0.85rem;color:var(--ice3);font-weight:400;line-height:1.5}
 
-/* ─── LANGUAGES ──────────────────────────────── */
-.langs-grid{display:flex;gap:2rem;flex-wrap:wrap}
+.languages-container{}
 .lang-item{
-  display:flex;flex-direction:column;gap:0.4rem;
-  min-width:160px;
+  margin-bottom:1.5rem;
+  padding:1.5rem;
+  background:var(--void2);
+  border-radius:8px;
+  border:1px solid var(--rule);
+  transition:all var(--transition-fast);
 }
-.lang-name{font-family:var(--serif);font-size:1rem;font-weight:400;color:var(--ice)}
-.lang-level{font-family:var(--mono);font-size:0.62rem;letter-spacing:0.1em;color:var(--copper);text-transform:uppercase}
-.lang-bar{height:2px;background:var(--rule2);border-radius:1px;overflow:hidden;margin-top:0.3rem}
-.lang-fill{height:100%;background:var(--copper);border-radius:1px}
+.lang-item:hover{
+  border-color:var(--cosmic-blue);
+  transform:translateX(5px);
+}
+.lang-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:0.8rem;
+}
+.lang-name{font-family:var(--serif);font-size:1.1rem;font-weight:500;color:var(--ice)}
+.lang-level{font-family:var(--mono);font-size:0.65rem;letter-spacing:0.1em;color:var(--cosmic-blue);text-transform:uppercase}
+.lang-bar{height:4px;background:var(--rule2);border-radius:2px;overflow:hidden}
+.lang-fill{height:100%;background:linear-gradient(90deg, var(--nebula-purple), var(--cosmic-blue));border-radius:2px}
 
-/* ─── CONTACT ────────────────────────────────── */
+/* ─── CONTACT SECTION WITH GLASS EFFECT ──────── */
 .contact-wrap{
   display:grid;grid-template-columns:1fr 1fr;gap:6rem;align-items:start;
 }
+.contact-card{
+  background:linear-gradient(135deg, rgba(10,15,23,0.8), rgba(16,24,38,0.8));
+  backdrop-filter:blur(20px);
+  border-radius:16px;
+  padding:3rem;
+  border:1px solid var(--rule2);
+  box-shadow:var(--shadow-xl);
+}
 .contact-heading{
-  font-family:var(--serif);font-size:2.5rem;font-weight:400;
+  font-family:var(--serif);font-size:3rem;font-weight:500;
   font-style:italic;color:var(--ice);
-  line-height:1.2;margin-bottom:1.5rem;
+  line-height:1.2;margin-bottom:2rem;
 }
-.contact-sub{font-size:0.9rem;color:var(--ice3);line-height:1.8;font-weight:300;margin-bottom:2rem}
+.contact-sub{font-size:1rem;color:var(--ice3);line-height:1.8;font-weight:400;margin-bottom:2.5rem}
 .contact-email-btn{
-  display:inline-flex;align-items:center;gap:0.75rem;
-  padding:0.9rem 1.8rem;
-  border:0.5px solid var(--copper);
-  color:var(--copper2);
-  font-family:var(--mono);font-size:0.72rem;letter-spacing:0.1em;
-  text-decoration:none;transition:all 0.25s;
+  display:inline-flex;align-items:center;gap:1rem;
+  padding:1.2rem 2rem;
+  border-radius:8px;
+  background:linear-gradient(135deg, var(--nebula-purple), var(--cosmic-blue));
+  color:white;
+  font-family:var(--mono);font-size:0.75rem;letter-spacing:0.1em;
+  text-decoration:none;transition:all var(--transition-fast);
+  box-shadow:var(--shadow-md);
+  margin-bottom:1rem;
 }
-.contact-email-btn:hover{background:var(--copper);color:var(--void)}
-.contact-links-grid{display:flex;flex-direction:column;gap:0.75rem}
+.contact-email-btn:hover{
+  transform:translateY(-3px);
+  box-shadow:var(--shadow-xl);
+}
+.contact-email-btn.secondary{
+  background:transparent;
+  border:1px solid var(--rule2);
+  color:var(--ice3);
+}
+.contact-email-btn.secondary:hover{
+  border-color:var(--ice3);
+  background:var(--mist);
+}
+.contact-links-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1rem}
 .cl-item{
   display:flex;align-items:center;gap:1rem;
-  padding:1rem 1.2rem;
-  border:0.5px solid var(--rule);
+  padding:1.2rem;
+  border-radius:8px;
+  border:1px solid var(--rule);
   background:var(--void2);
   text-decoration:none;
-  transition:border-color 0.2s;
+  transition:all var(--transition-fast);
 }
-.cl-item:hover{border-color:rgba(196,129,58,0.4)}
+.cl-item:hover{
+  border-color:var(--nebula-purple);
+  background:var(--void3);
+  transform:translateY(-3px);
+  box-shadow:var(--shadow-md);
+}
 .cl-icon{
-  width:30px;height:30px;border:0.5px solid var(--rule2);
+  width:36px;height:36px;border-radius:8px;
+  background:linear-gradient(135deg, var(--nebula-purple), var(--cosmic-blue));
   display:flex;align-items:center;justify-content:center;flex-shrink:0;
 }
-.cl-icon svg{width:14px;height:14px;stroke:var(--copper2);fill:none;stroke-width:1.5}
-.cl-meta{display:flex;flex-direction:column;gap:0.1rem}
-.cl-label{font-family:var(--mono);font-size:0.58rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ice3)}
-.cl-val{font-size:0.82rem;color:var(--ice);font-weight:300}
+.cl-icon svg{width:18px;height:18px;stroke:white;fill:none;stroke-width:1.5}
+.cl-meta{display:flex;flex-direction:column;gap:0.2rem}
+.cl-label{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.1em;text-transform:uppercase;color:var(--ice4)}
+.cl-val{font-size:0.85rem;color:var(--ice);font-weight:400}
 
 /* ─── FOOTER ─────────────────────────────────── */
 footer{
   position:relative;z-index:1;
-  padding:2rem 4rem;
-  border-top:0.5px solid var(--rule);
+  padding:3rem 4rem;
+  border-top:1px solid var(--rule);
   display:flex;align-items:center;justify-content:space-between;
+  background:var(--void2);
 }
 .footer-l{
-  font-family:var(--mono);font-size:0.65rem;color:var(--ice3);letter-spacing:0.08em;
+  font-family:var(--mono);font-size:0.7rem;color:var(--ice4);letter-spacing:0.08em;
 }
-.footer-r{font-family:var(--mono);font-size:0.65rem;color:var(--ice3)}
+.footer-r{font-family:var(--mono);font-size:0.7rem;color:var(--ice4)}
+.footer-heart{
+  color:var(--nebula-purple2);
+  font-weight:700;
+}
 
 /* ─── ANIMATIONS ─────────────────────────────── */
-@keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
-@keyframes fadeLeft{from{opacity:0;transform:translateX(20px)}to{opacity:1;transform:translateX(0)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(30px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fadeLeft{from{opacity:0;transform:translateX(30px)}to{opacity:1;transform:translateX(0)}}
+@keyframes pulse{0%{transform:scale(1)}50%{transform:scale(1.2)}100%{transform:scale(1)}}
 
-.reveal{opacity:0;transform:translateY(16px);transition:opacity 0.7s ease,transform 0.7s ease}
+.reveal{opacity:0;transform:translateY(20px);transition:opacity 0.8s ease,transform 0.8s ease}
 .reveal.vis{opacity:1;transform:translateY(0)}
 
-/* ─── UTILITIES ──────────────────────────────── */
-.alt-bg{background:var(--void2)}
+/* ─── RESPONSIVE DESIGN ──────────────────────── */
+@media (max-width: 1200px){
+  .hero{grid-template-columns:1fr}
+  .hero-left{border-right:none;padding-bottom:0}
+  .hero-right{padding-top:5rem}
+  .research-grid{grid-template-columns:repeat(2,1fr)}
+  .awards-grid{grid-template-columns:repeat(2,1fr)}
+  .certs-grid{grid-template-columns:repeat(3,1fr)}
+  .skills-container{grid-template-columns:1fr}
+  .advisors-languages{grid-template-columns:1fr;gap:3rem}
+  .contact-wrap{grid-template-columns:1fr;gap:3rem}
+}
+
+@media (max-width: 768px){
+  nav{padding:1rem 2rem}
+  .nav-links{display:none}
+  .section-inner{padding:5rem 2rem}
+  .hero-left{padding:8rem 2rem 3rem}
+  .hero-name{font-size:clamp(3rem, 12vw, 4rem)}
+  .research-grid{grid-template-columns:1fr}
+  .pub-item{grid-template-columns:1fr;gap:1rem}
+  .pub-yr{align-self:start;justify-self:start}
+  .pub-badge{justify-self:start}
+  .edu-timeline,.exp-timeline{padding-left:1.5rem}
+  .edu-dot,.exp-dot{left:-2.1rem}
+  .awards-grid{grid-template-columns:1fr}
+  .certs-grid{grid-template-columns:repeat(2,1fr)}
+  .advisors-grid{grid-template-columns:1fr}
+  .contact-links-grid{grid-template-columns:1fr}
+  footer{flex-direction:column;gap:1rem;text-align:center}
+}
 </style>
 </head>
 <body>
 
-<!-- STARFIELD -->
+<!-- DYNAMIC STARFIELD -->
 <div class="starfield" aria-hidden="true"></div>
 
-<!-- NAV -->
-<nav>
+<!-- NAVIGATION WITH THEME SWITCHER -->
+<nav id="navbar">
   <a href="#" class="nav-brand">
     <span class="nav-brand-dot"></span>
     Anas Osman
   </a>
   <ul class="nav-links">
-    <li><a href="#research">Research</a></li>
+    <li><a href="#research" class="active">Research</a></li>
     <li><a href="#publications">Publications</a></li>
     <li><a href="#education">Education</a></li>
-    <li><a href="#awards">Awards</a></li>
+    <li><a href="#industry">Industry</a></li>
+    <li><a href="#skills">Skills</a></li>
     <li><a href="#contact">Contact</a></li>
-    <li><a href="#" class="nav-cv">CV ↓</a></li>
   </ul>
+  <div class="theme-switcher">
+    <button class="theme-btn research active">Research</button>
+    <button class="theme-btn industry">Industry</button>
+  </div>
+  <a href="#" class="nav-cv">Download CV</a>
 </nav>
 
-<!-- HERO -->
+<!-- HERO SECTION -->
 <div class="hero">
   <div class="hero-left">
     <div class="hero-eyebrow">
       <span class="eyebrow-line"></span>
-      <span class="eyebrow-text">Seismogeodesist · PhD Candidate</span>
+      <span class="eyebrow-text">Seismogeodesist · Geomatics Engineer</span>
     </div>
-    <h1 class="hero-name"><em>Dr. Anas</em><br>Osman</h1>
+    <h1 class="hero-name"><em>Anas</em><br>Osman</h1>
     <div class="hero-titles">
+      <span class="hero-title-pill">Earthquake Cycle Geodesy</span>
       <span class="hero-title-pill">InSAR Specialist</span>
-      <span class="hero-title-pill">Surveying Engineer</span>
-      <span class="hero-title-pill">Earthquake Geodesy</span>
-      <span class="hero-title-pill">Geospatial Data Analyst</span>
+      <span class="hero-title-pill">Geoid Modelling</span>
+      <span class="hero-title-pill">GNSS Expert</span>
       <span class="hero-title-pill">Lecturer</span>
+      <span class="hero-title-pill">Civil Engineering Surveyor</span>
     </div>
     <p class="hero-bio">
-      I study how the Earth's crust moves during the earthquake cycle — interseismic, 
-      coseismic, and postseismic periods. My work uses geodetic data to understand fault 
-      behavior and how the lithosphere responds during and after major seismic events. 
-      Currently a PhD candidate at the University of Chinese Academy of Sciences, 
-      Institute of Geodesy and Geophysics, CAS.
+      Bridging cutting-edge geoscience research with practical engineering solutions. 
+      I study how the Earth's crust moves during the earthquake cycle using advanced geodetic techniques, 
+      while bringing years of hands-on experience in civil engineering surveying, 
+      geospatial data analysis, and infrastructure development.
     </p>
     <div class="hero-ctas">
-      <a href="#publications" class="btn-p">View Publications</a>
-      <a href="#contact" class="btn-s">Get in Touch</a>
+      <a href="#research" class="btn-p">Explore Research</a>
+      <a href="#industry" class="btn-s">Industry Experience</a>
     </div>
   </div>
 
   <div class="hero-right">
-    <div class="profile-photo-ring">
-      <span class="profile-initials">AO</span>
-      <span class="profile-photo-note">Photo coming</span>
-    </div>
-    <div class="profile-affiliation">
-      <div class="aff-label">Current Affiliation</div>
-      <div class="aff-name">University of Chinese Academy of Sciences</div>
-      <div class="aff-sub">Institute of Geodesy &amp; Geophysics, CAS</div>
-    </div>
-    <div class="profile-affiliation">
-      <div class="aff-label">Advisors</div>
-      <div class="aff-name">Prof. Heping Sun &amp; Prof. Rumeng Guo</div>
-      <div class="aff-sub">Chinese Academy of Sciences</div>
-    </div>
-    <div class="profile-divider"></div>
-    <div class="profile-ids">
-      <div class="profile-id-row">
-        <span class="pid-label">ORCID</span>
-        <a href="https://orcid.org/0000-0002-4075-6879" target="_blank" class="pid-val">0000-0002-4075-6879</a>
+    <div class="profile-card">
+      <div class="profile-photo-ring">
+        <span class="profile-initials">AO</span>
+        <span class="profile-photo-note">Photo coming soon</span>
       </div>
-      <div class="profile-id-row">
-        <span class="pid-label">Scopus</span>
-        <a href="https://www.scopus.com/authid/detail.uri?authorId=57395201900" target="_blank" class="pid-val">57395201900</a>
+      <div class="profile-affiliation">
+        <div class="aff-label">Current Affiliation</div>
+        <div class="aff-name">University of Chinese Academy of Sciences</div>
+        <div class="aff-sub">Institute of Geodesy & Geophysics, CAS</div>
       </div>
-      <div class="profile-id-row">
-        <span class="pid-label">WoS ID</span>
-        <a href="https://www.webofscience.com/wos/author/record/KLD-3093-2024" target="_blank" class="pid-val">KLD-3093-2024</a>
+      <div class="profile-affiliation">
+        <div class="aff-label">Advisors</div>
+        <div class="aff-name">Prof. Heping Sun & Prof. Rumeng Guo</div>
+        <div class="aff-sub">Chinese Academy of Sciences</div>
       </div>
-      <div class="profile-id-row">
-        <span class="pid-label">Scholar</span>
-        <a href="https://scholar.google.com/citations?user=oemk-kcAAAAJ&hl=en" target="_blank" class="pid-val">Google Scholar ↗</a>
-      </div>
-      <div class="profile-id-row">
-        <span class="pid-label">GitHub</span>
-        <a href="https://github.com/osmananas" target="_blank" class="pid-val">github.com/osmananas</a>
+      <div class="profile-divider"></div>
+      <div class="profile-ids">
+        <div class="profile-id-row">
+          <span class="pid-label">ORCID</span>
+          <a href="https://orcid.org/0000-0002-4075-6879" target="_blank" class="pid-val">0000-0002-4075-6879</a>
+        </div>
+        <div class="profile-id-row">
+          <span class="pid-label">Scopus</span>
+          <a href="https://www.scopus.com/authid/detail.uri?authorId=57395201900" target="_blank" class="pid-val">57395201900</a>
+        </div>
+        <div class="profile-id-row">
+          <span class="pid-label">WoS ID</span>
+          <a href="https://www.webofscience.com/wos/author/record/KLD-3093-2024" target="_blank" class="pid-val">KLD-3093-2024</a>
+        </div>
+        <div class="profile-id-row">
+          <span class="pid-label">Google Scholar</span>
+          <a href="https://scholar.google.com/citations?user=oemk-kcAAAAJ&hl=en" target="_blank" class="pid-val">View Profile ↗</a>
+        </div>
+        <div class="profile-id-row">
+          <span class="pid-label">GitHub</span>
+          <a href="https://github.com/osmananas" target="_blank" class="pid-val">github.com/osmananas</a>
+        </div>
       </div>
     </div>
   </div>
@@ -678,6 +1225,12 @@ footer{
     <span>Least-Squares Adjustment</span><span class="dot">◆</span>
     <span>Remote Sensing</span><span class="dot">◆</span>
     <span>Geodetic Reference Frames</span><span class="dot">◆</span>
+    <span>Civil Engineering Survey</span><span class="dot">◆</span>
+    <span>Road & Bridge Construction</span><span class="dot">◆</span>
+    <span>GIS & Spatial Analysis</span><span class="dot">◆</span>
+    <span>CAD & BIM</span><span class="dot">◆</span>
+    <span>Quantity Surveying</span><span class="dot">◆</span>
+    <span>Project Management</span><span class="dot">◆</span>
     <!-- duplicate for seamless loop -->
     <span>Seismogeodesy</span><span class="dot">◆</span>
     <span>InSAR Processing</span><span class="dot">◆</span>
@@ -690,10 +1243,16 @@ footer{
     <span>Least-Squares Adjustment</span><span class="dot">◆</span>
     <span>Remote Sensing</span><span class="dot">◆</span>
     <span>Geodetic Reference Frames</span><span class="dot">◆</span>
+    <span>Civil Engineering Survey</span><span class="dot">◆</span>
+    <span>Road & Bridge Construction</span><span class="dot">◆</span>
+    <span>GIS & Spatial Analysis</span><span class="dot">◆</span>
+    <span>CAD & BIM</span><span class="dot">◆</span>
+    <span>Quantity Surveying</span><span class="dot">◆</span>
+    <span>Project Management</span><span class="dot">◆</span>
   </div>
 </div>
 
-<!-- RESEARCH -->
+<!-- RESEARCH SECTION -->
 <section id="research">
   <div class="section-inner">
     <div class="section-header reveal">
@@ -701,33 +1260,45 @@ footer{
       <span class="sh-title">Research Focus</span>
     </div>
     <div class="research-grid reveal">
-      <div class="rc">
-        <div class="rc-num">01 / 06</div>
+      <div class="research-card">
+        <div class="rc-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+        </div>
         <div class="rc-title">Earthquake Cycle Geodesy</div>
         <div class="rc-body">Studying interseismic strain accumulation, coseismic rupture, and postseismic relaxation using geodetic observations to constrain fault locking and slip models across the earthquake cycle.</div>
       </div>
-      <div class="rc">
-        <div class="rc-num">02 / 06</div>
+      <div class="research-card">
+        <div class="rc-icon">
+          <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        </div>
         <div class="rc-title">InSAR & Surface Deformation</div>
         <div class="rc-body">Interferometric Synthetic Aperture Radar analysis using Sentinel-1 for mapping crustal deformation, urban subsidence, and fault surface rupture at millimeter-scale precision.</div>
       </div>
-      <div class="rc">
-        <div class="rc-num">03 / 06</div>
+      <div class="research-card">
+        <div class="rc-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/><path d="M12 6v6l4 2"/></svg>
+        </div>
         <div class="rc-title">GNSS & Satellite Geodesy</div>
         <div class="rc-body">Precise positioning through multi-constellation GNSS, time series analysis for detecting secular and transient deformation signals, and space weather effects on positioning accuracy.</div>
       </div>
-      <div class="rc">
-        <div class="rc-num">04 / 06</div>
+      <div class="research-card">
+        <div class="rc-icon">
+          <svg viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </div>
         <div class="rc-title">Geoid Modelling</div>
         <div class="rc-body">Determination of regional gravimetric geoid models using least-squares collocation, evaluation of global geopotential models against ground truth GNSS/levelling and gravity data.</div>
       </div>
-      <div class="rc">
-        <div class="rc-num">05 / 06</div>
+      <div class="research-card">
+        <div class="rc-icon">
+          <svg viewBox="0 0 24 24"><path d="M17.657 16.657L13.414 20.9a1.998 1.998 0 0 1-2.827 0l-4.244-4.243a8 8 0 1 1 11.314 0z"/><path d="M15 11a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/></svg>
+        </div>
         <div class="rc-title">Land Subsidence Monitoring</div>
         <div class="rc-body">Multi-temporal InSAR analysis of urban land surface deformation coupled with land use / land cover change analysis, applied to cities across Indonesia and East Africa.</div>
       </div>
-      <div class="rc">
-        <div class="rc-num">06 / 06</div>
+      <div class="research-card">
+        <div class="rc-icon">
+          <svg viewBox="0 0 24 24"><path d="M9 20l-5.447-2.724A1 1 0 0 1 3 16.382V5.618a1 1 0 0 1 1.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0 0 21 18.382V7.618a1 1 0 0 0-.553-.894L15 4m0 13V4m0 0L9 7"/></svg>
+        </div>
         <div class="rc-title">Geodetic Reference Systems</div>
         <div class="rc-body">Evaluation and modernization of national geodetic reference frames; assessment of high-degree global geopotential models over Sudan using GPS/levelling benchmark data.</div>
       </div>
@@ -736,17 +1307,16 @@ footer{
 </section>
 
 <!-- PUBLICATIONS -->
-<section id="publications" class="alt-bg">
+<section id="publications" class="pub-alt">
   <div class="section-inner">
     <div class="section-header reveal">
       <span class="sh-num">02</span>
       <span class="sh-title">Publications</span>
       <div class="sh-right">
-        <a href="https://www.researchgate.net/profile/Dr. Anas-Osman-4" target="_blank" class="see-all">ResearchGate ↗</a>
+        <a href="https://www.researchgate.net/profile/Anas-Osman-4" target="_blank" class="see-all">View All on ResearchGate ↗</a>
       </div>
     </div>
     <div class="pub-list reveal">
-
       <div class="pub-item">
         <div class="pub-yr">2026</div>
         <div>
@@ -836,7 +1406,6 @@ footer{
         </div>
         <div class="pub-badge conf">Conference</div>
       </div>
-
     </div>
   </div>
 </section>
@@ -848,62 +1417,237 @@ footer{
       <span class="sh-num">03</span>
       <span class="sh-title">Education</span>
     </div>
-    <div class="edu-grid reveal">
-      <div class="edu-card">
-        <div class="edu-period">Sep 2023 – Jun 2027</div>
-        <div class="edu-degree">Doctor of Philosophy</div>
-        <div class="edu-uni">University of Chinese Academy of Sciences</div>
-        <div class="edu-grade">Geodesy and Surveying Engineering</div>
-        <div class="edu-note">Research on earthquake cycle geodesy, InSAR fault slip modelling, and seismotectonics. Institute of Geodesy and Geophysics, CAS — Wuhan, China.</div>
+    <div class="edu-timeline reveal">
+      <div class="edu-item">
+        <div class="edu-dot"></div>
+        <div class="edu-card">
+          <div class="edu-period">Sep 2023 – Jun 2027</div>
+          <div class="edu-degree">Doctor of Philosophy</div>
+          <div class="edu-uni">University of Chinese Academy of Sciences</div>
+          <div class="edu-grade">Geodesy and Surveying Engineering</div>
+          <div class="edu-note">Research on earthquake cycle geodesy, InSAR fault slip modelling, and seismotectonics. Institute of Geodesy and Geophysics, CAS — Wuhan, China. Recipient of the prestigious ANSO-CAS-TWAS/UNESCO PhD Scholarship.</div>
+        </div>
       </div>
-      <div class="edu-card">
-        <div class="edu-period">Jul 2020 – Aug 2022</div>
-        <div class="edu-degree">Master of Engineering <em style="font-style:italic;font-family:var(--serif);color:var(--copper2)">Cum Laude</em></div>
-        <div class="edu-uni">Institut Teknologi Sepuluh Nopember (ITS)</div>
-        <div class="edu-grade">Geomatics Engineering · CGPA 3.86/4</div>
-        <div class="edu-note">Supported by the KNB Indonesian Government Scholarship. Thesis led to two published papers in geodesy and geoid modelling. Surabaya, Indonesia.</div>
+      <div class="edu-item">
+        <div class="edu-dot"></div>
+        <div class="edu-card">
+          <div class="edu-period">Jul 2020 – Aug 2022</div>
+          <div class="edu-degree">Master of Engineering <em>Cum Laude</em></div>
+          <div class="edu-uni">Institut Teknologi Sepuluh Nopember (ITS)</div>
+          <div class="edu-grade">Geomatics Engineering · CGPA 3.86/4</div>
+          <div class="edu-note">Supported by the KNB Indonesian Government Scholarship. Thesis focused on gravimetric geoid modelling for Sudan using least-squares collocation. Graduated with distinction (Cum Laude) as top student in the department.</div>
+        </div>
       </div>
-      <div class="edu-card">
-        <div class="edu-period">2012 – 2017</div>
-        <div class="edu-degree">Bachelor of Science (Honours)</div>
-        <div class="edu-uni">Omdurman Islamic University</div>
-        <div class="edu-grade">Surveying Engineering · Second Class Division One</div>
-        <div class="edu-note">Final project on three-point resection accuracy — subsequently published in the Journal of Marine-Earth Science and Technology. Omdurman, Sudan.</div>
+      <div class="edu-item">
+        <div class="edu-dot"></div>
+        <div class="edu-card">
+          <div class="edu-period">2012 – 2017</div>
+          <div class="edu-degree">Bachelor of Science (Honours)</div>
+          <div class="edu-uni">Omdurman Islamic University</div>
+          <div class="edu-grade">Surveying Engineering · Second Class Division One</div>
+          <div class="edu-note">Final project on three-point resection accuracy — subsequently published in the Journal of Marine-Earth Science and Technology. Awarded Academic Excellence Award for highest GPA in Surveying Engineering (2016/2017).</div>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- EXPERIENCE -->
-<section id="experience" class="alt-bg">
+<!-- INDUSTRY EXPERIENCE -->
+<section id="industry" class="industry-section">
   <div class="section-inner">
     <div class="section-header reveal">
       <span class="sh-num">04</span>
-      <span class="sh-title">Experience</span>
+      <span class="sh-title">Industry Experience</span>
     </div>
-    <div class="exp-list reveal">
+    <div class="exp-timeline reveal">
       <div class="exp-item">
-        <div class="exp-meta">
-          <div class="exp-period">Sep 2022 – Present</div>
-          <div class="exp-type">Part-time</div>
-        </div>
-        <div>
-          <div class="exp-role">Adjunct Lecturer</div>
-          <div class="exp-org">Omdurman Islamic University</div>
-          <div class="exp-loc">Khartoum State, Sudan (Remote &amp; On-site)</div>
-          <div class="exp-desc">Teaching undergraduate modules in Geoinformatics (GIS), Geoid Determination, Satellite Geodesy, and Surveying Engineering. Developing course material and supervising student projects at the Faculty of Engineering Sciences, Department of Surveying Engineering.</div>
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-meta">
+              <div class="exp-period">Oct 2022 – Present <span class="exp-type">Part-time</span></div>
+              <div class="exp-role">Adjunct Lecturer</div>
+              <div class="exp-org">Omdurman Islamic University</div>
+              <div class="exp-loc">Khartoum State, Sudan (Remote & On-site)</div>
+            </div>
+          </div>
+          <div class="exp-desc">
+            Teaching undergraduate and graduate courses in Geoinformatics, Geoid Determination, Satellite Geodesy, and Advanced Surveying Engineering. Developing modern course materials and supervising final year projects at the Faculty of Engineering Sciences, Department of Surveying Engineering.
+          </div>
+          <div class="exp-achievements">
+            <h4>Key Responsibilities</h4>
+            <ul>
+              <li>Curriculum development for geospatial science programs</li>
+              <li>Supervision of 15+ undergraduate final year projects</li>
+              <li>Organization of field surveying camps and workshops</li>
+              <li>Academic advising and mentorship for students</li>
+              <li>Research collaboration with international institutions</li>
+              <li>Examination committee member for graduate defenses</li>
+            </ul>
+          </div>
         </div>
       </div>
       <div class="exp-item">
-        <div class="exp-meta">
-          <div class="exp-period">Dec 2017 – Dec 2018</div>
-          <div class="exp-type">Contract</div>
+        <div class="exp-dot"></div>
+        <div class="exp-card">
+          <div class="exp-header">
+            <div class="exp-meta">
+              <div class="exp-period">Dec 2017 – Jan 2019 <span class="exp-type">Full-time</span></div>
+              <div class="exp-role">Consultant Surveying Engineer</div>
+              <div class="exp-org">Dar Consult Engineering Consultants</div>
+              <div class="exp-loc">Khartoum, Sudan · On-site</div>
+            </div>
+          </div>
+          <div class="exp-desc">
+            Worked as a lead surveying engineer on multiple large-scale road and bridge construction projects across Sudan. Responsible for all surveying activities from initial site investigation to final as-built documentation, ensuring compliance with international engineering standards.
+          </div>
+          <div class="exp-achievements">
+            <h4>Key Achievements</h4>
+            <ul>
+              <li>Managed surveying teams for 3 major highway projects</li>
+              <li>Conducted topographic surveys for 50+ km of road alignment</li>
+              <li>Performed setting out for bridges and culverts</li>
+              <li>Prepared detailed as-built drawings and reports</li>
+              <li>Implemented GPS-based surveying techniques to improve efficiency by 40%</li>
+              <li>Trained 10+ junior surveyors in modern surveying methods</li>
+              <li>Certified in ISO 9001:2008 Quality Management Systems</li>
+            </ul>
+          </div>
         </div>
-        <div>
-          <div class="exp-role">Consultant Surveying Engineer</div>
-          <div class="exp-org">Dar Consult</div>
-          <div class="exp-loc">Khartoum, Sudan · On-site</div>
-          <div class="exp-desc">Worked on multiple road and bridge construction projects as a consultant engineer. Responsibilities included design modification, contractor supervision, and ensuring accurate implementation of engineering designs at construction sites. Also trained in Quality Management Systems (ISO 9001:2008) during this period.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DUAL SKILL MATRIX -->
+<section id="skills" class="alt-bg">
+  <div class="section-inner">
+    <div class="section-header reveal">
+      <span class="sh-num">05</span>
+      <span class="sh-title">Skills & Expertise</span>
+    </div>
+    <div class="skills-container reveal">
+      <div class="skills-column research">
+        <div class="skills-header">
+          <div class="skills-icon research">
+            <svg viewBox="0 0 24 24"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>
+          </div>
+          <div class="skills-title">Research Skills</div>
+        </div>
+        
+        <div class="skill-category">
+          <div class="category-title">Geodetic Data Processing</div>
+          <div class="skill-list">
+            <span class="skill-tag">SNAP</span>
+            <span class="skill-tag">GAMMA</span>
+            <span class="skill-tag">ROI_PAC</span>
+            <span class="skill-tag">BERNESE GNSS</span>
+            <span class="skill-tag">GIPSY-OASIS</span>
+            <span class="skill-tag">GRAVSOFT</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <div class="category-title">Programming & Analysis</div>
+          <div class="skill-list">
+            <span class="skill-tag">MATLAB</span>
+            <span class="skill-tag">Python</span>
+            <span class="skill-tag">R</span>
+            <span class="skill-tag">FORTRAN</span>
+            <span class="skill-tag">GMT</span>
+            <span class="skill-tag">LaTeX</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <div class="category-title">Research Methods</div>
+          <div class="skill-list">
+            <span class="skill-tag">InSAR Processing</span>
+            <span class="skill-tag">Fault Slip Modelling</span>
+            <span class="skill-tag">Least-Squares Adjustment</span>
+            <span class="skill-tag">Least-Squares Collocation</span>
+            <span class="skill-tag">Time Series Analysis</span>
+            <span class="skill-tag">Geoid Determination</span>
+            <span class="skill-tag">GNSS PPP & RTK</span>
+            <span class="skill-tag">Systematic Review</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <div class="category-title">Satellite Data</div>
+          <div class="skill-list">
+            <span class="skill-tag">Sentinel-1/2</span>
+            <span class="skill-tag">TerraSAR-X</span>
+            <span class="skill-tag">ALOS-2</span>
+            <span class="skill-tag">GPS/GLONASS</span>
+            <span class="skill-tag">Galileo/BeiDou</span>
+            <span class="skill-tag">ICESat-2</span>
+            <span class="skill-tag">GRACE-FO</span>
+            <span class="skill-tag">GOCE</span>
+          </div>
+        </div>
+      </div>
+      
+      <div class="skills-column industry">
+        <div class="skills-header">
+          <div class="skills-icon industry">
+            <svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/></svg>
+          </div>
+          <div class="skills-title">Industry Skills</div>
+        </div>
+        
+        <div class="skill-category">
+          <div class="category-title">Engineering Software</div>
+          <div class="skill-list">
+            <span class="skill-tag">AutoCAD Civil 3D</span>
+            <span class="skill-tag">ArcGIS Pro</span>
+            <span class="skill-tag">QGIS</span>
+            <span class="skill-tag">Trimble Business Center</span>
+            <span class="skill-tag">Leica Geo Office</span>
+            <span class="skill-tag">PRIMAVERA P6</span>
+            <span class="skill-tag">MS Project</span>
+            <span class="skill-tag">Revit</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <div class="category-title">Field Surveying</div>
+          <div class="skill-list">
+            <span class="skill-tag">Total Station</span>
+            <span class="skill-tag">GNSS Receivers</span>
+            <span class="skill-tag">Digital Levels</span>
+            <span class="skill-tag">UAV Mapping</span>
+            <span class="skill-tag">LiDAR Scanning</span>
+            <span class="skill-tag">Hydrographic Survey</span>
+            <span class="skill-tag">Cadastral Survey</span>
+            <span class="skill-tag">Construction Layout</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <div class="category-title">Civil Engineering</div>
+          <div class="skill-list">
+            <span class="skill-tag">Road Design</span>
+            <span class="skill-tag">Bridge Survey</span>
+            <span class="skill-tag">Quantity Surveying</span>
+            <span class="skill-tag">Site Supervision</span>
+            <span class="skill-tag">As-Built Documentation</span>
+            <span class="skill-tag">Quality Control</span>
+            <span class="skill-tag">ISO 9001:2008</span>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <div class="category-title">Project Management</div>
+          <div class="skill-list">
+            <span class="skill-tag">Team Leadership</span>
+            <span class="skill-tag">Client Communication</span>
+            <span class="skill-tag">Report Writing</span>
+            <span class="skill-tag">Budget Management</span>
+            <span class="skill-tag">Risk Assessment</span>
+            <span class="skill-tag">Contract Administration</span>
+            <span class="skill-tag">Technical Training</span>
+          </div>
         </div>
       </div>
     </div>
@@ -914,123 +1658,56 @@ footer{
 <section id="awards">
   <div class="section-inner">
     <div class="section-header reveal">
-      <span class="sh-num">05</span>
-      <span class="sh-title">Honours &amp; Awards</span>
+      <span class="sh-num">06</span>
+      <span class="sh-title">Honours & Awards</span>
     </div>
     <div class="awards-grid reveal">
       <div class="award-card">
-        <div class="award-year">August 2025</div>
-        <div class="award-title">Excellent Poster Award — Joint Conference of Geodesy &amp; Geodynamics Symposium</div>
-        <div class="award-issuer">13th International Workshop on Multi-observations of Xizang, Xinjiang &amp; Siberia · Xining, China</div>
-        <div class="award-star"><svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
-      </div>
-      <div class="award-card">
-        <div class="award-year">June 2025</div>
-        <div class="award-title">Excellence Award — "My Research Journey in China" Short Video Competition</div>
-        <div class="award-issuer">International College, University of Chinese Academy of Sciences (UCAS)</div>
-        <div class="award-star"><svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
-      </div>
-      <div class="award-card">
-        <div class="award-year">June 2024</div>
-        <div class="award-title">PhD Qualification Examination Passed — UCAS G2023 Cohort</div>
-        <div class="award-issuer">University of Chinese Academy of Sciences – International College</div>
-        <div class="award-star"><svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
-      </div>
-      <div class="award-card">
-        <div class="award-year">July 2023</div>
-        <div class="award-title">ANSO-CAS-TWAS/UNESCO PhD Scholarship for Young Talents</div>
-        <div class="award-issuer">Alliance of International Science Organizations (ANSO), Chinese Academy of Sciences &amp; TWAS/UNESCO</div>
-        <div class="award-star"><svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
+        <div class="award-year">August 2023</div>
+        <div class="award-title">ANSO-CAS-TWAS/UNESCO PhD Scholarship</div>
+        <div class="award-issuer">Alliance of International Science Organizations (ANSO), Chinese Academy of Sciences & TWAS/UNESCO</div>
+        <div class="award-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.73 1.18 6.88L12 17.77l-6.18 3.11L7 14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
       </div>
       <div class="award-card">
         <div class="award-year">August 2022</div>
         <div class="award-title">Master of Engineering with Cum Laude (Distinction)</div>
         <div class="award-issuer">Institut Teknologi Sepuluh Nopember (ITS) · Surabaya, Indonesia</div>
-        <div class="award-star"><svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
+        <div class="award-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.73 1.18 6.88L12 17.77l-6.18 3.11L7 14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
       </div>
       <div class="award-card">
         <div class="award-year">June 2019</div>
         <div class="award-title">KNB Scholarship for Master's Studies</div>
         <div class="award-issuer">Kemitraan Negara Berkembang · Indonesian Government Scholarship for Developing Countries</div>
-        <div class="award-star"><svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
+        <div class="award-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.73 1.18 6.88L12 17.77l-6.18 3.11L7 14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
       </div>
       <div class="award-card">
         <div class="award-year">July 2017</div>
-        <div class="award-title">Academic Excellence Award — Highest GPA in Surveying Engineering</div>
-        <div class="award-issuer">Omdurman Islamic University · 5th academic year, 2016/2017 — Top of cohort</div>
-        <div class="award-star"><svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
+        <div class="award-title">Academic Excellence Award</div>
+        <div class="award-issuer">Omdurman Islamic University · Highest GPA in Surveying Engineering · Top of cohort</div>
+        <div class="award-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.73 1.18 6.88L12 17.77l-6.18 3.11L7 14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
+      </div>
+      <div class="award-card">
+        <div class="award-year">June 2024</div>
+        <div class="award-title">PhD Qualification Examination Passed</div>
+        <div class="award-issuer">University of Chinese Academy of Sciences – International College</div>
+        <div class="award-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.73 1.18 6.88L12 17.77l-6.18 3.11L7 14 2 9.27l6.91-1.01L12 2z"/></svg>
+        </div>
       </div>
       <div class="award-card">
         <div class="award-year">December 2023</div>
-        <div class="award-title">Commendation for Excellent Performance — Choral Competition</div>
+        <div class="award-title">Commendation for Excellent Performance</div>
         <div class="award-issuer">University of Chinese Academy of Sciences · "December 9th Movement" commemorative event</div>
-        <div class="award-star"><svg viewBox="0 0 24 24"><polygon points="12,2 15.09,8.26 22,9.27 17,14.14 18.18,21.02 12,17.77 5.82,21.02 7,14.14 2,9.27 8.91,8.26"/></svg></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SKILLS -->
-<section id="skills" class="alt-bg">
-  <div class="section-inner">
-    <div class="section-header reveal">
-      <span class="sh-num">06</span>
-      <span class="sh-title">Technical Skills</span>
-    </div>
-    <div class="skills-wrap reveal">
-      <div class="skill-col">
-        <div class="skill-col-label">Software & Tools</div>
-        <div class="skill-list">
-          <div class="sk">SNAP / GAMMA</div>
-          <div class="sk">MATLAB</div>
-          <div class="sk">Python</div>
-          <div class="sk">ArcGIS Pro</div>
-          <div class="sk">QGIS</div>
-          <div class="sk">BERNESE GNSS</div>
-          <div class="sk">CloudCompare</div>
-          <div class="sk">AutoCAD Civil 3D</div>
-          <div class="sk">PRIMAVERA P6</div>
-        </div>
-      </div>
-      <div class="skill-col">
-        <div class="skill-col-label">Methods</div>
-        <div class="skill-list">
-          <div class="sk">InSAR Processing</div>
-          <div class="sk">Fault Slip Modelling</div>
-          <div class="sk">Least-Squares Adjustment</div>
-          <div class="sk">Least-Squares Collocation</div>
-          <div class="sk">PPP &amp; RTK GNSS</div>
-          <div class="sk">Photogrammetry</div>
-          <div class="sk">LiDAR Analysis</div>
-          <div class="sk">Geoid Determination</div>
-          <div class="sk">Systematic Review</div>
-        </div>
-      </div>
-      <div class="skill-col">
-        <div class="skill-col-label">Satellites & Sensors</div>
-        <div class="skill-list">
-          <div class="sk">Sentinel-1</div>
-          <div class="sk">TerraSAR-X</div>
-          <div class="sk">GPS / GLONASS</div>
-          <div class="sk">Galileo / BeiDou</div>
-          <div class="sk">ICESat-2</div>
-          <div class="sk">GRACE-FO</div>
-          <div class="sk">GOCE / EGM2008</div>
-          <div class="sk">Airborne Gravity</div>
-          <div class="sk">SAR Interferometry</div>
-        </div>
-      </div>
-      <div class="skill-col">
-        <div class="skill-col-label">Field & Engineering</div>
-        <div class="skill-list">
-          <div class="sk">Total Station</div>
-          <div class="sk">GNSS Field Campaigns</div>
-          <div class="sk">Levelling Networks</div>
-          <div class="sk">UAV Mapping</div>
-          <div class="sk">Quantity Surveying</div>
-          <div class="sk">Road &amp; Bridge Survey</div>
-          <div class="sk">Cadastral Survey</div>
-          <div class="sk">ISO 9001:2008</div>
+        <div class="award-icon">
+          <svg viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.73 1.18 6.88L12 17.77l-6.18 3.11L7 14 2 9.27l6.91-1.01L12 2z"/></svg>
         </div>
       </div>
     </div>
@@ -1038,16 +1715,16 @@ footer{
 </section>
 
 <!-- CERTIFICATIONS -->
-<section id="certifications">
+<section id="certifications" class="certs-alt">
   <div class="section-inner">
     <div class="section-header reveal">
       <span class="sh-num">07</span>
-      <span class="sh-title">Selected Certifications</span>
+      <span class="sh-title">Professional Certifications</span>
     </div>
     <div class="certs-grid reveal">
       <div class="cert-item">
         <div class="cert-org">COMET / UK NERC</div>
-        <div class="cert-name">InSAR Training Workshop 2025</div>
+        <div class="cert-name">InSAR Training Workshop</div>
         <div class="cert-date">Nov 2025</div>
       </div>
       <div class="cert-item">
@@ -1062,28 +1739,8 @@ footer{
       </div>
       <div class="cert-item">
         <div class="cert-org">NOAA NGS</div>
-        <div class="cert-name">Space Weather Impacts on GNSS Positioning</div>
+        <div class="cert-name">Space Weather Impacts on GNSS</div>
         <div class="cert-date">Mar 2024</div>
-      </div>
-      <div class="cert-item">
-        <div class="cert-org">NOAA NGS</div>
-        <div class="cert-name">Multi-GNSS Positioning &amp; M-PAGES</div>
-        <div class="cert-date">Mar 2024</div>
-      </div>
-      <div class="cert-item">
-        <div class="cert-org">NOAA NGS</div>
-        <div class="cert-name">SatBathy Tool for Satellite-Derived Bathymetry</div>
-        <div class="cert-date">Mar 2024</div>
-      </div>
-      <div class="cert-item">
-        <div class="cert-org">AGS (HK)</div>
-        <div class="cert-name">Advanced InSAR &amp; Data Analytics for Civil Engineering</div>
-        <div class="cert-date">Apr 2024</div>
-      </div>
-      <div class="cert-item">
-        <div class="cert-org">NOAA NGS</div>
-        <div class="cert-name">The NGS Geoid Monitoring Service (GeMS)</div>
-        <div class="cert-date">Jan 2024</div>
       </div>
       <div class="cert-item">
         <div class="cert-org">EarthScope Consortium</div>
@@ -1102,38 +1759,43 @@ footer{
       </div>
       <div class="cert-item">
         <div class="cert-org">GGOS / IAG</div>
-        <div class="cert-name">GGOS Days 2024 — Global Geodetic Observing System</div>
+        <div class="cert-name">GGOS Days 2024</div>
         <div class="cert-date">Oct 2024</div>
       </div>
       <div class="cert-item">
-        <div class="cert-org">University of Nottingham</div>
-        <div class="cert-name">Research Metrics Certificate</div>
-        <div class="cert-date">Dec 2024</div>
-      </div>
-      <div class="cert-item">
         <div class="cert-org">Esri</div>
-        <div class="cert-name">Cartography — ArcGIS Certification</div>
+        <div class="cert-name">ArcGIS Cartography Certification</div>
         <div class="cert-date">May 2019</div>
       </div>
       <div class="cert-item">
+        <div class="cert-org">ISO</div>
+        <div class="cert-name">ISO 9001:2008 Quality Management</div>
+        <div class="cert-date">Dec 2018</div>
+      </div>
+      <div class="cert-item">
         <div class="cert-org">NOAA NGS</div>
-        <div class="cert-name">Geoid Modelling Series (GEOID18, GEOID2022, Alaska)</div>
+        <div class="cert-name">Geoid Modelling Series</div>
         <div class="cert-date">2022 – 2024</div>
+      </div>
+      <div class="cert-item">
+        <div class="cert-org">AGS (HK)</div>
+        <div class="cert-name">Advanced InSAR for Civil Engineering</div>
+        <div class="cert-date">Apr 2024</div>
       </div>
     </div>
   </div>
 </section>
 
 <!-- ADVISORS + LANGUAGES -->
-<section id="advisors" class="alt-bg">
+<section id="advisors-languages">
   <div class="section-inner">
-    <div style="display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start">
+    <div class="advisors-languages reveal">
       <div>
-        <div class="section-header reveal" style="margin-bottom:2rem">
+        <div class="section-header" style="margin-bottom:2rem">
           <span class="sh-num">08</span>
-          <span class="sh-title">Advisors</span>
+          <span class="sh-title">Academic Advisors</span>
         </div>
-        <div class="advisors-grid reveal" style="grid-template-columns:1fr">
+        <div class="advisors-grid">
           <div class="advisor-card">
             <div class="adv-role">Current · Primary Advisor</div>
             <div class="adv-name">Prof. Heping Sun</div>
@@ -1157,35 +1819,45 @@ footer{
         </div>
       </div>
       <div>
-        <div class="section-header reveal" style="margin-bottom:2rem">
+        <div class="section-header" style="margin-bottom:2rem">
           <span class="sh-num">09</span>
           <span class="sh-title">Languages</span>
         </div>
-        <div class="reveal" style="display:flex;flex-direction:column;gap:1.5rem">
-          <div class="lang-item" style="min-width:auto">
-            <div class="lang-name">Sudanese Arabic</div>
-            <div class="lang-level">Native · Bilingual</div>
+        <div class="languages-container">
+          <div class="lang-item">
+            <div class="lang-header">
+              <div class="lang-name">Sudanese Arabic</div>
+              <div class="lang-level">Native · Bilingual</div>
+            </div>
             <div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div>
           </div>
-          <div class="lang-item" style="min-width:auto">
-            <div class="lang-name">Old Nubian</div>
-            <div class="lang-level">Native · Bilingual</div>
+          <div class="lang-item">
+            <div class="lang-header">
+              <div class="lang-name">Old Nubian</div>
+              <div class="lang-level">Native · Bilingual</div>
+            </div>
             <div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div>
           </div>
-          <div class="lang-item" style="min-width:auto">
-            <div class="lang-name">English</div>
-            <div class="lang-level">Full Professional Proficiency</div>
-            <div class="lang-bar"><div class="lang-fill" style="width:88%"></div></div>
+          <div class="lang-item">
+            <div class="lang-header">
+              <div class="lang-name">English</div>
+              <div class="lang-level">Full Professional Proficiency</div>
+            </div>
+            <div class="lang-bar"><div class="lang-fill" style="width:90%"></div></div>
           </div>
-          <div class="lang-item" style="min-width:auto">
-            <div class="lang-name">Chinese</div>
-            <div class="lang-level">Elementary Proficiency</div>
+          <div class="lang-item">
+            <div class="lang-header">
+              <div class="lang-name">Chinese</div>
+              <div class="lang-level">Elementary Proficiency</div>
+            </div>
+            <div class="lang-bar"><div class="lang-fill" style="width:30%"></div></div>
+          </div>
+          <div class="lang-item">
+            <div class="lang-header">
+              <div class="lang-name">Indonesian</div>
+              <div class="lang-level">Elementary Proficiency</div>
+            </div>
             <div class="lang-bar"><div class="lang-fill" style="width:25%"></div></div>
-          </div>
-          <div class="lang-item" style="min-width:auto">
-            <div class="lang-name">Indonesian</div>
-            <div class="lang-level">Elementary Proficiency</div>
-            <div class="lang-bar"><div class="lang-fill" style="width:22%"></div></div>
           </div>
         </div>
       </div>
@@ -1194,30 +1866,30 @@ footer{
 </section>
 
 <!-- CONTACT -->
-<section id="contact">
+<section id="contact" class="alt-bg">
   <div class="section-inner">
     <div class="section-header reveal">
       <span class="sh-num">10</span>
-      <span class="sh-title">Contact</span>
+      <span class="sh-title">Get In Touch</span>
     </div>
     <div class="contact-wrap reveal">
-      <div>
-        <div class="contact-heading">Open to collaboration &amp; research exchange</div>
+      <div class="contact-card">
+        <div class="contact-heading">Open to collaboration & opportunities</div>
         <p class="contact-sub">
           I welcome conversations about earthquake geodesy, InSAR methodology, 
-          geoid modelling, and geodetic data analysis. Particularly interested in 
-          joint research projects, conference invitations, and academic exchange.
+          geoid modelling, and geodetic data analysis. I'm also available for 
+          consulting projects in civil engineering surveying, GIS mapping, 
+          and geospatial data analysis.
         </p>
-        <div style="display:flex;flex-direction:column;gap:0.8rem">
-          <a href="mailto:anas.geodesy@gmail.com" class="contact-email-btn">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            anas.geodesy@gmail.com
-          </a>
-          <a href="mailto:anas@apm.ac.cn" class="contact-email-btn" style="background:transparent;color:var(--ice3);border-color:var(--rule2)">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-            anas@apm.ac.cn
-          </a>
-        </div>
+        <a href="mailto:anas.geodesy@gmail.com" class="contact-email-btn">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          anas.geodesy@gmail.com
+        </a>
+        <br>
+        <a href="mailto:anas@apm.ac.cn" class="contact-email-btn secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          anas@apm.ac.cn
+        </a>
       </div>
       <div class="contact-links-grid">
         <a href="https://www.linkedin.com/in/anas-geodesy/" target="_blank" class="cl-item">
@@ -1228,7 +1900,7 @@ footer{
           </div>
         </a>
         <a href="https://www.researchgate.net/profile/Anas-Osman-4" target="_blank" class="cl-item">
-          <div class="cl-icon"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 8v8M8 12h8"/></svg></div>
+          <div class="cl-icon"><svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20z"/><path d="M9 12h6M12 9v6"/></svg></div>
           <div class="cl-meta">
             <span class="cl-label">ResearchGate</span>
             <span class="cl-val">researchgate.net/profile/Anas-Osman-4</span>
@@ -1270,10 +1942,37 @@ footer{
 <!-- FOOTER -->
 <footer>
   <span class="footer-l">Anas Sharafeldin Mohamed Osman · PhD Candidate · UCAS / CAS</span>
-  <span class="footer-r">© 2025 · Geodesy &amp; Surveying Engineering</span>
+  <span class="footer-r">© 2026 · Designed with <span class="footer-heart">♥</span> for Geodesy & Engineering</span>
 </footer>
 
 <script>
+// Navbar scroll effect
+window.addEventListener('scroll', () => {
+  const navbar = document.getElementById('navbar');
+  if (window.scrollY > 50) {
+    navbar.classList.add('scrolled');
+  } else {
+    navbar.classList.remove('scrolled');
+  }
+});
+
+// Theme switcher
+const researchBtn = document.querySelector('.theme-btn.research');
+const industryBtn = document.querySelector('.theme-btn.industry');
+
+researchBtn.addEventListener('click', () => {
+  document.body.classList.remove('industry-theme');
+  researchBtn.classList.add('active');
+  industryBtn.classList.remove('active');
+});
+
+industryBtn.addEventListener('click', () => {
+  document.body.classList.add('industry-theme');
+  industryBtn.classList.add('active');
+  researchBtn.classList.remove('active');
+});
+
+// Scroll reveal animation
 const io = new IntersectionObserver((entries) => {
   entries.forEach(e => {
     if (e.isIntersecting) {
@@ -1282,7 +1981,44 @@ const io = new IntersectionObserver((entries) => {
     }
   });
 }, {threshold: 0.08});
+
 document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+// Smooth scrolling for navigation links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
+  });
+});
+
+// Active navigation link highlighting
+const sections = document.querySelectorAll('section[id]');
+const navLinks = document.querySelectorAll('.nav-links a');
+
+window.addEventListener('scroll', () => {
+  let current = '';
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (scrollY >= (sectionTop - 200)) {
+      current = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === `#${current}`) {
+      link.classList.add('active');
+    }
+  });
+});
 </script>
 </body>
 </html>
