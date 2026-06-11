@@ -1137,26 +1137,33 @@ footer{
     <button class="theme-btn research active">Research</button>
     <button class="theme-btn industry">Industry</button>
   </div>
-<a href="#" class="nav-cv" id="downloadBtn">
-  <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-    <polyline points="7 10 12 15 17 10" />
-    <line x1="12" y1="15" x2="12" y2="3" />
-  </svg>
-  <span>Download CV</span>
-</a>
+.nav-cv {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 0.6rem 1.6rem;
+  border-radius: 8px;
+  background: rgba(10, 15, 23, 0.6);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--nebula-purple);
+  color: var(--ice);
+  font-family: var(--mono);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 8px rgba(123, 44, 191, 0.3);
+}
 
-<script>
-  document.getElementById('downloadBtn').addEventListener('click', function(e) {
-    e.preventDefault();
-    const link = document.createElement('a');
-    link.href = 'https://raw.githubusercontent.com/osmananas/osmananas.github.io/main/Anas_Osman_CV_2026.pdf';
-    link.download = 'Anas_Osman_CV_2026.pdf';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  });
-</script>
+.nav-cv:hover {
+  background: rgba(123, 44, 191, 0.2);
+  border-color: var(--nebula-purple2);
+  box-shadow: 0 0 16px var(--nebula-purple);
+  transform: translateY(-2px);
+  letter-spacing: 0.14em;
+}
 </nav>
 
 <!-- HERO SECTION -->
