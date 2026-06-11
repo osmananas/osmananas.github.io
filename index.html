@@ -1137,7 +1137,17 @@ footer{
     <button class="theme-btn research active">Research</button>
     <button class="theme-btn industry">Industry</button>
   </div>
-  <a href="#" class="https://raw.githubusercontent.com/osmananas/osmananas.github.io/main/Anas_Osman_CV_2026.pdf">Download CV</a>
+  <a href="#" class="nav-cv" onclick="downloadCV()">Download CV</a>
+<script>
+function downloadCV() {
+  const link = document.createElement('a');
+  link.href = 'https://raw.githubusercontent.com/osmananas/osmananas.github.io/main/Anas_Osman_CV_2026.pdf';
+  link.download = 'Anas_Osman_CV_2026.pdf';
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+</script>
 </nav>
 
 <!-- HERO SECTION -->
