@@ -1137,78 +1137,26 @@ footer{
     <button class="theme-btn research active">Research</button>
     <button class="theme-btn industry">Industry</button>
   </div>
-/* Enhanced Download CV Button - Compact Version */
-.nav-cv {
-  display: flex;
-  align-items: center;
-  gap: 6px;                /* reduced from 10px */
-  padding: 0.4rem 1.2rem;  /* reduced from 0.7rem 1.8rem */
-  border-radius: 40px;
-  background: linear-gradient(135deg, #7b2cbf, #3a86ff);
-  color: white;
-  font-family: var(--mono);
-  font-size: 0.65rem;      /* reduced from 0.75rem */
-  font-weight: 600;
-  letter-spacing: 0.08em;  /* slightly tighter */
-  text-transform: uppercase;
-  text-decoration: none;
-  transition: all 0.3s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-  box-shadow: 0 4px 12px rgba(123, 44, 191, 0.3);
-  border: 1px solid rgba(255,255,255,0.2);
-  backdrop-filter: blur(4px);
-  position: relative;
-  overflow: hidden;
-  z-index: 1;
-}
+<a href="#" class="nav-cv" id="downloadBtn">
+  <svg class="download-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+    <polyline points="7 10 12 15 17 10" />
+    <line x1="12" y1="15" x2="12" y2="3" />
+  </svg>
+  <span>Download CV</span>
+</a>
 
-.nav-cv::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #9d4edd, #5390d9);
-  z-index: -1;
-  transition: opacity 0.4s ease;
-  opacity: 0;
-}
-
-.nav-cv:hover::before {
-  opacity: 1;
-}
-
-.nav-cv:hover {
-  transform: translateY(-2px) scale(1.02);  /* slightly less movement */
-  box-shadow: 0 8px 20px rgba(123, 44, 191, 0.5);
-  letter-spacing: 0.12em;                   /* adjusted for smaller text */
-}
-
-.nav-cv:active {
-  transform: translateY(2px);
-}
-
-/* Download icon - smaller */
-.download-icon {
-  width: 14px;   /* reduced from 18px */
-  height: 14px;
-  transition: transform 0.3s ease;
-}
-
-.nav-cv:hover .download-icon {
-  transform: translateY(3px);
-}
-
-/* Optional softer pulse */
-@keyframes softPulse {
-  0% { box-shadow: 0 0 0 0 rgba(123, 44, 191, 0.4); }
-  70% { box-shadow: 0 0 0 8px rgba(123, 44, 191, 0); }  /* reduced spread */
-  100% { box-shadow: 0 0 0 0 rgba(123, 44, 191, 0); }
-}
-
-.nav-cv {
-  animation: softPulse 2s infinite;
-}
+<script>
+  document.getElementById('downloadBtn').addEventListener('click', function(e) {
+    e.preventDefault();
+    const link = document.createElement('a');
+    link.href = 'https://raw.githubusercontent.com/osmananas/osmananas.github.io/main/Anas_Osman_CV_2026.pdf';
+    link.download = 'Anas_Osman_CV_2026.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
+</script>
 </nav>
 
 <!-- HERO SECTION -->
