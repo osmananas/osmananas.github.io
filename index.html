@@ -1,0 +1,1346 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <title>Anas Osman | Geodesy &amp; Seismology</title>
+  <meta name="description" content="Anas Osman, PhD researcher in geodesy and seismology and surveying engineer. Research in earthquake deformation, InSAR, GNSS, remote sensing, GIS and gravimetric geoid modelling.">
+  <link rel="canonical" href="https://osmananas.github.io/">
+  <link rel="alternate" hreflang="en" href="https://osmananas.github.io/">
+  <link rel="alternate" hreflang="ar" href="https://osmananas.github.io/index-ar.html">
+  <link rel="alternate" hreflang="x-default" href="https://osmananas.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Anas Osman | Geodesy &amp; Seismology">
+  <meta property="og:description" content="Anas Osman, PhD researcher in geodesy and seismology and surveying engineer. Research in earthquake deformation, InSAR, GNSS, remote sensing, GIS and gravimetric geoid modelling.">
+  <meta property="og:url" content="https://osmananas.github.io/">
+  <meta property="og:image" content="https://osmananas.github.io/anas.jpg">
+  <meta property="og:image:alt" content="Portrait of Anas Osman">
+  <meta name="twitter:card" content="summary">
+  <meta name="theme-color" content="#13766f">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&amp;family=Cairo:wght@400;600;700&amp;display=swap" rel="stylesheet">
+  <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Person", "name": "Anas Sharafeldin Mohamed Osman", "alternateName": "Anas Osman", "url": "https://osmananas.github.io/", "image": "https://osmananas.github.io/anas.jpg", "jobTitle": "PhD Researcher in Geodesy and Seismology; Surveying Engineer", "affiliation": [{"@type": "Organization", "name": "University of Chinese Academy of Sciences"}, {"@type": "Organization", "name": "Innovation Academy for Precision Measurement Science and Technology, Chinese Academy of Sciences"}], "sameAs": ["https://orcid.org/0000-0002-4075-6879", "https://www.linkedin.com/in/anas-geodesy/", "https://www.researchgate.net/profile/Anas-Osman-4", "https://scholar.google.com/citations?user=oemk-kcAAAAJ", "https://github.com/osmananas"]}</script>
+<style id="anas-website-design">/* Change the colour variables here to customise both language versions. */
+:root {
+  color-scheme: light;
+  --bg: #faf9f6;
+  --surface: #ffffff;
+  --ink: #23353e;
+  --muted: #5b6b73;
+  --accent: #13766f;
+  --accent-hover: #0a5b56;
+  --secondary: #66839a;
+  --soft: #edf3f1;
+  --line: #dedfd9;
+  --header: rgba(250, 249, 246, .96);
+  --display: Georgia, 'Times New Roman', serif;
+  --body: 'Cairo', 'Segoe UI', Tahoma, Arial, sans-serif;
+}
+html[data-theme="dark"] {
+  color-scheme: dark;
+  --bg: #152128;
+  --surface: #1b2b33;
+  --ink: #ecf1ee;
+  --muted: #b4c4ca;
+  --accent: #7fd2bd;
+  --accent-hover: #a4e1cf;
+  --secondary: #9eb5cd;
+  --soft: #21383d;
+  --line: #3a4c54;
+  --header: rgba(21, 33, 40, .97);
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 88px; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.8 var(--body); -webkit-font-smoothing: antialiased; }
+html[lang="ar"] { --display: 'Amiri', 'Traditional Arabic', Georgia, serif; }
+html[lang="ar"] body { font-size: 16px; }
+button, input, select { font: inherit; color: inherit; }
+button, summary { cursor: pointer; }
+a { color: inherit; text-underline-offset: 4px; }
+a, button, input, select, summary { -webkit-tap-highlight-color: transparent; }
+a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible { outline: 3px solid var(--accent); outline-offset: 5px; }
+img, svg { max-width: 100%; }
+img { height: auto; }
+h1, h2, h3, h4, p, ul, ol, dl, figure { margin: 0; }
+h1, h2, h3 { line-height: 1.3; }
+ul, ol { padding-inline-start: 1.2em; }
+[hidden] { display: none !important; }
+::selection { background: var(--soft); color: var(--ink); }
+.container { width: min(1060px, calc(100% - 64px)); margin-left: auto; margin-right: auto; margin-inline: auto; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+.icon { width: 19px; height: 19px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.7; stroke-linecap: round; stroke-linejoin: round; }
+.brand-icon { width: 20px; height: 20px; flex: none; }
+.skip-link { position: absolute; inset-block-start: -100px; inset-inline-start: 20px; padding: 10px 18px; background: var(--accent); color: var(--bg); z-index: 100; }
+.skip-link:focus { inset-block-start: 10px; }
+.site-header { position: sticky; top: 0; z-index: 30; border-bottom: 1px solid var(--line); background: var(--header); }
+.nav-row { display: flex; align-items: center; gap: 21px; min-height: 65px; }
+.brand { white-space: nowrap; font-size: .93rem; font-weight: 700; text-decoration: none; }
+.brand span { color: var(--accent); }
+.main-nav { margin-inline-start: auto; }
+.nav-links { display: flex; align-items: center; gap: 18px; list-style: none; padding: 0; }
+.nav-links a { font-size: .73rem; text-decoration: none; color: var(--muted); padding-block: 14px; }
+.nav-links a:hover, .nav-links a[aria-current="location"] { color: var(--accent); }
+.header-tools { display: flex; align-items: center; gap: 7px; }
+.language-switch, .theme-toggle, .menu-toggle { display: inline-flex; align-items: center; justify-content: center; gap: 6px; min-height: 34px; padding: 6px 9px; border: 1px solid var(--line); border-radius: 3px; background: transparent; text-decoration: none; font-size: .73rem; }
+.theme-toggle, .menu-toggle { width: 35px; padding: 7px; }
+.language-switch:hover, .theme-toggle:hover, .menu-toggle:hover { background: var(--soft); }
+.menu-toggle { display: none; }
+.theme-sun { display: none; }
+html[data-theme="dark"] .theme-sun { display: block; }
+html[data-theme="dark"] .theme-moon { display: none; }
+.hero { padding-block: 83px 67px; }
+.hero-grid { display: grid; grid-template-columns: 1.45fr 1fr; gap: 68px; align-items: center; direction: ltr; }
+html[lang="ar"] .hero-grid { grid-template-columns: 1fr 1.45fr; }
+html[lang="ar"] .hero-copy { order: 2; direction: rtl; }
+html[lang="ar"] .portrait-frame { order: 1; }
+.eyebrow { color: var(--accent); font-size: .77rem; font-weight: 600; }
+.hero h1 { font-family: var(--display); font-size: 4.6rem;  font-weight: 400; line-height: 1.1; letter-spacing: -.035em; margin-block: 17px 21px; }
+.hero h1 .given-name { color: var(--accent); }
+.hero h1 .name-title { display: block; color: var(--muted); font-family: var(--body); font-size: .8rem; letter-spacing: .03em; margin-bottom: 10px; }
+html[lang="ar"] .hero h1 { font-size: 5.1rem;  line-height: 1.45; letter-spacing: 0; margin-block: 4px 10px; }
+html[lang="ar"] .hero h1 .name-title { margin-bottom: 0; }
+.hero-role { font-size: 1rem; font-weight: 600; line-height: 1.7; }
+.hero-affiliation { font-size: .85rem; color: var(--muted); margin-block: 7px 20px; line-height: 1.8; }
+.hero-intro { font-size: .97rem; line-height: 1.9; color: var(--muted); }
+.hero-award { font-size: .75rem; color: var(--accent); margin-top: 18px; }
+.hero-actions { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 24px; }
+.button { display: inline-flex; align-items: center; justify-content: center; gap: 9px; min-height: 45px; padding: 10px 20px; border: 1px solid var(--accent); border-radius: 3px; font-size: .79rem; font-weight: 600; text-decoration: none; white-space: nowrap; background: var(--accent); color: var(--bg); }
+.button:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+.button.secondary { background: transparent; color: var(--ink); border-color: var(--line); }
+.button.secondary:hover { background: var(--soft); }
+.portrait-frame { position: relative; margin: 10px; }
+.portrait-frame::before, .portrait-frame::after { content: ''; position: absolute; width: 50px; height: 50px; pointer-events: none; }
+.portrait-frame::before { top: -11px; inset-inline-start: -11px; border-block-start: 2px solid var(--accent); border-inline-start: 2px solid var(--accent); }
+.portrait-frame::after { bottom: -11px; inset-inline-end: -11px; border-block-end: 2px solid var(--secondary); border-inline-end: 2px solid var(--secondary); }
+.portrait { display: block; width: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: center; border-radius: 2px; }
+.portrait-fallback { display: grid; place-items: center; width: 100%; aspect-ratio: 3 / 4; background: var(--soft); color: var(--accent); font: 4rem var(--display); }
+.profile-links { display: flex; flex-wrap: wrap; gap: 10px 19px; margin-top: 26px; }
+.profile-link { display: inline-flex; align-items: center; gap: 6px; text-decoration: none; font-size: .73rem; white-space: nowrap; }
+.profile-link:hover { color: var(--accent); }
+.hero-note { margin-top: 37px; padding-top: 17px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px 20px; font-size: .76rem; color: var(--muted); }
+.hero-note span { display: inline-flex; align-items: center; gap: 7px; }
+.section { padding-block: 67px; border-top: 1px solid var(--line); }
+.section.alt { background: var(--surface); }
+.section-head { display: flex; align-items: end; justify-content: space-between; gap: 30px; margin-bottom: 34px; }
+.section-title { font-family: var(--display); font-size: 2.5rem;  font-weight: 400; letter-spacing: -.02em; }
+html[lang="ar"] .section-title { font-size: 2.55rem; letter-spacing: 0; }
+.section-head p { color: var(--muted); font-size: .81rem; max-width: 390px; }
+.subheading { font-weight: 600; color: var(--accent); font-size: .86rem; margin-bottom: 23px; }
+.research-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
+.research-card { padding-inline-start: 19px; border-inline-start: 2px solid var(--accent); }
+.research-card h3 { font-family: var(--display); font-size: 1.38rem; font-weight: 400; margin-bottom: 13px; }
+html[lang="ar"] .research-card h3 { font-size: 1.6rem; }
+.research-card p { font-size: .86rem; color: var(--muted); }
+.research-tags { margin-top: 13px; font-size: .72rem; color: var(--accent); }
+.featured-project { margin-top: 35px; padding: 26px 30px; border: 1px solid var(--line); background: var(--soft); display: grid; grid-template-columns: 1fr 1.6fr; gap: 36px; }
+.featured-project h3 { font-family: var(--display); font-size: 1.55rem; font-weight: 400; margin-top: 8px; }
+.featured-project p { font-size: .85rem; color: var(--muted); }
+.text-link { display: inline-flex; align-items: center; gap: 7px; color: var(--accent); font-weight: 600; font-size: .78rem; text-decoration: none; margin-top: 13px; }
+.text-link:hover { text-decoration: underline; }
+.research-status { margin-top: 20px; font-size: .82rem; color: var(--muted); }
+.research-status strong { color: var(--ink); }
+.pub-tools { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; margin-bottom: 12px; }
+html:not(.js) .pub-tools { display: none; }
+.filters { display: flex; gap: 4px; padding: 3px; border: 1px solid var(--line); border-radius: 3px; }
+.filter-btn { border: 0; border-radius: 2px; background: transparent; padding: 7px 10px; font-size: .73rem; color: var(--muted); }
+.filter-btn[aria-pressed="true"] { color: var(--bg); background: var(--accent); }
+.search-wrap { flex: 1; display: flex; align-items: center; gap: 8px; border: 1px solid var(--line); min-width: 175px; padding: 8px 11px; }
+.search-wrap input { width: 100%; min-width: 0; border: 0; background: transparent; font-size: .78rem; }
+.search-wrap input::placeholder { color: var(--muted); opacity: 1; }
+.sort-select { min-height: 43px; background: transparent; border: 1px solid var(--line); font-size: .73rem; padding: 7px 9px; }
+.pub-status { font-size: .74rem; color: var(--muted); margin-bottom: 13px; }
+.publication { display: grid; grid-template-columns: 57px 1fr; gap: 19px; padding-block: 24px; border-top: 1px solid var(--line); }
+.pub-year { font-family: var(--display); color: var(--muted); font-size: 1.08rem; padding-top: 4px; }
+.pub-type { display: block; font-size: .69rem; color: var(--accent); margin-bottom: 6px; }
+.publication h3 { font-family: 'Segoe UI', Tahoma, Arial, sans-serif; font-size: 1rem; line-height: 1.5; font-weight: 600; margin-bottom: 9px; }
+.publication h3 a { text-decoration: none; }
+.publication h3 a:hover { color: var(--accent); text-decoration: underline; }
+.pub-authors, .pub-journal { font-family: 'Segoe UI', Tahoma, Arial, sans-serif; font-size: .79rem; line-height: 1.7; color: var(--muted); margin-top: 3px; }
+.pub-authors strong { color: var(--ink); font-weight: 600; }
+.pub-journal { font-style: italic; }
+.pub-note { color: var(--accent); font-size: .75rem; margin-top: 5px; }
+.doi-link { display: inline-block; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; color: var(--accent); font-size: .72rem; margin-top: 9px; overflow-wrap: anywhere; }
+.no-results { border-block: 1px solid var(--line); padding-block: 30px; color: var(--muted); }
+.reset-btn { display: block; border: 0; background: transparent; color: var(--accent); text-decoration: underline; padding: 9px 0; }
+.two-columns { display: grid; grid-template-columns: 1fr 1fr; gap: 55px; }
+.timeline { list-style: none; border-inline-start: 1px solid var(--line); padding-inline-start: 24px; margin-inline-start: 3px; }
+.timeline-item { position: relative; margin-bottom: 28px; }
+.timeline-item:last-child { margin-bottom: 0; }
+.timeline-item::before { content: ''; position: absolute; inset-inline-start: -29px; top: 8px; width: 9px; height: 9px; border-radius: 50%; background: var(--accent); border: 2px solid var(--bg); }
+.period { font-size: .72rem; color: var(--muted); margin-bottom: 6px; }
+.timeline h3 { font-size: .99rem; font-weight: 600; line-height: 1.6; margin-bottom: 5px; }
+.timeline .institution { font-size: .81rem; font-weight: 600; margin-bottom: 5px; }
+.timeline p:not(.institution), .timeline li li { font-size: .8rem; color: var(--muted); }
+.experience-list { margin-top: 9px; }
+.experience-list li { padding-inline-start: 2px; margin-bottom: 4px; }
+.professional { margin-top: 46px; padding-top: 29px; border-top: 1px solid var(--line); }
+.skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px 40px; }
+.skill-card { border-top: 1px solid var(--line); padding-top: 17px; }
+.skill-card h3 { font-weight: 600; font-size: .96rem; margin-bottom: 9px; }
+.skill-card p { color: var(--muted); font-size: .81rem; }
+.skill-tags { list-style: none; display: flex; flex-wrap: wrap; gap: 6px; padding: 0; margin-top: 12px; }
+.skill-tags li { color: var(--accent); background: var(--soft); padding: 2px 8px; font-family: 'Segoe UI', Tahoma, Arial, sans-serif; font-size: .72rem; border-radius: 2px; }
+.soft-skills { display: grid; grid-template-columns: 155px 1fr; gap: 24px; border-top: 1px solid var(--line); padding-top: 22px; margin-top: 29px; }
+.soft-skills h3 { font-size: .91rem; }
+.soft-skills p { font-size: .8rem; color: var(--muted); }
+.conference-list { list-style: none; padding: 0; }
+.conference { display: grid; grid-template-columns: 74px 1fr; gap: 17px; border-bottom: 1px solid var(--line); padding-block: 19px; }
+.conference:first-child { padding-top: 0; }
+.conference time { color: var(--muted); font-size: .7rem; padding-top: 4px; }
+.conference h3 { font-size: .9rem; line-height: 1.6; font-weight: 600; }
+.conference p { color: var(--muted); font-size: .76rem; margin-top: 5px; }
+.conference .event-role { color: var(--accent); font-size: .74rem; }
+.training-details { border-block-end: 1px solid var(--line); }
+.training-details:first-child { border-block-start: 1px solid var(--line); }
+.training-details summary { padding: 18px 4px; font-size: .86rem; font-weight: 600; }
+.training-list { list-style: none; padding: 0 4px 21px; }
+.training-list li { margin-block: 14px; }
+.training-date { color: var(--accent); font-size: .69rem; }
+.training-list h4 { font-size: .81rem; font-weight: 600; margin-block: 3px; }
+.training-list p { font-size: .74rem; color: var(--muted); }
+.awards-grid { display: grid; grid-template-columns: 1fr 1fr; column-gap: 42px; }
+.award { display: grid; grid-template-columns: 47px 1fr; gap: 15px; border-top: 1px solid var(--line); padding-block: 23px; }
+.award-year { color: var(--accent); font-family: var(--display); font-size: 1.1rem; }
+.award h3 { font-size: .92rem; font-weight: 600; line-height: 1.65; }
+.award p { font-size: .78rem; color: var(--muted); margin-top: 6px; }
+.about-columns { display: grid; grid-template-columns: 1.15fr 1fr; gap: 60px; }
+.about-copy { font-size: .86rem; color: var(--muted); }
+.about-copy + .about-copy { margin-top: 14px; }
+.personal-list { margin-top: 24px; }
+.personal-row { display: grid; grid-template-columns: 103px 1fr; gap: 15px; border-top: 1px solid var(--line); padding-block: 10px; font-size: .78rem; }
+.personal-row dt { color: var(--muted); }
+.personal-row dd { margin: 0; }
+.language-list { margin-top: 15px; }
+.language { display: flex; justify-content: space-between; gap: 20px; border-top: 1px solid var(--line); padding-block: 10px; font-size: .8rem; }
+.language dd { margin: 0; color: var(--muted); font-size: .75rem; text-align: end; }
+.service { margin-top: 28px; }
+.service h3 { font-size: .84rem; font-weight: 600; margin-bottom: 9px; }
+.service p { color: var(--muted); font-size: .78rem; margin-bottom: 11px; }
+.service a { color: var(--accent); }
+.research-ids { display: flex; flex-wrap: wrap; gap: 13px; font-size: .75rem; margin-top: 16px; }
+.contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+.contact-copy { color: var(--muted); font-size: .91rem; max-width: 390px; }
+.contact-list { display: grid; gap: 16px; margin-top: 27px; }
+.contact-item { display: flex; justify-content: space-between; align-items: center; gap: 12px; border-bottom: 1px solid var(--line); padding-bottom: 13px; }
+.contact-item small { display: block; color: var(--muted); font-size: .69rem; margin-bottom: 3px; }
+.contact-item a { font-family: 'Segoe UI', Tahoma, Arial, sans-serif; font-size: .87rem; overflow-wrap: anywhere; color: var(--accent); }
+.copy-email { display: flex; padding: 8px; background: transparent; border: 1px solid var(--line); border-radius: 3px; }
+.copy-email:hover { background: var(--soft); }
+.copy-status { min-height: 27px; color: var(--muted); font-size: .76rem; margin-top: 9px; overflow-wrap: anywhere; }
+.contact-aside { border: 1px solid var(--line); background: var(--soft); padding: 28px; }
+.contact-aside h3 { font-family: var(--display); font-size: 1.5rem; font-weight: 400; margin-bottom: 15px; }
+.contact-aside p { font-size: .84rem; color: var(--muted); }
+.contact-aside .button { margin-top: 23px; }
+.site-footer { border-top: 1px solid var(--line); padding-block: 21px; font-size: .71rem; color: var(--muted); }
+.footer-row { display: flex; justify-content: space-between; align-items: center; gap: 20px; flex-wrap: wrap; }
+.footer-links { display: flex; gap: 18px; }
+.footer-links a { text-decoration: none; }
+.ltr { direction: ltr; unicode-bidi: isolate; }
+html[lang="ar"] .pub-content { text-align: start; }
+html[lang="ar"] .pub-text { direction: ltr; text-align: left; }
+html[lang="ar"] .pub-note { direction: rtl; text-align: right; }
+html[lang="ar"] .direction-arrow { transform: scaleX(-1); }
+@media (max-width: 1120px) {
+  .nav-row { gap: 15px; }
+  .nav-links { gap: 13px; }
+  .nav-links a { font-size: .7rem; }
+  .hero-grid { gap: 45px; }
+}
+@media (max-width: 940px) {
+  .container { width: min(740px, calc(100% - 44px)); }
+  .nav-row { flex-wrap: wrap; gap: 10px; padding-block: 12px; }
+  .header-tools { margin-inline-start: auto; }
+  .main-nav { order: 3; width: 100%; }
+  .nav-links { flex-wrap: wrap; gap: 8px 19px; }
+  .nav-links a { display: block; font-size: .82rem; padding-block: 7px; }
+  .js .menu-toggle { display: inline-flex; }
+  .hero { padding-block: 53px 45px; }
+  .hero-grid { grid-template-columns: 1.45fr 1fr; gap: 34px; }
+  .hero h1 { font-size: 3.3rem; }
+  .hero-intro { font-size: .88rem; }
+  .hero-role { font-size: .88rem; }
+  .hero-affiliation { font-size: .77rem; }
+  .hero-award { font-size: .69rem; }
+  .hero-actions { gap: 8px; }
+  .button { padding: 10px 13px; font-size: .73rem; }
+  .profile-links { gap: 10px 12px; }
+  .profile-link { font-size: .7rem; }
+  .two-columns, .about-columns, .contact-grid { gap: 34px; }
+  .section { padding-block: 52px; }
+}
+@media (max-width: 640px) {
+  .container { width: calc(100% - 38px); }
+  .hero-grid { grid-template-columns: 1fr; gap: 36px; }
+  html[lang="ar"] .hero-grid { grid-template-columns: 1fr; }
+  .hero-copy { order: 2; }
+  .portrait-frame { order: 1; width: min(270px, calc(100% - 24px)); margin-inline: auto; }
+  .hero h1 { font-size: 3.6rem; margin-block: 13px 17px; }
+  html[lang="ar"] .hero h1 { font-size: 4rem; }
+  .hero-intro { font-size: .94rem; }
+  .hero-role { font-size: .96rem; }
+  .hero-affiliation { font-size: .81rem; }
+  .hero-award { font-size: .75rem; }
+  .hero-note { margin-top: 30px; }
+  .section-head { align-items: start; flex-direction: column; gap: 10px; margin-bottom: 27px; }
+  .research-grid, .two-columns, .skills-grid, .awards-grid, .about-columns, .contact-grid { grid-template-columns: 1fr; }
+  .research-grid { gap: 26px; }
+  .featured-project { grid-template-columns: 1fr; gap: 15px; padding: 23px; }
+  .publication { grid-template-columns: 39px 1fr; gap: 13px; }
+  .pub-year { font-size: .96rem; }
+  .pub-tools { gap: 10px; }
+  .filters { width: 100%; }
+  .filter-btn { flex: 1; padding: 8px 5px; font-size: .74rem; }
+  .sort-select { max-width: 125px; }
+  .skills-grid { gap: 23px; }
+  .soft-skills { grid-template-columns: 1fr; gap: 8px; }
+  .two-columns > div + div, .about-columns > div + div { margin-top: 12px; }
+  .conference { grid-template-columns: 66px 1fr; gap: 13px; }
+  .contact-grid { gap: 32px; }
+  .contact-aside { padding: 23px; }
+  .brand { font-size: .88rem; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+@media print {
+  :root, html[data-theme="dark"] { --bg: #fff; --surface: #fff; --ink: #111; --muted: #444; --accent: #145f57; --soft: #fff; --line: #bbb; }
+  body { font-size: 10pt; }
+  .site-header, .skip-link, .pub-tools, .pub-status, .hero-actions, .copy-email, .copy-status, .footer-links { display: none !important; }
+  .container { width: 100%; }
+  .hero, .section { padding-block: 20px; }
+  .hero h1 { font-size: 34pt; }
+  .hero-grid { grid-template-columns: 1.8fr 1fr; gap: 30px; }
+  .portrait-frame { width: 160px; }
+  .publication, .timeline-item, .skill-card, .award, .conference { break-inside: avoid; }
+  a { text-decoration: none; }
+  .contact-aside { display: none; }
+  .contact-grid { grid-template-columns: 1fr; }
+}
+
+/* The design is embedded into each HTML page: no GitHub theme CSS is needed. */
+:root {
+  --bg: #f8f7f3;
+  --surface: #ffffff;
+  --ink: #203642;
+  --muted: #596b75;
+  --accent: #0e7075;
+  --accent-hover: #085a60;
+  --secondary: #869aa9;
+  --soft: #eaf1ef;
+  --line: #e0e3df;
+  --header: rgba(248,247,243,.97);
+  --body: 'Segoe UI', Tahoma, Arial, sans-serif;
+}
+html[lang="ar"] { --body: 'Cairo', Tahoma, Arial, sans-serif; }
+html[data-theme="dark"] {
+  --bg: #15252d;
+  --surface: #1c3039;
+  --ink: #edf3f0;
+  --muted: #b6c6cc;
+  --accent: #85d5ca;
+  --accent-hover: #a7e2d9;
+  --soft: #233b43;
+  --line: #3a5059;
+  --header: rgba(21,37,45,.97);
+}
+html { scroll-padding-top: 86px; }
+body { font-size: 16px; line-height: 1.75; }
+.container { width: 1100px; max-width: calc(100% - 64px); margin: 0 auto; }
+.site-header { background: var(--header); backdrop-filter: blur(12px); }
+.nav-row { display: grid; grid-template-columns: auto minmax(0,1fr) auto; min-height: 76px; gap: 22px; }
+.brand { display: inline-flex; gap: 10px; align-items: center; font-size: 15px; letter-spacing: -.2px; }
+.brand-mark { display: inline-flex; flex: none; align-items: center; justify-content: center; width: 32px; height: 32px; border: 1px solid var(--accent); color: var(--accent); font: 14px Georgia,serif; border-radius: 50%; }
+.brand-name { color: var(--ink) !important; }
+.main-nav { min-width: 0; margin: 0; justify-self: end; }
+.nav-links { gap: 21px; justify-content: flex-end; }
+.nav-links a { display: block; font-size: 12.5px; line-height: 1.4; white-space: nowrap; padding: 27px 0 25px; border-bottom: 2px solid transparent; }
+.nav-links a[aria-current="page"] { color: var(--accent); border-bottom-color: var(--accent); }
+.header-tools { gap: 8px; margin: 0; }
+.language-switch,.theme-toggle,.menu-toggle { min-height: 35px; border-radius: 4px; }
+.language-switch { font-size: 12px; }
+.icon { width: 18px; height: 18px; }
+.brand-icon { width: 18px; height: 18px; }
+.js .view { display: none; }
+.js .view.is-active { display: block; }
+.view { min-height: calc(100vh - 147px); }
+.view.section { padding: 67px 0 76px; border: 0; background: var(--bg); }
+.hero { padding: 67px 0 38px; overflow: visible; }
+.hero-grid { grid-template-columns: minmax(0,1.45fr) minmax(0,1fr); gap: 76px; align-items: center; }
+html[lang="ar"] .hero-grid { grid-template-columns: minmax(0,1fr) minmax(0,1.45fr); }
+.hero h1 { font-size: 76px; line-height: 1.08; margin: 17px 0 24px; letter-spacing: -3px; }
+.hero h1 .name-title { font-size: 14px; letter-spacing: 0; margin-bottom: 9px; font-weight: 400; }
+html[lang="ar"] .hero h1 { font-size: 82px; line-height: 1.45; margin: 7px 0 13px; letter-spacing: 0; }
+html[lang="ar"] .hero h1 .name-title { font-size: 15px; }
+.hero-role { font-size: 17px; line-height: 1.65; font-weight: 600; }
+.hero-role .secondary-role { color: var(--muted); font-weight: 400; font-size: 15px; }
+.hero-affiliation { font-size: 13.5px; line-height: 1.8; margin: 12px 0 19px; }
+.hero-intro { font-size: 16px; line-height: 1.85; max-width: 540px; }
+.hero-award { font-size: 12px; line-height: 1.8; margin-top: 17px; color: var(--accent); }
+.hero-actions { gap: 11px; margin-top: 25px; }
+.button { font-size: 13px; border-radius: 3px; min-height: 46px; padding: 11px 18px; }
+.profile-links { gap: 12px 20px; margin-top: 25px; }
+.profile-link { font-size: 12px; white-space: nowrap; }
+.portrait-frame { width: 350px; max-width: 100%; margin: 14px auto; justify-self: center; }
+.portrait { width: 100%; border-radius: 2px; box-shadow: 0 12px 28px rgba(32,54,66,.07); }
+.portrait-frame::before,.portrait-frame::after { width: 42px; height: 42px; }
+.portrait-frame::before { top: -12px; inset-inline-start: -12px; }
+.portrait-frame::after { bottom: -12px; inset-inline-end: -12px; }
+.hero-note { margin-top: 32px; padding-top: 17px; font-size: 12px; gap: 12px 25px; }
+.hero-note span { white-space: nowrap; }
+.page-heading { margin-bottom: 36px; }
+.page-heading .eyebrow { font-size: 11px; letter-spacing: 1.4px; text-transform: uppercase; margin-bottom: 9px; }
+html[lang="ar"] .page-heading .eyebrow { letter-spacing: 0; font-size: 12px; }
+.section-title { font-size: 43px; line-height: 1.2; letter-spacing: -1px; }
+html[lang="ar"] .section-title { font-size: 46px; line-height: 1.6; letter-spacing: 0; }
+.section-head { margin-bottom: 35px; align-items: end; gap: 32px; }
+.section-head p { font-size: 14px; line-height: 1.75; max-width: 390px; }
+.section-head .text-link { flex-shrink: 0; white-space: nowrap; }
+.home-section { padding: 53px 0 56px; border-top: 1px solid var(--line); }
+.home-section .section-title { font-size: 35px; }
+html[lang="ar"] .home-section .section-title { font-size: 40px; }
+.home-section .section-head { margin-bottom: 27px; }
+.home-section .eyebrow { font-size: 11px; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px; }
+html[lang="ar"] .home-section .eyebrow { letter-spacing: 0; }
+.focus-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 31px; }
+.focus-item { padding: 0 0 0 16px; border-left: 2px solid var(--accent); }
+html[lang="ar"] .focus-item { padding: 0 16px 0 0; border-left: 0; border-right: 2px solid var(--accent); }
+.focus-item h3 { font-family: var(--display); font-size: 22px; font-weight: 400; margin-bottom: 10px; }
+html[lang="ar"] .focus-item h3 { font-size: 25px; }
+.focus-item p { font-size: 13.5px; color: var(--muted); line-height: 1.8; }
+.project-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 25px; }
+.project-card { background: var(--surface); border: 1px solid var(--line); border-radius: 5px; overflow: hidden; }
+.project-cover { position: relative; height: 158px; overflow: hidden; background: #1b4048; color: #e3f0ed; padding: 22px 27px; direction: ltr; }
+.project-cover.blue { background: #243d52; }
+.project-cover.sage { background: #31594f; }
+.project-cover .cover-art { position: absolute; width: 275px; height: 190px; top: -15px; right: -25px; opacity: .33; }
+.project-cover span { display: block; position: relative; font: 11px 'Segoe UI',Arial,sans-serif; letter-spacing: 1.8px; }
+.project-cover b { display: block; position: relative; font: 38px Georgia,serif; margin-top: 20px; letter-spacing: -1px; }
+.project-content { padding: 25px 27px; }
+.project-meta { font-size: 11px; color: var(--accent); margin-bottom: 9px; }
+.project-content h3 { font-family: var(--display); font-size: 24px; font-weight: 400; line-height: 1.35; margin-bottom: 12px; }
+html[lang="ar"] .project-content h3 { font-size: 28px; line-height: 1.5; }
+.project-content p:not(.project-meta) { color: var(--muted); font-size: 13.5px; line-height: 1.8; }
+.project-content .text-link { font-size: 12px; margin-top: 17px; }
+.home-callout { margin-top: 30px; display: flex; justify-content: space-between; align-items: center; gap: 30px; padding: 25px 29px; background: var(--soft); border-left: 3px solid var(--accent); }
+html[lang="ar"] .home-callout { border-left: 0; border-right: 3px solid var(--accent); }
+.home-callout h3 { font-family: var(--display); font-size: 23px; font-weight: 400; margin-bottom: 6px; }
+.home-callout p { color: var(--muted); font-size: 13px; }
+.home-callout .text-link { flex: none; margin: 0; }
+.research-grid { gap: 30px; margin-bottom: 36px; }
+.research-card h2,.research-card h3 { font-family: var(--display); font-size: 23px; font-weight: 400; margin-bottom: 14px; }
+html[lang="ar"] .research-card h2 { font-size: 27px; line-height: 1.55; }
+.research-card p { font-size: 14px; line-height: 1.8; }
+.research-card .research-tags { font-size: 11px; }
+.research-status { background: var(--soft); border-radius: 3px; padding: 17px 20px; font-size: 13px; margin-top: 29px; }
+.research-projects { border-top: 1px solid var(--line); margin-top: 38px; padding-top: 34px; }
+.research-projects>h2 { font-family: var(--display); font-size: 30px; font-weight: 400; margin-bottom: 24px; }
+.pub-tools { gap: 13px; margin-bottom: 16px; }
+.filter-btn { font-size: 12px; padding: 8px 12px; }
+.search-wrap input { font-size: 13px; }
+.sort-select { font-size: 12px; }
+.pub-status { font-size: 12px; margin-bottom: 19px; }
+.publication { padding: 27px 0; grid-template-columns: 55px minmax(0,1fr); gap: 21px; }
+.publication h2,.publication h3 { font-family: 'Segoe UI',Tahoma,Arial,sans-serif; font-size: 16px; font-weight: 600; line-height: 1.6; margin: 7px 0 10px; }
+.publication h2 a { text-decoration: none; }
+.publication h2 a:hover { color: var(--accent); text-decoration: underline; }
+.pub-authors,.pub-journal { font-size: 13px; line-height: 1.8; }
+.doi-link { font-size: 12px; }
+.subheading { font-size: 15px; margin-bottom: 25px; }
+.two-columns { gap: 54px; }
+.timeline h3 { font-size: 16px; line-height: 1.6; }
+.timeline .institution { font-size: 13.5px; line-height: 1.8; }
+.timeline p:not(.institution),.timeline li li { font-size: 13px; line-height: 1.85; }
+.period { font-size: 12px; }
+.timeline-item { margin-bottom: 30px; }
+.skill-card h2,.skill-card h3 { font-size: 17px; line-height: 1.5; font-weight: 600; margin-bottom: 12px; }
+.skill-card p { font-size: 14px; line-height: 1.8; }
+.skill-tags li { font-size: 12px; padding: 3px 9px; }
+.soft-skills h2 { font-size: 15px; line-height: 1.5; }
+.soft-skills p { font-size: 13.5px; line-height: 1.8; }
+.conference h3 { font-size: 15px; line-height: 1.6; }
+.conference p { font-size: 13px; line-height: 1.8; }
+.conference time { font-size: 12px; }
+.training-details summary { font-size: 14px; line-height: 1.7; }
+.training-list h3,.training-list h4 { font-size: 13px; line-height: 1.7; font-weight: 600; }
+.training-list p { font-size: 12.5px; line-height: 1.8; }
+.about-copy { font-size: 15px; line-height: 1.9; }
+.language { font-size: 13.5px; }
+.language dd { font-size: 12px; }
+.service h2 { font-size: 14px; line-height: 1.65; font-weight: 600; margin: 0 0 9px; }
+.service p { font-size: 13px; line-height: 1.85; }
+.personal-row { font-size: 13px; line-height: 1.8; }
+.view #awards { margin-top: 44px; padding: 36px 0 0; border-top: 1px solid var(--line); background: transparent; }
+.view #awards>.container { max-width: 100%; width: 100%; }
+.view #awards .section-title { font-size: 31px; }
+.award h3 { font-size: 15px; }
+.award p { font-size: 13px; }
+.contact-copy { font-size: 16px; line-height: 1.85; }
+.contact-item a { font-size: 15px; }
+.contact-item small { font-size: 12px; }
+.contact-aside h2 { font-family: var(--display); font-size: 28px; font-weight: 400; margin-bottom: 13px; }
+.contact-aside p { font-size: 14px; line-height: 1.8; }
+.site-footer { background: var(--bg); padding: 22px 0; font-size: 12px; }
+.footer-links { align-items: center; gap: 21px; }
+@media (max-width: 1100px) {
+  .nav-row { gap: 17px; }
+  .nav-links { gap: 15px; }
+  .nav-links a { font-size: 12px; }
+  .hero-grid { gap: 45px; }
+  .hero h1 { font-size: 65px; }
+  html[lang="ar"] .hero h1 { font-size: 74px; }
+}
+@media (max-width: 940px) {
+  .container { width: 740px; max-width: calc(100% - 44px); }
+  .nav-row { grid-template-columns: auto minmax(0,1fr); min-height: 67px; padding: 13px 0; gap: 11px; }
+  .header-tools { justify-self: end; }
+  .main-nav { grid-column: 1 / -1; grid-row: 2; width: 100%; order: 3; margin: 0; }
+  .nav-links { gap: 0 23px; padding: 7px 0 2px; justify-content: flex-start; }
+  .nav-links a { font-size: 14px; padding: 11px 0 9px; }
+  .hero { padding: 48px 0 31px; }
+  .hero-grid { gap: 29px; }
+  .hero h1 { font-size: 55px; letter-spacing: -2px; }
+  html[lang="ar"] .hero h1 { font-size: 62px; }
+  .hero-intro { font-size: 14.5px; }
+  .hero-role { font-size: 15px; }
+  .hero-affiliation { font-size: 12px; }
+  .hero-role .secondary-role { font-size: 14px; }
+  .hero-actions { gap: 10px; }
+  .button { font-size: 12px; padding: 10px 13px; }
+  .profile-links { gap: 11px 15px; }
+  .profile-link { font-size: 11px; }
+  .portrait-frame { width: 270px; }
+  .hero-note { font-size: 11px; }
+  .view.section { padding: 43px 0 55px; }
+  .section-title { font-size: 37px; }
+  html[lang="ar"] .section-title { font-size: 42px; }
+  .project-content { padding: 21px; }
+  .project-cover { padding: 21px; }
+  .focus-grid { gap: 22px; }
+  .focus-item h3 { font-size: 21px; }
+  .two-columns,.about-columns,.contact-grid { gap: 34px; }
+}
+@media (max-width: 640px) {
+  .container { width: calc(100% - 38px); max-width: none; }
+  .hero-grid,html[lang="ar"] .hero-grid { grid-template-columns: minmax(0,1fr); gap: 26px; }
+  .hero-copy,html[lang="ar"] .hero-copy { order: 1; }
+  .portrait-frame,html[lang="ar"] .portrait-frame { order: 2; width: 228px; margin: 22px auto 14px; }
+  .hero h1 { font-size: 57px; letter-spacing: -2px; }
+  html[lang="ar"] .hero h1 { font-size: 69px; }
+  .hero-intro { font-size: 15px; line-height: 1.9; max-width: none; }
+  .hero-role { font-size: 16px; }
+  .hero-affiliation { font-size: 12.5px; }
+  .hero-award { font-size: 11.5px; }
+  .hero-note { margin-top: 24px; gap: 11px; }
+  .hero-note span { white-space: normal; }
+  .profile-link { font-size: 12px; }
+  .section-title { font-size: 35px; }
+  html[lang="ar"] .section-title { font-size: 40px; }
+  .section-head { gap: 12px; }
+  .section-head p { font-size: 13.5px; }
+  .home-section { padding: 37px 0; }
+  .home-section .section-title { font-size: 31px; }
+  .focus-grid,.project-grid { grid-template-columns: minmax(0,1fr); }
+  .focus-grid { gap: 24px; }
+  .project-grid { gap: 22px; }
+  .home-callout { flex-direction: column; align-items: start; gap: 15px; padding: 22px; }
+  .publication { grid-template-columns: 38px minmax(0,1fr); gap: 13px; }
+  .publication h2 { font-size: 15px; }
+  .pub-authors,.pub-journal { font-size: 12.5px; }
+  .soft-skills { grid-template-columns: minmax(0,1fr); }
+  .footer-row { gap: 13px; }
+}
+@media (max-width: 360px) {
+  .hero h1 { font-size: 48px; }
+  html[lang="ar"] .hero h1 { font-size: 59px; }
+  .brand { gap: 7px; font-size: 13px; }
+  .header-tools { gap: 5px; }
+  .language-switch { padding: 6px 7px; }
+}
+@media print {
+  .js .view { display: block !important; }
+  .home-section { display: none; }
+  .hero h1,html[lang="ar"] .hero h1 { font-size: 35pt; }
+  .hero-copy,html[lang="ar"] .hero-copy { order: 0; }
+  .portrait-frame,html[lang="ar"] .portrait-frame { order: 1; width: 155px; }
+  .view { min-height: 0; }
+  .view.section { padding: 18px 0; }
+  .home-callout { display: none; }
+}
+</style>
+<script id="anas-theme-init">document.documentElement.classList.add('js');try{const t=localStorage.getItem('anas-site-theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t;}catch(e){}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+  <header class="site-header"><div class="container nav-row">
+    <a href="#home" class="brand"><span class="brand-mark" aria-hidden="true">AO</span><span class="brand-name">Anas Osman</span></a>
+    <nav class="main-nav" id="main-nav" aria-label="Main navigation"><ul class="nav-links">
+<li><a href="#home">Home</a></li>
+<li><a href="#research">Research</a></li>
+<li><a href="#publications">Publications</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#skills">Skills</a></li>
+<li><a href="#conferences">Conferences</a></li>
+<li><a href="#about">About</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul></nav>
+    <div class="header-tools">
+      <a class="language-switch" href="index-ar.html" data-page="index-ar.html" lang="ar" dir="rtl" hreflang="ar" aria-label="Switch to Arabic"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"></circle><path d="M3 12h18M12 3c5 5 5 13 0 18-5-5-5-13 0-18Z"></path></svg>العربية</a>
+      <button type="button" class="theme-toggle" aria-label="Switch to dark theme" aria-pressed="false"><svg class="icon theme-moon" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20 14A9 9 0 0 1 10 3a9 9 0 1 0 10 11Z"></path></svg><svg class="icon theme-sun" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"></circle><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"></path></svg></button>
+      <button type="button" class="menu-toggle" aria-label="Open navigation" aria-controls="main-nav" aria-expanded="false"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h16"></path></svg></button>
+    </div>
+  </div></header>
+  <main id="main" tabindex="-1">
+    <section class="view is-active" id="home" aria-labelledby="hero-title" data-view="home"><div class="hero"><div class="container">
+      <div class="hero-grid">
+<div class="hero-copy">
+        <p class="eyebrow">Geodesy · Seismology · Remote sensing</p>
+        <h1 id="hero-title" tabindex="-1">
+<span class="name-title">Eng.</span><span class="given-name">Anas</span> Osman</h1>
+        <p class="hero-role">PhD Researcher in Geodesy &amp; Seismology<br><span class="secondary-role">Surveying Engineer</span></p>
+        <p class="hero-affiliation">University of Chinese Academy of Sciences<br>Innovation Academy for Precision Measurement Science and Technology, CAS</p>
+        <p class="hero-intro">I use InSAR and GNSS to study how the Earth's crust moves before, during and after earthquakes, how faults slip, and how earthquakes influence nearby faults. My work also draws on remote sensing, GIS and gravimetric geoid modelling.</p>
+        <p class="hero-award">Excellent Poster Award · Geodesy &amp; Geodynamics / TibXS, 2025</p>
+        <div class="hero-actions">
+<a class="button" href="#publications">My publications<svg class="icon direction-arrow" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-5-5 5 5-5 5"></path></svg></a><a class="button secondary" href="Anas_Osman_CV.pdf" download="Anas_Osman_CV.pdf"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m-4-4 4 4 4-4M4 16v5h16v-5"></path></svg>Download CV</a>
+</div>
+        <div class="profile-links" aria-label="Academic and professional profiles">
+<a class="profile-link" href="https://orcid.org/0000-0002-4075-6879" target="_blank" rel="noopener noreferrer" lang="en" dir="ltr"><svg class="brand-icon" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="12" fill="#A6CE39"></circle><circle cx="6.6" cy="6.7" r="1" fill="#fff"></circle><path d="M5.8 9h1.6v9H5.8zm4-3h4.4a6 6 0 0 1 0 12H9.8zm1.6 1.5v9h2.8a4.5 4.5 0 0 0 0-9Z" fill="#fff"></path></svg>ORCID</a><a class="profile-link" href="https://www.linkedin.com/in/anas-geodesy/" target="_blank" rel="noopener noreferrer" lang="en" dir="ltr"><svg class="brand-icon" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><rect width="24" height="24" rx="2.4" fill="#0A66C2"></rect><circle cx="5.5" cy="5.5" r="1.6" fill="#fff"></circle><path d="M4 9h3v11H4zm5 0h3v1.6c.7-1.2 1.9-1.9 3.4-1.9 3 0 4.1 1.8 4.1 4.6V20h-3v-6c0-1.7-.6-2.5-1.8-2.5-1.7 0-2.7 1-2.7 3V20H9Z" fill="#fff"></path></svg>LinkedIn</a><a class="profile-link" href="https://www.researchgate.net/profile/Anas-Osman-4" target="_blank" rel="noopener noreferrer" lang="en" dir="ltr"><svg class="brand-icon" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><rect width="24" height="24" rx="2.5" fill="#008C83"></rect><path d="M5 6h5a4 4 0 0 1 1.1 7.8L15 20h-3l-3.5-6H7.4v6H5zm2.4 2v4h2.3c2.8 0 2.8-4 0-4Z" fill="#fff"></path><path d="M17.5 4.5c-1.8 0-3 1.3-3 3.2s1.2 3.2 3 3.2c1 0 1.9-.4 2.4-1V7.5h-2.4v1.1h1.1v.7c-.3.3-.7.4-1.1.4-1 0-1.6-.8-1.6-2s.6-2 1.6-2c.5 0 .9.2 1.2.6l.8-.8c-.5-.7-1.2-1-2-1Z" fill="#fff"></path></svg>ResearchGate</a><a class="profile-link" href="https://scholar.google.com/citations?user=oemk-kcAAAAJ" target="_blank" rel="noopener noreferrer" lang="en" dir="ltr"><svg class="brand-icon" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path d="M12 2 0 10l12 8 12-8Z" fill="#4285F4"></path><path d="M6 14v5c3 4 9 4 12 0v-5l-6 4Z" fill="#3569B8"></path><path d="M22 11v7" stroke="#4285F4" stroke-width="1.4"></path></svg>Google Scholar</a>
+</div>
+      </div>
+<figure class="portrait-frame"><img class="portrait" id="portrait" src="anas.jpg" width="354" height="472" alt="Anas Osman" fetchpriority="high"><div class="portrait-fallback" id="portrait-fallback" aria-label="Anas Osman" hidden>AO</div></figure>
+</div>
+      <div class="hero-note">
+<span><svg class="icon" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 0 1 14 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>Based in Wuhan, China</span><span>Expected PhD completion: July 2027</span>
+</div>
+    </div></div>
+<section class="home-section"><div class="container">
+<div class="section-head">
+<div>
+<p class="eyebrow">Research focus</p>
+<h2 class="section-title">Reading the Earth’s movements</h2>
+</div>
+<a class="text-link" href="#research">Explore my research <span aria-hidden="true">→</span></a>
+</div>
+<div class="focus-grid">
+<article class="focus-item"><h3>Earthquake deformation</h3>
+<p>Fault slip and deformation before, during and after earthquakes, observed with InSAR and GNSS.</p></article><article class="focus-item"><h3>Remote sensing &amp; GIS</h3>
+<p>Satellite imagery, radar interferometry, deformation time series and geospatial analysis.</p></article><article class="focus-item"><h3>Physical geodesy</h3>
+<p>Gravimetric geoid modelling, gravity-field analysis and evaluation of geopotential models.</p></article>
+</div>
+</div></section><section class="home-section"><div class="container">
+<div class="section-head">
+<div>
+<p class="eyebrow">Published work</p>
+<h2 class="section-title">Recent research</h2>
+</div>
+<a class="text-link" href="#publications">All publications <span aria-hidden="true">→</span></a>
+</div>
+<div class="project-grid">
+<article class="project-card"><div class="project-cover " aria-hidden="true">
+<svg class="cover-art" viewbox="0 0 300 210" width="275" height="190" aria-hidden="true" fill="none" stroke="#c1e1d8" stroke-width="1"><ellipse cx="174" cy="103" rx="116" ry="87" transform="rotate(-28 174 103)"></ellipse><ellipse cx="174" cy="103" rx="100" ry="70" transform="rotate(-28 174 103)"></ellipse><ellipse cx="174" cy="103" rx="83" ry="56" transform="rotate(-28 174 103)"></ellipse><ellipse cx="174" cy="103" rx="65" ry="43" transform="rotate(-28 174 103)"></ellipse><ellipse cx="174" cy="103" rx="45" ry="29" transform="rotate(-28 174 103)"></ellipse><ellipse cx="174" cy="103" rx="24" ry="15" transform="rotate(-28 174 103)"></ellipse><path d="M104 205 247 3" stroke="#fff" stroke-opacity=".45" stroke-dasharray="5 7"></path></svg><span>2024</span><b>WUSHI</b>
+</div>
+<div class="project-content">
+<p class="project-meta" lang="en" dir="ltr">Remote Sensing · 2026</p>
+<h3>Wushi earthquake sequence</h3>
+<p>Coseismic rupture, afterslip and aftershock interactions following the 2024 Mw 7.1 earthquake.</p>
+<a class="text-link" href="https://doi.org/10.3390/rs18162739" target="_blank" rel="noopener noreferrer">Read the paper <span aria-hidden="true">↗</span></a>
+</div></article><article class="project-card"><div class="project-cover blue" aria-hidden="true">
+<svg class="cover-art" viewbox="0 0 300 210" width="275" height="190" aria-hidden="true" fill="none" stroke="#c1e1d8" stroke-width="1"><ellipse cx="174" cy="103" rx="116" ry="87" transform="rotate(-28 174 103)"></ellipse><ellipse cx="174" cy="103" rx="100" ry="70" transform="rotate(-28 174 103)"></ellipse><ellipse cx="174" cy="103" rx="83" ry="56" transform="rotate(-28 174 103)"></ellipse><ellipse cx="174" cy="103" rx="65" ry="43" transform="rotate(-28 174 103)"></ellipse><ellipse cx="174" cy="103" rx="45" ry="29" transform="rotate(-28 174 103)"></ellipse><ellipse cx="174" cy="103" rx="24" ry="15" transform="rotate(-28 174 103)"></ellipse><path d="M104 205 247 3" stroke="#fff" stroke-opacity=".45" stroke-dasharray="5 7"></path></svg><span>2025</span><b>KAMCHATKA</b>
+</div>
+<div class="project-content">
+<p class="project-meta" lang="en" dir="ltr">Geophysical Research Letters · 2026</p>
+<h3>Slip through the earthquake cycle</h3>
+<p>Interseismic, coseismic and early postseismic slip associated with the 2025 Mw 8.8 Kamchatka earthquake.</p>
+<a class="text-link" href="https://doi.org/10.1029/2025GL121473" target="_blank" rel="noopener noreferrer">Read the paper <span aria-hidden="true">↗</span></a>
+</div></article>
+</div>
+<div class="home-callout">
+<div>
+<h3>Research and collaboration</h3>
+<p>Interested in geodesy, earthquake deformation or geospatial engineering? Let’s get in touch.</p>
+</div>
+<a class="text-link" href="#contact">Contact me <span aria-hidden="true">→</span></a>
+</div>
+</div></section></section>
+
+    <section class="view section" id="research" aria-labelledby="research-title" data-view="research"><div class="container">
+      <div class="section-head page-heading">
+<h1 class="section-title" id="research-title" tabindex="-1">Research interests</h1>
+<p>Understanding the Earth through satellite and geodetic observations.</p>
+</div>
+      <div class="research-grid">
+        <article class="research-card"><h2>Earthquake-cycle geodesy</h2>
+<p>Interseismic strain, coseismic slip and postseismic deformation, including afterslip, aftershock triggering and stress transfer between faults.</p>
+<div class="research-tags">InSAR · GNSS · Coulomb stress</div></article>
+        <article class="research-card"><h2>Remote sensing &amp; GIS</h2>
+<p>Satellite imagery and radar interferometry for deformation time series, land subsidence and geospatial analysis.</p>
+<div class="research-tags">Satellite imagery · SAR · GIS</div></article>
+        <article class="research-card"><h2>Physical &amp; satellite geodesy</h2>
+<p>Gravimetric geoid modelling, gravity-field analysis and evaluation of global geopotential models using terrestrial and satellite observations.</p>
+<div class="research-tags">Geoid · Gravity · GNSS/levelling</div></article>
+      </div>
+      <p class="research-status"><strong>Work in progress:</strong> Four additional research manuscripts are in progress or under review.</p>
+    <div class="research-projects">
+<h2>Selected studies</h2>
+<div class="project-grid">
+<article class="project-card"><div class="project-cover " aria-hidden="true">
+<svg class="cover-art" viewbox="0 0 300 210" width="275" height="190" aria-hidden="true" fill="none" stroke="#c1e1d8" stroke-width="1"><ellipse cx="174" cy="103" rx="116" ry="87" transform="rotate(-28 174 103)"></ellipse><ellipse cx="174" cy="103" rx="100" ry="70" transform="rotate(-28 174 103)"></ellipse><ellipse cx="174" cy="103" rx="83" ry="56" transform="rotate(-28 174 103)"></ellipse><ellipse cx="174" cy="103" rx="65" ry="43" transform="rotate(-28 174 103)"></ellipse><ellipse cx="174" cy="103" rx="45" ry="29" transform="rotate(-28 174 103)"></ellipse><ellipse cx="174" cy="103" rx="24" ry="15" transform="rotate(-28 174 103)"></ellipse><path d="M104 205 247 3" stroke="#fff" stroke-opacity=".45" stroke-dasharray="5 7"></path></svg><span>2024</span><b>WUSHI</b>
+</div>
+<div class="project-content">
+<p class="project-meta" lang="en" dir="ltr">Remote Sensing · 2026</p>
+<h3>Wushi earthquake sequence</h3>
+<p>Coseismic rupture, afterslip and aftershock interactions following the 2024 Mw 7.1 earthquake.</p>
+<a class="text-link" href="https://doi.org/10.3390/rs18162739" target="_blank" rel="noopener noreferrer">Read the paper <span aria-hidden="true">↗</span></a>
+</div></article><article class="project-card"><div class="project-cover blue" aria-hidden="true">
+<svg class="cover-art" viewbox="0 0 300 210" width="275" height="190" aria-hidden="true" fill="none" stroke="#c1e1d8" stroke-width="1"><ellipse cx="174" cy="103" rx="116" ry="87" transform="rotate(-28 174 103)"></ellipse><ellipse cx="174" cy="103" rx="100" ry="70" transform="rotate(-28 174 103)"></ellipse><ellipse cx="174" cy="103" rx="83" ry="56" transform="rotate(-28 174 103)"></ellipse><ellipse cx="174" cy="103" rx="65" ry="43" transform="rotate(-28 174 103)"></ellipse><ellipse cx="174" cy="103" rx="45" ry="29" transform="rotate(-28 174 103)"></ellipse><ellipse cx="174" cy="103" rx="24" ry="15" transform="rotate(-28 174 103)"></ellipse><path d="M104 205 247 3" stroke="#fff" stroke-opacity=".45" stroke-dasharray="5 7"></path></svg><span>2025</span><b>KAMCHATKA</b>
+</div>
+<div class="project-content">
+<p class="project-meta" lang="en" dir="ltr">Geophysical Research Letters · 2026</p>
+<h3>Slip through the earthquake cycle</h3>
+<p>Interseismic, coseismic and early postseismic slip associated with the 2025 Mw 8.8 Kamchatka earthquake.</p>
+<a class="text-link" href="https://doi.org/10.1029/2025GL121473" target="_blank" rel="noopener noreferrer">Read the paper <span aria-hidden="true">↗</span></a>
+</div></article><article class="project-card"><div class="project-cover sage" aria-hidden="true">
+<svg class="cover-art" viewbox="0 0 300 210" width="275" height="190" aria-hidden="true" fill="none" stroke="#c1e1d8" stroke-width="1"><ellipse cx="174" cy="103" rx="116" ry="87" transform="rotate(-28 174 103)"></ellipse><ellipse cx="174" cy="103" rx="100" ry="70" transform="rotate(-28 174 103)"></ellipse><ellipse cx="174" cy="103" rx="83" ry="56" transform="rotate(-28 174 103)"></ellipse><ellipse cx="174" cy="103" rx="65" ry="43" transform="rotate(-28 174 103)"></ellipse><ellipse cx="174" cy="103" rx="45" ry="29" transform="rotate(-28 174 103)"></ellipse><ellipse cx="174" cy="103" rx="24" ry="15" transform="rotate(-28 174 103)"></ellipse><path d="M104 205 247 3" stroke="#fff" stroke-opacity=".45" stroke-dasharray="5 7"></path></svg><span>GEODESY</span><b>SUDAN</b>
+</div>
+<div class="project-content">
+<p class="project-meta" lang="en" dir="ltr">Journal of Applied Geodesy · 2025</p>
+<h3>Gravity and geoid modelling</h3>
+<p>Evaluation of global geopotential and elevation models against terrestrial gravity and GNSS/levelling observations in Sudan.</p>
+<a class="text-link" href="https://doi.org/10.1515/jag-2024-0006" target="_blank" rel="noopener noreferrer">Read the paper <span aria-hidden="true">↗</span></a>
+</div></article><article class="project-card"><div class="project-cover blue" aria-hidden="true">
+<svg class="cover-art" viewbox="0 0 300 210" width="275" height="190" aria-hidden="true" fill="none" stroke="#c1e1d8" stroke-width="1"><ellipse cx="174" cy="103" rx="116" ry="87" transform="rotate(-28 174 103)"></ellipse><ellipse cx="174" cy="103" rx="100" ry="70" transform="rotate(-28 174 103)"></ellipse><ellipse cx="174" cy="103" rx="83" ry="56" transform="rotate(-28 174 103)"></ellipse><ellipse cx="174" cy="103" rx="65" ry="43" transform="rotate(-28 174 103)"></ellipse><ellipse cx="174" cy="103" rx="45" ry="29" transform="rotate(-28 174 103)"></ellipse><ellipse cx="174" cy="103" rx="24" ry="15" transform="rotate(-28 174 103)"></ellipse><path d="M104 205 247 3" stroke="#fff" stroke-opacity=".45" stroke-dasharray="5 7"></path></svg><span>REMOTE SENSING</span><b>MAKASSAR</b>
+</div>
+<div class="project-content">
+<p class="project-meta" lang="en" dir="ltr">Urban &amp; Environmental Technology · 2026</p>
+<h3>Land deformation and land cover</h3>
+<p>Multi-temporal analysis of land surface deformation in relation to land use and land cover in Makassar City.</p>
+<a class="text-link" href="https://doi.org/10.25105/urbanenvirotech.v9i1.23368" target="_blank" rel="noopener noreferrer">Read the paper <span aria-hidden="true">↗</span></a>
+</div></article>
+</div>
+</div>
+</div></section>
+
+    <section class="view section alt" id="publications" aria-labelledby="publications-title" data-view="publications"><div class="container">
+      <div class="section-head page-heading">
+<h1 class="section-title" id="publications-title" tabindex="-1">Publications</h1>
+<p>Five journal articles and three conference papers. My name is highlighted in the author lists.</p>
+</div>
+      <div class="pub-tools">
+<div class="filters" role="group" aria-label="Filter publications">
+<button class="filter-btn" type="button" data-filter="all" aria-pressed="true">All (8)</button><button class="filter-btn" type="button" data-filter="journal" aria-pressed="false">Journal articles (5)</button><button class="filter-btn" type="button" data-filter="conference" aria-pressed="false">Conference papers (3)</button>
+</div>
+      <label class="search-wrap" for="publication-search"><span class="sr-only">Search publications</span><svg class="icon" aria-hidden="true" viewbox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="10" cy="10" r="6"></circle><path d="m15 15 6 6"></path></svg><input type="search" id="publication-search" placeholder="Search titles, authors, keywords…" autocomplete="off"></label>
+      <label class="sr-only" for="publication-sort">Sort publications</label><select class="sort-select" id="publication-sort"><option value="newest">Newest first</option>
+<option value="oldest">Oldest first</option></select>
+</div>
+      <p class="pub-status" id="publication-status" role="status" aria-live="polite">8 of 8 publications</p>
+<div id="publication-list">
+<article class="publication" data-type="journal" data-year="2026" data-order="0"><div class="pub-year" dir="ltr">2026</div>
+<div class="pub-content">
+<span class="pub-type">Journal article</span><div class="pub-text" lang="en" dir="ltr">
+<h2><a href="https://doi.org/10.3390/rs18162739" target="_blank" rel="noopener noreferrer">Interplay of Coseismic Rupture, Afterslip, and Aftershocks Associated with the 2024 Mw 7.1 Wushi Earthquake</a></h2>
+<p class="pub-authors"><strong>Osman, A.</strong>; Guo, R.; Tang, X.; Zhang, Y.; Zhang, B.; Sun, H.; Abdelaal, M. I.</p>
+<p class="pub-journal">Remote Sensing, 18(16), 2739</p>
+</div>
+<a class="doi-link" href="https://doi.org/10.3390/rs18162739" target="_blank" rel="noopener noreferrer" lang="en" dir="ltr">doi:10.3390/rs18162739 <span aria-hidden="true">↗</span></a>
+</div></article><article class="publication" data-type="journal" data-year="2026" data-order="1"><div class="pub-year" dir="ltr">2026</div>
+<div class="pub-content">
+<span class="pub-type">Journal article</span><div class="pub-text" lang="en" dir="ltr">
+<h2><a href="https://doi.org/10.1029/2025GL121473" target="_blank" rel="noopener noreferrer">Interseismic, Coseismic, and Early Postseismic Slip Associated With the 2025 Mw 8.8 Kamchatka Earthquake</a></h2>
+<p class="pub-authors">Xiao, Y.; Wang, J.; Zhang, Y.; Zhang, W.; Zhou, J.; Sun, H.; Zhao, Y.; <strong>Osman, A.</strong>; Guo, R.</p>
+<p class="pub-journal">Geophysical Research Letters</p>
+</div>
+<a class="doi-link" href="https://doi.org/10.1029/2025GL121473" target="_blank" rel="noopener noreferrer" lang="en" dir="ltr">doi:10.1029/2025GL121473 <span aria-hidden="true">↗</span></a>
+</div></article><article class="publication" data-type="journal" data-year="2026" data-order="2"><div class="pub-year" dir="ltr">2026</div>
+<div class="pub-content">
+<span class="pub-type">Journal article</span><div class="pub-text" lang="en" dir="ltr">
+<h2><a href="https://doi.org/10.25105/urbanenvirotech.v9i1.23368" target="_blank" rel="noopener noreferrer">Multi-Temporal Identification and Analysis of Land Surface Deformation with Land Use Land Cover in Makassar City</a></h2>
+<p class="pub-authors">Hamzah, S.; Wijayanti, R. F.; Anjasmara, I. M.; Sabri, L. M.; <strong>Osman, A.</strong></p>
+<p class="pub-journal">Indonesian Journal of Urban and Environmental Technology, 9(1), 40–60</p>
+</div>
+<a class="doi-link" href="https://doi.org/10.25105/urbanenvirotech.v9i1.23368" target="_blank" rel="noopener noreferrer" lang="en" dir="ltr">doi:10.25105/urbanenvirotech.v9i1.23368 <span aria-hidden="true">↗</span></a>
+</div></article><article class="publication" data-type="journal" data-year="2025" data-order="3"><div class="pub-year" dir="ltr">2025</div>
+<div class="pub-content">
+<span class="pub-type">Journal article</span><div class="pub-text" lang="en" dir="ltr">
+<h2><a href="https://doi.org/10.1515/jag-2024-0006" target="_blank" rel="noopener noreferrer">Regional evaluation of global geopotential models and three types of digital elevation models with ground-based gravity and GNSS/levelling data using several techniques over Sudan</a></h2>
+<p class="pub-authors"><strong>Osman, A.</strong>; Elsaka, B.; Anjasmara, I. M.</p>
+<p class="pub-journal">Journal of Applied Geodesy, 19(1), 25–48</p>
+</div>
+<a class="doi-link" href="https://doi.org/10.1515/jag-2024-0006" target="_blank" rel="noopener noreferrer" lang="en" dir="ltr">doi:10.1515/jag-2024-0006 <span aria-hidden="true">↗</span></a>
+</div></article><article class="publication" data-type="conference" data-year="2023" data-order="4"><div class="pub-year" dir="ltr">2023</div>
+<div class="pub-content">
+<span class="pub-type">Conference paper</span><div class="pub-text" lang="en" dir="ltr">
+<h2><a href="https://doi.org/10.1088/1755-1315/1127/1/012014" target="_blank" rel="noopener noreferrer">Determination of a new gravimetric geoid modelling for Sudan using the least-squares collocation technique</a></h2>
+<p class="pub-authors"><strong>Osman, A. S. M.</strong>; Anjasmara, I. M.</p>
+<p class="pub-journal">IOP Conference Series: Earth and Environmental Science, 1127(1), 012014</p>
+</div>
+<a class="doi-link" href="https://doi.org/10.1088/1755-1315/1127/1/012014" target="_blank" rel="noopener noreferrer" lang="en" dir="ltr">doi:10.1088/1755-1315/1127/1/012014 <span aria-hidden="true">↗</span></a>
+</div></article><article class="publication" data-type="journal" data-year="2021" data-order="5"><div class="pub-year" dir="ltr">2021</div>
+<div class="pub-content">
+<span class="pub-type">Journal article</span><div class="pub-text" lang="en" dir="ltr">
+<h2><a href="https://doi.org/10.12962/j27745449.v2i2.101" target="_blank" rel="noopener noreferrer">Accuracy Investigation of the Three-Point Resection Method Through the Distribution of Control Points Across Four Quadrants</a></h2>
+<p class="pub-authors"><strong>Osman, A.</strong>; Mabrouk, A. M. A.; Mahjoub, A. M. A.; Elkhalifa, E. A. M.; Elhag, A. A.</p>
+<p class="pub-journal">Journal of Marine-Earth Science and Technology</p>
+</div>
+<p class="pub-note">Based on my BSc thesis.</p>
+<a class="doi-link" href="https://doi.org/10.12962/j27745449.v2i2.101" target="_blank" rel="noopener noreferrer" lang="en" dir="ltr">doi:10.12962/j27745449.v2i2.101 <span aria-hidden="true">↗</span></a>
+</div></article><article class="publication" data-type="conference" data-year="2021" data-order="6"><div class="pub-year" dir="ltr">2021</div>
+<div class="pub-content">
+<span class="pub-type">Conference paper</span><div class="pub-text" lang="en" dir="ltr">
+<h2><a href="https://doi.org/10.1088/1755-1315/936/1/012035" target="_blank" rel="noopener noreferrer">Assessment of high-degree reference models and Recent Goce/Grace Global Geopotential Models over Sudan based on the GPS/Leveling data</a></h2>
+<p class="pub-authors"><strong>Osman, A. S. M.</strong>; Anjasmara, I. M.; Ruby, A.; Udama, Z. A.</p>
+<p class="pub-journal">IOP Conference Series: Earth and Environmental Science, 936(1), 012035</p>
+</div>
+<a class="doi-link" href="https://doi.org/10.1088/1755-1315/936/1/012035" target="_blank" rel="noopener noreferrer" lang="en" dir="ltr">doi:10.1088/1755-1315/936/1/012035 <span aria-hidden="true">↗</span></a>
+</div></article><article class="publication" data-type="conference" data-year="2021" data-order="7"><div class="pub-year" dir="ltr">2021</div>
+<div class="pub-content">
+<span class="pub-type">Conference paper</span><div class="pub-text" lang="en" dir="ltr">
+<h2><a href="https://doi.org/10.1088/1755-1315/936/1/012029" target="_blank" rel="noopener noreferrer">Geoid Modelling of Kalimantan Island using Airborne Gravity Data and Global Geoid Model (EGM2008)</a></h2>
+<p class="pub-authors">Udama, Z. A.; Anjasmara, I. M.; Pahlevi, A. M.; <strong>Osman, A. S. M.</strong></p>
+<p class="pub-journal">IOP Conference Series: Earth and Environmental Science, 936(1), 012029</p>
+</div>
+<a class="doi-link" href="https://doi.org/10.1088/1755-1315/936/1/012029" target="_blank" rel="noopener noreferrer" lang="en" dir="ltr">doi:10.1088/1755-1315/936/1/012029 <span aria-hidden="true">↗</span></a>
+</div></article>
+</div>
+      <div class="no-results" id="no-results" hidden>
+<p>No publications match this search.</p>
+<button class="reset-btn" id="reset-search" type="button">Reset filters and search</button>
+</div>
+    </div></section>
+
+    <section class="view section" id="experience" aria-labelledby="experience-title" data-view="experience"><div class="container">
+      <div class="section-head page-heading">
+<h1 class="section-title" id="experience-title" tabindex="-1">Education &amp; experience</h1>
+<p>A background in surveying and geomatics, followed by doctoral research in earthquake deformation.</p>
+</div>
+      <div class="two-columns">
+<div>
+<h2 class="subheading">Education</h2>
+<ol class="timeline">
+<li class="timeline-item">
+<p class="period">Sep 2023 – Jul 2027 (expected)</p>
+<h3>PhD, Geodesy and Surveying Engineering</h3>
+<p class="institution">University of Chinese Academy of Sciences (UCAS), Beijing, China</p>
+<p>Doctoral research host since January 2024: Innovation Academy for Precision Measurement Science and Technology, CAS, Wuhan. PhD qualification examination passed in June 2024.</p>
+</li>
+<li class="timeline-item">
+<p class="period">Jul 2020 – Aug 2022</p>
+<h3>Master of Engineering, Geomatics Engineering</h3>
+<p class="institution">Institut Teknologi Sepuluh Nopember (ITS), Surabaya, Indonesia</p>
+<p>Cum laude · CGPA 3.86/4.00. Department of Geomatics Engineering.</p>
+</li>
+<li class="timeline-item">
+<p class="period">2012 – 2017</p>
+<h3>BSc (Honours), Surveying Engineering</h3>
+<p class="institution">Omdurman Islamic University, Sudan</p>
+<p>Second Class, Division One. Faculty of Engineering Sciences.</p>
+</li>
+</ol>
+</div>
+<div>
+<h2 class="subheading">Research experience</h2>
+<ol class="timeline">
+<li class="timeline-item">
+<p class="period">Jan 2024 – Present</p>
+<h3>Doctoral Research, Geodesy and Seismology</h3>
+<p class="institution">Innovation Academy for Precision Measurement Science and Technology, CAS</p>
+<ul class="experience-list">
+<li>Investigate earthquake-cycle deformation using InSAR and GNSS, with published work on the Wushi and Kamchatka earthquake sequences.</li>
+<li>Model coseismic slip and afterslip; study earthquake interactions using Coulomb stress changes and aftershock distributions.</li>
+<li>Four additional research manuscripts are in progress or under review.</li>
+</ul>
+</li>
+<li class="timeline-item">
+<p class="period">Jul 2020 – Aug 2022</p>
+<h3>Master’s Research, Gravimetric Geoid Modelling</h3>
+<p class="institution">Institut Teknologi Sepuluh Nopember (ITS)</p>
+<ul class="experience-list">
+<li>Developed a regional gravimetric geoid model for Sudan using least-squares collocation.</li>
+<li>Evaluated global geopotential and digital elevation models against terrestrial gravity and GNSS/levelling observations.</li>
+</ul>
+</li>
+</ol>
+</div>
+</div>
+      <div class="professional">
+<h2 class="subheading">Professional experience</h2>
+<div class="two-columns">
+<ol class="timeline"><li class="timeline-item">
+<p class="period">Sep 2022 – Nov 2024</p>
+<h3>Adjunct Lecturer · Part-time</h3>
+<p class="institution">Department of Surveying Engineering, Omdurman Islamic University, Sudan</p>
+<p>Taught undergraduate courses and supervised final-year projects and BSc theses.</p>
+</li></ol>
+<ol class="timeline"><li class="timeline-item">
+<p class="period">Dec 2017 – Dec 2018</p>
+<h3>Surveying Engineer · Contract</h3>
+<p class="institution">Dar Consult, Khartoum, Sudan</p>
+<p>Consultant surveying engineer on road and bridge projects; modified engineering designs and supervised contractors during site implementation.</p>
+</li></ol>
+</div>
+</div>
+    </div></section>
+
+    <section class="view section alt" id="skills" aria-labelledby="skills-title" data-view="skills"><div class="container">
+      <div class="section-head page-heading">
+<h1 class="section-title" id="skills-title" tabindex="-1">Technical skills</h1>
+<p>Methods and tools for geodetic research, geospatial analysis and surveying engineering.</p>
+</div>
+      <div class="skills-grid">
+<article class="skill-card"><h2>Geodesy &amp; seismogeodesy</h2>
+<p>InSAR processing and time-series analysis (SBAS, PS-InSAR); GNSS data processing; deformation monitoring; coseismic and postseismic modelling; finite-fault inversion; Coulomb stress and elastic dislocation modelling; gravimetric geoid modelling; least-squares adjustment and uncertainty analysis.</p></article><article class="skill-card"><h2>Remote sensing &amp; GIS</h2>
+<p>Satellite image processing; SAR interferometry; LiDAR point-cloud processing; digital elevation model generation; geospatial data processing and analysis.</p>
+<ul class="skill-tags" lang="en" dir="ltr">
+<li>ArcGIS</li>
+<li>QGIS</li>
+<li>SNAP</li>
+</ul></article><article class="skill-card"><h2>Programming &amp; scripting</h2>
+<p>MATLAB and Python for scientific analysis; Bash shell scripting; Git version control; Linux/Unix environments.</p>
+<ul class="skill-tags" lang="en" dir="ltr">
+<li>MATLAB</li>
+<li>Python</li>
+<li>NumPy</li>
+<li>SciPy</li>
+<li>Pandas</li>
+<li>Matplotlib</li>
+<li>Bash</li>
+<li>Git</li>
+</ul></article><article class="skill-card"><h2>Machine learning &amp; AI</h2>
+<p>Machine learning and artificial intelligence applied to geoscience data.</p>
+<ul class="skill-tags" lang="en" dir="ltr">
+<li>scikit-learn</li>
+<li>TensorFlow</li>
+<li>PyTorch</li>
+</ul></article><article class="skill-card"><h2>Research software</h2>
+<p>Tools for radar interferometry, GNSS processing, fault-slip modelling and physical geodesy.</p>
+<ul class="skill-tags" lang="en" dir="ltr">
+<li>GMTSAR</li>
+<li>ISCE</li>
+<li>MintPy</li>
+<li>StaMPS</li>
+<li>PSGRN/PSCMP</li>
+<li>SDM</li>
+<li>SlipSolve</li>
+<li>GRAVSOFT</li>
+<li>Coulomb</li>
+<li>GAMIT/GLOBK</li>
+<li>GipsyX</li>
+</ul></article><article class="skill-card"><h2>Visualisation &amp; documentation</h2>
+<p>Scientific maps, figures and research documentation.</p>
+<ul class="skill-tags" lang="en" dir="ltr">
+<li>GMT</li>
+<li>PyGMT</li>
+<li>Inkscape</li>
+<li>Matplotlib</li>
+<li>Surfer</li>
+<li>Google Earth Pro</li>
+<li>LaTeX</li>
+<li>Overleaf</li>
+<li>Microsoft Office</li>
+</ul></article><article class="skill-card"><h2>Surveying engineering</h2>
+<p>GNSS RTK, total station, levelling, topographic surveys, setting out, network adjustment and surveying data processing.</p>
+<ul class="skill-tags" lang="en" dir="ltr">
+<li>AutoCAD Civil 3D</li>
+<li>GNSS RTK</li>
+</ul></article>
+</div>
+<div class="soft-skills">
+<h2>Soft skills</h2>
+<p>Time management; problem-solving; work ethic; presentation and communication; teamwork; quick learning and adaptability; research and analytical thinking; creativity.</p>
+</div>
+    </div></section>
+
+    <section class="view section" id="conferences" aria-labelledby="conferences-title" data-view="conferences"><div class="container">
+      <div class="section-head page-heading">
+<h1 class="section-title" id="conferences-title" tabindex="-1">Conferences &amp; training</h1>
+<p>Research presentations and professional development in satellite observations, geodesy and engineering.</p>
+</div>
+      <div class="two-columns">
+<div>
+<h2 class="subheading">Academic conferences &amp; presentations</h2>
+<ol class="conference-list">
+<li class="conference">
+<time>Aug 2026</time><div>
+<h3>14th International Workshop on TibXS</h3>
+<p>Kunming, China · 10–14 August 2026</p>
+<p class="event-role">Presenter</p>
+</div>
+</li>
+<li class="conference">
+<time>Aug 2025</time><div>
+<h3>Joint Geodesy and Geodynamics Symposium &amp; 13th TibXS Workshop</h3>
+<p>Xining, China · 1–4 August 2025</p>
+<p class="event-role">Poster presentation · Excellent Poster Award</p>
+</div>
+</li>
+<li class="conference">
+<time>Oct 2024</time><div>
+<h3>GGOS Days 2024</h3>
+<p>Global Geodetic Observing System · International Association of Geodesy</p>
+<p class="event-role">Participant</p>
+</div>
+</li>
+<li class="conference">
+<time>Jul 2022</time><div>
+<h3>Geomatics International Conference (GEOICON 2022)</h3>
+<p>ITS, Indonesia · Sudan gravimetric geoid modelling using least-squares collocation</p>
+<p class="event-role">Presenter</p>
+</div>
+</li>
+<li class="conference">
+<time>Jul 2021</time><div>
+<h3>Geomatics International Conference (GEOICON 2021)</h3>
+<p>ITS, Indonesia · Geospatial solutions for hazards and disaster management</p>
+<p class="event-role">Presenter</p>
+</div>
+</li>
+<li class="conference">
+<time>Oct 2019</time><div>
+<h3>Joint International Conference on Civil, Environmental and Geo Engineering</h3>
+<p>Institut Teknologi Sepuluh Nopember, Indonesia</p>
+<p class="event-role">Presenter</p>
+</div>
+</li>
+</ol>
+</div>
+<div>
+<h2 class="subheading">Selected training &amp; professional development</h2>
+<details class="training-details" open><summary>Satellite observations, remote sensing &amp; GIS</summary><ul class="training-list">
+<li>
+<span class="training-date">Nov 2025</span><h4>COMET InSAR Training Workshop</h4>
+<p>Centre for Observation and Modelling of Earthquakes, Volcanoes and Tectonics, UK.</p>
+</li>
+<li>
+<span class="training-date">Apr 2024</span><h4>Advanced InSAR and Data Analytics for Civil Engineering</h4>
+<p>AGS, Hong Kong · construction-site risk reduction and long-term asset monitoring.</p>
+</li>
+<li>
+<span class="training-date">Mar/Jun 2024</span><h4>From Space to Screen: Satellite Imagery in ArcGIS</h4>
+<p>Esri · accessing and tasking satellite imagery.</p>
+</li>
+<li>
+<span class="training-date">Mar 2024</span><h4>NOAA SatBathy: Satellite-Derived Bathymetry</h4>
+<p>NOAA · automated bathymetry from satellite observations.</p>
+</li>
+<li>
+<span class="training-date">May 2019</span><h4>Cartography</h4>
+<p>Esri.</p>
+</li>
+</ul></details><details class="training-details"><summary>GNSS, gravity &amp; seismology</summary><ul class="training-list">
+<li>
+<span class="training-date">2020–2024</span><h4>GNSS positioning, time series &amp; observation planning</h4>
+<p>NOAA NGS / COMET · noise analysis, orbit determination, multi-GNSS positioning, space weather, antenna calibration and survey planning.</p>
+</li>
+<li>
+<span class="training-date">2024</span><h4>EarthScope Seismology Skill Building Workshop</h4>
+<p>EarthScope Consortium / Miami University · Linux, shell scripting, GMT and introductory SAC tutorials.</p>
+</li>
+<li>
+<span class="training-date">2022–2024</span><h4>Geoid and gravity training</h4>
+<p>NOAA NGS / COMET · Geoid Monitoring Service (GeMS), Gravity for Geodesy II and GEOID2022.</p>
+</li>
+<li>
+<span class="training-date">Selected webinars</span><h4>NOAA National Geodetic Survey webinars</h4>
+<p>OPUS, CORS, reference-system modernisation, absolute gravity, geoid change and sea-level observations.</p>
+</li>
+</ul></details><details class="training-details"><summary>Research practice &amp; engineering</summary><ul class="training-list">
+<li>
+<span class="training-date">2024–2025</span><h4>Peer review, open science &amp; scientific writing</h4>
+<p>Researcher Academy / University of Nottingham · manuscript preparation, publication ethics, research metrics and journal selection; systematic-review training (June 2024).</p>
+</li>
+<li>
+<span class="training-date">Jan/Feb 2019</span><h4>Engineering software &amp; quantity surveying</h4>
+<p>Zoohal Engineering and Training Center · AutoCAD Civil 3D, Primavera P6, PlanSwift, earthworks, Excel quantity surveying, project costs and contracts.</p>
+</li>
+<li>
+<span class="training-date">Aug–Sep 2014</span><h4>Practical surveying training</h4>
+<p>Sudan Survey Authority · digital levelling, Leica total station, GPS fundamentals, data transfer and field surveying.</p>
+</li>
+</ul></details>
+</div>
+</div>
+    </div></section>
+
+    <section class="view section" id="about" aria-labelledby="about-title" data-view="about"><div class="container">
+      <div class="section-head page-heading">
+<h1 class="section-title" id="about-title" tabindex="-1">About me</h1>
+<p>A Sudanese engineer and researcher based in Wuhan, China.</p>
+</div>
+      <div class="about-columns">
+<div>
+<p class="about-copy">My studies and work have taken me from Sudan to Indonesia and China. I combine a practical surveying background with research in geomatics, physical geodesy and earthquake deformation.</p>
+<p class="about-copy">Outside research, I enjoy learning languages, travel and cultural exchange, reading about science and technology, photography, football, hiking and field exploration.</p>
+      <dl class="personal-list">
+<div class="personal-row">
+<dt>Nationality</dt>
+<dd>Sudanese</dd>
+</div>
+<div class="personal-row">
+<dt>Based in</dt>
+<dd>Wuhan, Hubei, China</dd>
+</div>
+<div class="personal-row">
+<dt>From</dt>
+<dd>Khartoum, Sudan</dd>
+</div>
+<div class="personal-row">
+<dt>PhD completion</dt>
+<dd>July 2027 (expected)</dd>
+</div>
+</dl>
+</div>
+      <div>
+<h2 class="subheading">Languages</h2>
+<dl class="language-list">
+<div class="language">
+<dt>Arabic</dt>
+<dd>Native or bilingual</dd>
+</div>
+<div class="language">
+<dt>Nubian languages</dt>
+<dd>Native or bilingual</dd>
+</div>
+<div class="language">
+<dt>English</dt>
+<dd>Full professional proficiency</dd>
+</div>
+<div class="language">
+<dt>Chinese</dt>
+<dd>Elementary proficiency</dd>
+</div>
+<div class="language">
+<dt>Indonesian</dt>
+<dd>Elementary proficiency</dd>
+</div>
+</dl>
+<div class="service">
+<h2>Academic service</h2>
+<p>Reviewer, <a href="https://journal.its.ac.id/index.php/jmest/reviewer-team" target="_blank" rel="noopener noreferrer" lang="en" dir="ltr">Journal of Marine-Earth Science and Technology</a><br>May 2023 – Present</p>
+<h2>Professional registration</h2>
+<p>Graduate Engineer (Surveying), Sudan Engineering Council · April 2018.<br><span lang="en" dir="ltr">EC/ER/GE/55449</span></p>
+</div>
+<div class="research-ids">
+<a href="https://www.scopus.com/authid/detail.uri?authorId=57395201900" target="_blank" rel="noopener noreferrer" lang="en" dir="ltr">Scopus</a><a href="https://www.webofscience.com/wos/author/record/KLD-3093-2024" target="_blank" rel="noopener noreferrer" lang="en" dir="ltr">Web of Science</a><a href="https://github.com/osmananas" target="_blank" rel="noopener noreferrer" lang="en" dir="ltr">GitHub</a>
+</div>
+</div>
+</div>
+    <section class="section alt" id="awards" aria-labelledby="awards-title"><div class="container">
+      <div class="section-head">
+<h2 class="section-title" id="awards-title">Awards &amp; scholarships</h2>
+<p>Recognition for research presentations and academic achievement.</p>
+</div>
+<div class="awards-grid">
+<article class="award"><time class="award-year">2025</time><div>
+<h3>Excellent Poster Award</h3>
+<p>Joint Geodesy and Geodynamics Symposium &amp; 13th TibXS Workshop · Xining, China.</p>
+</div></article><article class="award"><time class="award-year">2023</time><div>
+<h3>ANSO-CAS-TWAS/UNESCO PhD Scholarship</h3>
+<p>ANSO Scholarship for Young Talents · ANSO, Chinese Academy of Sciences and TWAS/UNESCO.</p>
+</div></article><article class="award"><time class="award-year">2022</time><div>
+<h3>Master of Engineering with Cum Laude</h3>
+<p>Institut Teknologi Sepuluh Nopember · CGPA 3.86/4.00.</p>
+</div></article><article class="award"><time class="award-year">2019</time><div>
+<h3>KNB Scholarship for Master’s Studies</h3>
+<p>Indonesian Government · master’s studies in Geomatics Engineering at ITS.</p>
+</div></article><article class="award"><time class="award-year">2017</time><div>
+<h3>Academic Excellence Award, Surveying Engineering</h3>
+<p>Omdurman Islamic University · highest semester-10 performance and second-best overall fifth-year result (2016/2017).</p>
+</div></article>
+</div>
+    </div></section>
+
+    </div></section>
+
+    <section class="view section alt" id="contact" aria-labelledby="contact-title" data-view="contact"><div class="container">
+      <div class="section-head page-heading">
+<h1 class="section-title" id="contact-title" tabindex="-1">Get in touch</h1>
+<p>Research collaboration, academic enquiries and geospatial engineering opportunities.</p>
+</div>
+      <div class="contact-grid">
+<div>
+<p class="contact-copy">I welcome conversations about earthquake geodesy, satellite observations, GIS and gravimetric geoid modelling. You can reach me by email or through my professional profiles.</p>
+      <div class="contact-list">
+<div class="contact-item">
+<div>
+<small>Email</small><a href="mailto:anas.geodesy@gmail.com" dir="ltr">anas.geodesy@gmail.com</a>
+</div>
+<button type="button" class="copy-email" data-email="anas.geodesy@gmail.com" aria-label="Copy personal email address"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M15 8V4H4v11h4"></path></svg></button>
+</div>
+<div class="contact-item">
+<div>
+<small>Institutional email</small><a href="mailto:anas@apm.ac.cn" dir="ltr">anas@apm.ac.cn</a>
+</div>
+<button type="button" class="copy-email" data-email="anas@apm.ac.cn" aria-label="Copy institutional email address"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="12" height="12" rx="2"></rect><path d="M15 8V4H4v11h4"></path></svg></button>
+</div>
+<div class="contact-item">
+<div>
+<small>Phone</small><a href="tel:+8617810730902" dir="ltr">+86 178 1073 0902</a>
+</div>
+<svg class="icon" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M19 10c0 5-7 11-7 11S5 15 5 10a7 7 0 0 1 14 0Z"></path><circle cx="12" cy="10" r="2.5"></circle></svg>
+</div>
+</div>
+<p class="copy-status" id="copy-status" role="status" aria-live="polite"></p>
+<div class="profile-links">
+<a class="profile-link" href="https://orcid.org/0000-0002-4075-6879" target="_blank" rel="noopener noreferrer" lang="en" dir="ltr"><svg class="brand-icon" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><circle cx="12" cy="12" r="12" fill="#A6CE39"></circle><circle cx="6.6" cy="6.7" r="1" fill="#fff"></circle><path d="M5.8 9h1.6v9H5.8zm4-3h4.4a6 6 0 0 1 0 12H9.8zm1.6 1.5v9h2.8a4.5 4.5 0 0 0 0-9Z" fill="#fff"></path></svg>ORCID</a><a class="profile-link" href="https://www.linkedin.com/in/anas-geodesy/" target="_blank" rel="noopener noreferrer" lang="en" dir="ltr"><svg class="brand-icon" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><rect width="24" height="24" rx="2.4" fill="#0A66C2"></rect><circle cx="5.5" cy="5.5" r="1.6" fill="#fff"></circle><path d="M4 9h3v11H4zm5 0h3v1.6c.7-1.2 1.9-1.9 3.4-1.9 3 0 4.1 1.8 4.1 4.6V20h-3v-6c0-1.7-.6-2.5-1.8-2.5-1.7 0-2.7 1-2.7 3V20H9Z" fill="#fff"></path></svg>LinkedIn</a><a class="profile-link" href="https://www.researchgate.net/profile/Anas-Osman-4" target="_blank" rel="noopener noreferrer" lang="en" dir="ltr"><svg class="brand-icon" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><rect width="24" height="24" rx="2.5" fill="#008C83"></rect><path d="M5 6h5a4 4 0 0 1 1.1 7.8L15 20h-3l-3.5-6H7.4v6H5zm2.4 2v4h2.3c2.8 0 2.8-4 0-4Z" fill="#fff"></path><path d="M17.5 4.5c-1.8 0-3 1.3-3 3.2s1.2 3.2 3 3.2c1 0 1.9-.4 2.4-1V7.5h-2.4v1.1h1.1v.7c-.3.3-.7.4-1.1.4-1 0-1.6-.8-1.6-2s.6-2 1.6-2c.5 0 .9.2 1.2.6l.8-.8c-.5-.7-1.2-1-2-1Z" fill="#fff"></path></svg>ResearchGate</a><a class="profile-link" href="https://scholar.google.com/citations?user=oemk-kcAAAAJ" target="_blank" rel="noopener noreferrer" lang="en" dir="ltr"><svg class="brand-icon" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18"><path d="M12 2 0 10l12 8 12-8Z" fill="#4285F4"></path><path d="M6 14v5c3 4 9 4 12 0v-5l-6 4Z" fill="#3569B8"></path><path d="M22 11v7" stroke="#4285F4" stroke-width="1.4"></path></svg>Google Scholar</a>
+</div>
+</div>
+      <aside class="contact-aside"><h2>Curriculum vitae</h2>
+<p>My updated CV brings together my education, research publications, technical skills, professional experience and training.</p>
+<a class="button" href="Anas_Osman_CV.pdf" download="Anas_Osman_CV.pdf"><svg class="icon" aria-hidden="true" viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m-4-4 4 4 4-4M4 16v5h16v-5"></path></svg>Download CV · PDF</a></aside>
+</div>
+    </div></section>
+  </main>
+  <footer class="site-footer"><div class="container footer-row">
+<p>© <span id="footer-year">2026</span> Anas Osman.</p>
+<div class="footer-links">
+<a href="Anas_Osman_CV.pdf" download="Anas_Osman_CV.pdf">Download CV</a><a class="language-switch" href="index-ar.html" data-page="index-ar.html" lang="ar" dir="rtl">العربية</a><a href="#home">Home</a>
+</div>
+</div></footer>
+<script id="anas-website-behaviour">/* Everything this website needs is included in the two language pages. */
+(() => {
+  'use strict';
+  const root = document.documentElement;
+  root.classList.add('js');
+  const ar = root.lang === 'ar';
+  const text = (en, arabic) => ar ? arabic : en;
+  const themeButton = document.querySelector('.theme-toggle');
+  const mobile = window.matchMedia('(max-width: 940px)');
+  const nav = document.querySelector('.main-nav');
+  const menu = document.querySelector('.menu-toggle');
+  function setTheme(theme) {
+    root.dataset.theme = theme;
+    themeButton.setAttribute('aria-pressed', String(theme === 'dark'));
+    themeButton.setAttribute('aria-label', theme === 'dark'
+      ? text('Switch to light theme', 'التبديل إلى المظهر الفاتح')
+      : text('Switch to dark theme', 'التبديل إلى المظهر الداكن'));
+  }
+  setTheme(root.dataset.theme || 'light');
+  themeButton.addEventListener('click', () => {
+    const theme = root.dataset.theme === 'dark' ? 'light' : 'dark';
+    setTheme(theme);
+    try { localStorage.setItem('anas-site-theme', theme); } catch (_) { /* Works without storage. */ }
+  });
+  function setMenu(open, restoreFocus = false) {
+    nav.hidden = mobile.matches && !open;
+    menu.setAttribute('aria-expanded', String(mobile.matches && open));
+    menu.setAttribute('aria-label', open ? text('Close navigation', 'إغلاق القائمة') : text('Open navigation', 'فتح القائمة'));
+    if (restoreFocus) menu.focus();
+  }
+  setMenu(false);
+  const watch = () => setMenu(false);
+  if (mobile.addEventListener) mobile.addEventListener('change', watch);
+  else if (mobile.addListener) mobile.addListener(watch);
+  menu.addEventListener('click', () => setMenu(menu.getAttribute('aria-expanded') !== 'true'));
+  document.addEventListener('keydown', event => {
+    if (event.key === 'Escape' && menu.getAttribute('aria-expanded') === 'true') setMenu(false, true);
+  });
+  document.addEventListener('click', event => {
+    if (mobile.matches && event.target instanceof Element && !event.target.closest('.site-header')) setMenu(false);
+  });
+
+  const views = Array.from(document.querySelectorAll('[data-view]'));
+  const navLinks = Array.from(nav.querySelectorAll('a[href^="#"]'));
+  const languageLinks = document.querySelectorAll('.language-switch');
+  const pageNames = {
+    home: text('Anas Osman | Geodesy & Seismology', 'أنس عثمان | الجيوديسيا وعلم الزلازل'),
+    research: text('Research | Anas Osman', 'البحث العلمي | أنس عثمان'),
+    publications: text('Publications | Anas Osman', 'المنشورات العلمية | أنس عثمان'),
+    experience: text('Education & Experience | Anas Osman', 'التعليم والخبرات | أنس عثمان'),
+    skills: text('Technical Skills | Anas Osman', 'المهارات التقنية | أنس عثمان'),
+    conferences: text('Conferences & Training | Anas Osman', 'المؤتمرات والتدريب | أنس عثمان'),
+    about: text('About | Anas Osman', 'نبذة عني | أنس عثمان'),
+    contact: text('Contact | Anas Osman', 'التواصل | أنس عثمان')
+  };
+  function readDestination() {
+    let id = '';
+    try { id = decodeURIComponent(window.location.hash.slice(1)); } catch (_) { /* Use the home view for an invalid fragment. */ }
+    const target = id ? document.getElementById(id) : null;
+    const view = target?.closest('[data-view]') || document.getElementById('home');
+    return { view, target };
+  }
+  function showView(moveFocus = false) {
+    const {view, target} = readDestination();
+    views.forEach(item => {
+      item.classList.toggle('is-active', item === view);
+      item.hidden = item !== view;
+    });
+    navLinks.forEach(link => {
+      if (link.getAttribute('href') === '#' + view.id) link.setAttribute('aria-current', 'page');
+      else link.removeAttribute('aria-current');
+    });
+    languageLinks.forEach(link => { link.href = link.dataset.page + window.location.hash; });
+    document.title = pageNames[view.id] || pageNames.home;
+    setMenu(false);
+    if (moveFocus) {
+      window.scrollTo({top: 0, behavior: 'auto'});
+      const heading = view.querySelector('h1');
+      if (heading) heading.focus({preventScroll: true});
+      if (target && target !== view && target.id !== 'main') target.scrollIntoView({block: 'start', behavior: 'auto'});
+    }
+  }
+  window.addEventListener('hashchange', () => showView(true));
+  showView(false);
+  navLinks.forEach(link => link.addEventListener('click', () => {
+    setMenu(false);
+    if (window.location.hash === link.getAttribute('href')) showView(true);
+  }));
+
+  const list = document.getElementById('publication-list');
+  const publications = Array.from(list.querySelectorAll('.publication'));
+  const filters = Array.from(document.querySelectorAll('.filter-btn'));
+  const search = document.getElementById('publication-search');
+  const sort = document.getElementById('publication-sort');
+  const status = document.getElementById('publication-status');
+  const noResults = document.getElementById('no-results');
+  let activeFilter = 'all';
+  function updatePublications() {
+    const query = search.value.trim().toLocaleLowerCase();
+    let count = 0;
+    publications.slice().sort((a,b) => {
+      const year = Number(b.dataset.year) - Number(a.dataset.year);
+      return (sort.value === 'oldest' ? -year : year) || Number(a.dataset.order) - Number(b.dataset.order);
+    }).forEach(item => {
+      const match = (activeFilter === 'all' || item.dataset.type === activeFilter) && item.textContent.toLocaleLowerCase().includes(query);
+      item.hidden = !match;
+      if (match) count++;
+      list.appendChild(item);
+    });
+    status.textContent = text(`${count} of ${publications.length} publications`, `${count} من ${publications.length} منشورات`);
+    noResults.hidden = count !== 0;
+  }
+  filters.forEach(button => button.addEventListener('click', () => {
+    activeFilter = button.dataset.filter;
+    filters.forEach(filter => filter.setAttribute('aria-pressed', String(filter === button)));
+    updatePublications();
+  }));
+  search.addEventListener('input', updatePublications);
+  sort.addEventListener('change', updatePublications);
+  document.getElementById('reset-search').addEventListener('click', () => {
+    activeFilter = 'all'; search.value = ''; sort.value = 'newest';
+    filters.forEach(filter => filter.setAttribute('aria-pressed', String(filter.dataset.filter === 'all')));
+    updatePublications(); search.focus();
+  });
+  updatePublications();
+
+  document.querySelectorAll('.copy-email').forEach(button => button.addEventListener('click', async () => {
+    const status = document.getElementById('copy-status');
+    try {
+      if (!navigator.clipboard || !window.isSecureContext) throw new Error('Unavailable');
+      await navigator.clipboard.writeText(button.dataset.email);
+      status.textContent = text('Email address copied.', 'تم نسخ عنوان البريد الإلكتروني.');
+    } catch (_) {
+      status.textContent = text('Copy this address: ', 'يمكنك نسخ هذا العنوان: ') + button.dataset.email;
+    }
+  }));
+  const portrait = document.getElementById('portrait');
+  function portraitFallback() {
+    portrait.hidden = true;
+    document.getElementById('portrait-fallback').hidden = false;
+  }
+  portrait.addEventListener('error', portraitFallback);
+  if (portrait.complete && portrait.naturalWidth === 0) portraitFallback();
+  document.getElementById('footer-year').textContent = String(new Date().getFullYear());
+})();
+</script>
+</body>
+</html>
